@@ -261,7 +261,7 @@ header,
 
 .container__services__principal__carrucel-items p{ 
     padding: 8px 0;
-    font-size: 0.7em; 
+    font-size: 1.2em; 
     color: #fff;
 }
 
@@ -559,7 +559,8 @@ header,
     .container__services-principal{
         height:130vh;
         
-    }
+    } 
+    
     .container__services__principal-carrucel { 
         flex-direction: column;
         align-items: flex-start;
@@ -572,7 +573,8 @@ header,
 
     .container__services__principal__carrucel-items{
         width: 92%;
-        height: 25%;
+        height: 25%; 
+        font-size:0.8em;
     }
 
     .container__services__principal__carrucel-items p {
