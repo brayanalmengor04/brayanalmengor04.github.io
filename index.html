@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website -Brayan Almengor</title>
+    <link rel="stylesheet" href="/res/style.css"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Movere namas el nav como sticky o fixed-->
+    <header>
+        <nav class="container__nav-principal">
+            <ul class="container__nav__principal-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#proyects">Proyects</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+            <!--Contenedor del nav telefono movil responsive-->
+            <ul class="container__navResponsive-principal">
+                <li onclick="mostrarMenu()" ><ion-icon name="menu"></ion-icon></li>
+            </ul>
+        </nav>  
+        <div class="container__menuResponsive">
+            <div onclick="ocultarMenu()" class="container__menuResponsive__options"  ><a href="#home">Home</a></div>
+            <div onclick="ocultarMenu()" class="container__menuResponsive__options"><a href="#about">About</a></div>
+            <div onclick="ocultarMenu()" class="container__menuResponsive__options"><a href="#services">Services</a></div>
+            <div onclick="ocultarMenu()" class="container__menuResponsive__options"><a href="#testimonials">Testimonials</a></div>
+            <div onclick="ocultarMenu()" class="container__menuResponsive__options"><a href="#proyects">Proyects</a></div>
+            <div onclick="ocultarMenu()" class="container__menuResponsive__options"><a href="#contacts">Contacts</a></div>
+        </div>
+    </header>
+    <!--Contenedor del nav o la barra de navegacion-->
+
+    <section id="home" class="container__background-principal">
+
+
+        <div class="container__background__principal-title">
+            <h3>Hello I'm</h3>
+            <h2>BRAYAN ALMENGOR</h2>
+            <!--Descripcion de lo que hago tema de ceo -->
+            <h1>At your fingertips development, custimized for your unique digital needs!</h1>
+
+            <div class="container__background__principal__title-button">
+                <a href="https://wa.me/c/50765425634">Explore our Services!</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="container__aboutme-principal">
+        <div class="container__aboutme__principal-elements">
+            <div  data-aos-duration="1500" data-aos="fade-right" class="container__aboutme__principal__elements-image">
+                <img src="#" alt="">
+            </div>
+
+            <div data-aos="fade-left"  data-aos-duration="1500" class="container__aboutme__principal__elements-contents">
+                <h4>About Me!</h4>
+                <p>"Hi! My name is Brayan Almengor , and I'm passionate about the world of programming. Currently, I'm a student at the Technological University of Panama 
+                    pursuing a bachelor's degree in Software Develolopment. I enjoy video games and all things related to the digital world. 
+                    I reside in Panama and I'm 22 years old . If you need and more information for the About Me section , just let me know!
+                </p>
+
+                <div class="container__aboutme__principal__elements__contents-button">
+                    <a href="#">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Section de Servicios-->
+    <section id="services" class="container__services-principal">
+        <div class="container__services__principal-title">
+            <h4>Services</h4>
+        </div>
+
+        <div class="container__services__principal-carrucel">
+            <div  data-aos-duration="1500" data-aos="fade-down" class="container__services__principal__carrucel-items">
+                <div><ion-icon name="construct-outline"></ion-icon></div>
+                <h5>Creative Desing</h5>
+                <p>!Welcome to our Creative Designe service! We  specialize in crafting visually stunning and engaging designs
+                    tailored to your unique needs. Whether you're looking for eye-catching graphics captivating branding, or 
+                    innovate digital experiences, our teams of skilled designers is here to bring your vision to life. Let's collaborate 
+                    to create something truly exceptional!
+                </p>
+            </div>
+
+            <div  data-aos-duration="1500" data-aos="fade-down" class="container__services__principal__carrucel-items">
+                <div><ion-icon name="build"></ion-icon></div>
+                <h5>Maintenance and Suport</h5>
+                <p>We're to ensure your software operates smoothly and efficiently. Our team provides proactive monitoring, promt 
+                    troublesshooting, and personalized assistance allowing you to focus on your business while we take care of your 
+                    software needs.
+                </p>
+            </div>
+            <div  data-aos-duration="1500" data-aos="fade-down" class="container__services__principal__carrucel-items">
+                <div><ion-icon name="rocket"></ion-icon></div>
+                <h5>E-Commerce Solutions</h5>
+                <p>From seamless payment experiences to robust inventory management, our team ensures your e-commerce plataform operates 
+                    smoonthly and efficiently . With our expertise, personalized support, and proactive approach, we help you 
+                    maximize sales and optimize your online business.
+                </p>
+            </div>
+            <div  data-aos-duration="1500" data-aos="fade-down" class="container__services__principal__carrucel-items">
+                <div><ion-icon name="code-slash"></ion-icon></div>
+                <h5>Clean and Efficients Code</h5>
+                <p>Our Clean and efficient Code service ensures your codebase is wel-structured, easy to maintain, and optimized for perfomance 
+                    whether developing new software or improving existing proyects!
+                </p>
+            </div>
+
+            <div  data-aos-duration="1500" data-aos="fade-down" class="container__services__principal__carrucel-items">
+                <div><ion-icon name="phone-landscape"></ion-icon></div>
+                <h5>Responsive and Adaptable Design</h5>
+                <p>Our Responsive and Adaptable Design service ensures your designs seamlessly adjust to various devices, enhancing user experience across
+                    platforms!.
+                </p>
+            </div>
+            <div  data-aos-duration="1500" data-aos="fade-down" class="container__services__principal__carrucel-items">
+                <div><ion-icon name="logo-apple-ar"></ion-icon></div>
+                <h5>Api Integrations</h5>
+                <p>Our API Integrations service seamlessly integrates APIs into your systems, enhancing functionality 
+                    and connectivity across your platforms
+                </p>
+            </div>
+
+        </div>
+
+        <div id="tecnolgis" class="container__services__principal-carrucelAction">
+            <div class="container__services__principal__carrucelAction-buttons"></div>
+            <div class="container__services__principal__carrucelAction-buttons"></div>
+        </div>
+
+    </section>
+
+
+    <!--Mi tecnologias que domino-->
+
+    <section class="container__tecnologys-principal">
+        <div class="container__tecnologys__principal-butonLeft">
+            <div>Icono</div>
+        </div>
+        <div class="container__tecnologys__principal-carrucel">
+
+        </div>
+        <div class="container__tecnologys__principal-butonRight">
+            <div>Icono</div>
+        </div>
+    </section>
+
+
+    <section id="proyects" class="container__proyects-principal">
+        <div class="container__proyects__principal-title">
+            <h4>Portfolio</h4>
+        </div>
+
+        <div class="container__proyects__principal-carrucel">
+            <!--Imagen en el contenedor-->
+            <div  data-aos-duration="1500" data-aos="zoom-in-up" class="container__proyects__principal__carrucel-items">
+                <h5>This Proyects Title</h5>
+                <p>Description proyects</p>
+                <a href="#"><ion-icon name="cube"></ion-icon></a>
+            </div>
+            <div  data-aos-duration="1500" data-aos="zoom-in-up" class="container__proyects__principal__carrucel-items">
+                <h5>This Proyects Title</h5>
+                <p>Description proyects</p>
+                <a href="#"><ion-icon name="cube"></ion-icon></a>
+            </div>
+            <div  data-aos-duration="1500" data-aos="zoom-in-up" class="container__proyects__principal__carrucel-items">
+                <h5>This Proyects Title</h5>
+                <p>Description proyects</p>
+                <a href="#"><ion-icon name="cube"></ion-icon></a>
+            </div>
+            <div   data-aos-duration="1500" data-aos="zoom-in-up" class="container__proyects__principal__carrucel-items">
+                <h5>This Proyects Title</h5>
+                <p>Description proyects</p>
+                <a href="#"><ion-icon name="cube"></ion-icon></a>
+            </div>
+            <div  data-aos-duration="1500" data-aos="zoom-in-up" class="container__proyects__principal__carrucel-items">
+                <h5>This Proyects Title</h5>
+                <p>Description proyects</p>
+                <a href="#"><ion-icon name="cube"></ion-icon></a>
+            </div>
+            <div  data-aos-duration="1500" data-aos="zoom-in-up" class="container__proyects__principal__carrucel-items">
+                <h5>This Proyects Title</h5>
+                <p>Description proyects</p>
+                <a href="#"><ion-icon name="cube"></ion-icon></a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacts" class="container__footer-principal">
+        <div class="container__footer__principal-title">
+            <h5>Keep in Touch</h5>
+        </div>
+
+        <div data-aos-duration="1500" data-aos="fade-right" class="container__footer__principal-main">
+
+            <form action="" class="container__footer__principal-formulario">
+                <div>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="LastName">
+                </div> 
+                
+                <input type="email" placeholder="Email">
+                <textarea name="" id="" cols="10" rows="10" placeholder="Comentary"></textarea>
+                <button type="submit">Send Now!</button>
+            </form>
+
+            <div  data-aos="fade-left"  data-aos-duration="1500" class="container__footer__principal-info">
+                <div class="container__footer__principal__info-icons">
+                    <i><ion-icon name="location"></ion-icon></i>
+                    <p>Panama , Panama Oeste</p>
+                </div>
+                <div class="container__footer__principal__info-icons">
+                    <i><ion-icon name="call"></ion-icon></i>
+                    <p>+507 6542-5634</p>
+                </div>
+                <div class="container__footer__principal__info-icons">
+                    <i><ion-icon name="mail"></ion-icon></i>
+                    <p>brayanalmengor300@gmail.com</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="container__footer__principal-more">
+            <!--Mostrar todos los iconos-->
+            <div class="container__footer__principal__more-icons">
+                <ion-icon name="logo-github"></ion-icon> 
+                <ion-icon name="logo-discord"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-figma"></ion-icon>
+            </div>
+            <div>All Rights Reserved @2024 Brayan Almengor</div>
+        </div>
+    </footer> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/res/app.js"></script>
+    <script>
+        AOS.init();
+    </script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+
+
+</body>
+
+</html>
