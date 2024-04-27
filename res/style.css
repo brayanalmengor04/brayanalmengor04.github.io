@@ -106,13 +106,13 @@ header,
     color: #fff; 
 }
 .container__background__principal-title h2{
-    font-size: 3em; 
+    font-size: 3.2em; 
     color: #ffc107;
 }
 .container__background__principal-title h1{  
     text-align:center;
     width: 50%;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #fff;
 }
 
@@ -126,12 +126,6 @@ header,
 } 
 .container__background__principal__title-button a{  
     text-decoration: none;   
-
-
-
-
-
-
     padding: 20px;
     color: #ffc107;
 } 
@@ -545,7 +539,7 @@ header,
     }
     .container__aboutme__principal__elements-contents p {
         font-weight: lighter;
-        font-size: 0.8em;
+        font-size: 0.9em;
         color: #fff;
         padding: 10px 0;
     }
