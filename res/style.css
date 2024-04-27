@@ -106,7 +106,7 @@ header,
 .container__background__principal-title h1{  
     text-align:center;
     width: 50%;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #fff;
 }
 
@@ -251,7 +251,7 @@ header,
 
 .container__services__principal__carrucel-items p{ 
     padding: 8px 0;
-    font-size: 1em; 
+    font-size: 0.7em; 
     color: #fff;
 }
 
