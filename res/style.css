@@ -521,7 +521,7 @@ header,
     .container__background__principal__title-button {
         margin: 30px;
         width: 64%;
-      
+        
     } 
 
     /** about me**/
@@ -543,7 +543,7 @@ header,
     }
     .container__aboutme__principal__elements-contents p {
         font-weight: lighter;
-        font-size: 1.3em;
+        font-size: 1em;
         color: #fff;
         padding: 10px 0;
     }
