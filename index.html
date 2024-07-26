@@ -41,12 +41,15 @@
 
     <section id="home" class="container__background-principal">
 
-
         <div class="container__background__principal-title">
             <h3>Hello I'm</h3>
-            <h2>BRAYAN ALMENGOR</h2>
+           
+            <div class="typed-container">
+                <span id="typed-text"></span>
+                <span id="cursor">|</span>
+            </div>
             <!--Descripcion de lo que hago tema de ceo -->
-            <h1>At your fingertips development, custimized for your unique digital needs!</h1>
+            <h1> At your fingertips development, custimized for your unique digital needs!</h1>
 
             <div class="container__background__principal__title-button">
                 <a href="https://wa.me/c/50765425634">Explore our Services!</a>
@@ -69,7 +72,7 @@
                 </p>
 
                 <div class="container__aboutme__principal__elements__contents-button">
-                    <a href="#">Download CV</a>
+                    <a href="">Download CV</a>
                 </div>
             </div>
         </div>
@@ -144,14 +147,17 @@
     <!--Mi tecnologias que domino-->
 
     <section class="container__tecnologys-principal">
-        <div class="container__tecnologys__principal-butonLeft">
-            <div>Icono</div>
-        </div>
-        <div class="container__tecnologys__principal-carrucel">
-
-        </div>
-        <div class="container__tecnologys__principal-butonRight">
-            <div>Icono</div>
+        <div  class="carousel-container">
+            <button class="carousel-button left" id="prev-button">&lt;</button>
+            <div class="carousel" id="carousel">
+                <img data-aos-duration="1500" data-aos="fade-down" src="imagen/html.png" alt="Technology 1">
+                <img data-aos-duration="1500" data-aos="fade-down" src="imagen/css.png" alt="Technology 2">
+                <img data-aos-duration="1500" data-aos="fade-down" src="imagen/javascript.png" alt="Technology 3">
+                <img data-aos-duration="1500" data-aos="fade-down" src="imagen/reactim.png" alt="Technology 4">
+                <img data-aos-duration="1500" data-aos="fade-down" src="imagen/java.png" alt="Technology 5">
+                <img data-aos-duration="1500" data-aos="fade-down" src="imagen/android.png" alt="Technology 6">
+            </div>
+            <button class="carousel-button right" id="next-button">&gt;</button>
         </div>
     </section>
 
