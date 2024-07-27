@@ -564,7 +564,7 @@ header,
     }
     .typed-container span{ 
         
-        font-size: 3em;
+        font-size: 1.9em;
         color: #ffc107;
         text-align:center; 
     } 
@@ -602,7 +602,7 @@ header,
     }
     .container__aboutme__principal__elements-contents p {
         font-weight: 300;
-        font-size: 1.9em;
+        font-size: 1.3em;
         color: #fff;
         padding: 10px 0;
     }
