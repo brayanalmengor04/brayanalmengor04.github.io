@@ -77,7 +77,34 @@ function erase() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() { 
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projects = document.querySelectorAll('.container__proyects__principal__carrucel-items');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+
+            projects.forEach(project => {
+                if (filter === 'all') {
+                    project.style.display = 'flex';
+                } else {
+                    if (project.classList.contains(filter)) {
+                        project.style.display = 'flex';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                }
+            });
+
+            // Remove 'active' class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add 'active' class to the clicked button
+            this.classList.add('active');
+        });
+    });  
+
     setTimeout(type, delayBetweenPhrases);
 });  
 
