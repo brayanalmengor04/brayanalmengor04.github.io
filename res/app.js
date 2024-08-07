@@ -108,6 +108,23 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(type, delayBetweenPhrases);
 });  
 
+//FFuncion whatssap 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    var whatsappMessage = `Hola soy ${firstName} ${lastName}, mi correo es: ${email}. Información Mensaje: ${message}`;
+
+    var whatsappUrl = `https://wa.me/50765425634?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappUrl, '_blank');
+});
+
+
 const  menuResponsive = document.querySelector(".container__menuResponsive");
 const menuResponsiveItems = document.querySelector(".container__menuResponsive__options");
 
