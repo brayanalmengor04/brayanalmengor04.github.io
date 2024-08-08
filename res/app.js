@@ -6,50 +6,27 @@
         "Turning ideas into reality."
     ]; 
 
-const carousel = document.getElementById('carousel');
-const images = carousel.getElementsByTagName('img');
-const prevButton = document.getElementById('prev-button');
-const nextButton = document.getElementById('next-button'); 
-let currentPhraseIndex = 0;
-let currentLetterIndex = 0;  
-let currentIndex = 0;
-const itemsPerPage = 3;  
+//Tecnologias Button 
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+    const scrollAmount = 200; // Ajusta la cantidad de desplazamiento según tus necesidades
 
-function showImages() {
-    for (let i = 0; i < images.length; i++) {
-        images[i].classList.remove('active');
-    }
-    for (let i = currentIndex; i < currentIndex + itemsPerPage; i++) {
-        if (images[i]) {
-            images[i].classList.add('active');
-        }
-    }
-    // Trigger reflow for smooth transition
-    carousel.style.opacity = 0;
-    setTimeout(() => {
-        carousel.style.opacity = 1;
-    }, 100);
-}
-function next() {
-    if (currentIndex + itemsPerPage < images.length) {
-        currentIndex += itemsPerPage;
-    } else {
-        currentIndex = 0; // Loop back to start
-    }
-    showImages();
-}
-function prev() {
-    if (currentIndex - itemsPerPage >= 0) {
-        currentIndex -= itemsPerPage;
-    } else {
-        currentIndex = Math.max(images.length - itemsPerPage, 0); // Loop back to end
-    }
-    showImages();
-} 
-prevButton.addEventListener('click', prev);
-nextButton.addEventListener('click', next);
+    prevButton.addEventListener('click', function() {
+        carousel.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+    nextButton.addEventListener('click', function() {
+        carousel.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+});
 
-showImages();
 
 const typedTextElement = document.getElementById('typed-text');
 const typingSpeed = 100; // Velocidad de tipeo en ms
