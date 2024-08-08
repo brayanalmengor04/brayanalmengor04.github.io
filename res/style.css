@@ -335,18 +335,28 @@ header,
 .carousel-container {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 100%; 
+    height:80vh;
 }
 
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+.carousel { 
+
+    display: flex;   
+    align-items: center;
+    gap: 200px;
+    height: 80vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;  
+   
 }
 
 .carousel img {
-    min-width: 200px; /* Ajusta esto al tamaño que prefieras */
-    margin-right: 10px; /* Espacio entre imágenes */
+    
+    
+    min-width: 300px; /* Ajusta esto al tamaño que prefieras */
+    height: auto;
+ 
+    
 }
 
 .carousel-button {
