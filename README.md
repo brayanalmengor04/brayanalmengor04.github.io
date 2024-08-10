@@ -1,22 +1,8 @@
-# Web Development Project
+# React + Vite
 
-Welcome to my web development project! This repository contains the source code and assets for my website.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Folder Structure
+Currently, two official plugins are available:
 
-- **images**: Contains all the images required for the project.
-- **src**: Contains source materials such as CSS and JavaScript files.
-
-## Project Overview
-
-The project is structured as follows:
-
-- `index.html`: This file contains the HTML code for constructing the structure of the website.
-
-## Demo
-
-You can view a live demo of the website [here]( https://brayanalmengor04.github.io/).
-
-## Pending Tasks
-
-- Implement the "Technology" section.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
