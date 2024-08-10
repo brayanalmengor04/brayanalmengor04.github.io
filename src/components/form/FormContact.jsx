@@ -37,7 +37,8 @@ export function FormContact() {
     }
     setErrors({});
 
-    const whatsappMessage = `Hola, soy ${formData.firstName} ${formData.lastName}. Descripción: ${formData.message}`;
+    const whatsappMessage = `Hola, soy ${formData.firstName} ${formData.lastName} ,Aqui le proporciono gmail de contacto ${formData.email}
+    Asunto del mensaje : ${formData.message} , Saludos desde la Web`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=50765425634&text=${encodeURIComponent(
       whatsappMessage
     )}`;
