@@ -7,7 +7,7 @@ const projectsData = [
     title: 'Portfolio Website',
     description: 'A sleek portfolio website showcasing my skills, projects, and resume. It features responsive design, intuitive navigation, and a contact form for potential clients and collaborators.',
     link: 'https://brayandevpty.netlify.app/',
-    imgSrc: '/src/assets/image/WebsiteProyect.png',
+    imgSrc: 'assets/image/WebsiteProyect.png',
   },
   {
     id:2,
@@ -24,7 +24,7 @@ const projectsData = [
     title: 'Figma Prototype Design for Android Raffle Generator',
     description: 'A Figma prototype for an Android app that simplifies raffle management. It offers features like automated number generation, participant data handling, and real-time updates.',
     link: 'https://www.figma.com/design/7QHR3QNNkCQn9A0d21W3DA/Rifa-Mania?node-id=0-1&t=sQqr8qgDEBtpYPwY-1',
-    imgSrc: '/src/assets/image/RifaMania.png'
+    imgSrc: 'assets/image/RifaMania.png'
   }
 ];
 
