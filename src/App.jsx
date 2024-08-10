@@ -1,5 +1,5 @@
 
-import './App.css' 
+import '/src/App.css' 
 import { Navbar } from './components/navbar/Navbar' 
 import { TitleTyped } from './components/title/TitleTyped' 
 import { ArticleAbout } from './components/article/ArticleAbout' 
