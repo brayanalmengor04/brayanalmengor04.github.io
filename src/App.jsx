@@ -69,12 +69,12 @@ export function App() {
       </section> 
       <section id="tecnologies" className='container__skill-principal'>
         <div className='container__skill-carrucel'>
-          <TecnologiesItem src="/src/assets/image/reactim.png" alt="React" />
-          <TecnologiesItem src="/src/assets/image/android.png" alt="Android" />
-          <TecnologiesItem src="/src/assets/image/java.png" alt="Java" />
-          <TecnologiesItem src="/src/assets/image/javascript.png" alt="JavaScript" />
-          <TecnologiesItem src="/src/assets/image/html.png" alt="HTML" />
-          <TecnologiesItem src="/src/assets/image/css.png" alt="CSS" />
+          <TecnologiesItem src="./assets/image/reactim.png" alt="React" />
+          <TecnologiesItem src="./assets/image/android.png" alt="Android" />
+          <TecnologiesItem src="./assets/image/java.png" alt="Java" />
+          <TecnologiesItem src="./assets/image/javascript.png" alt="JavaScript" />
+          <TecnologiesItem src="./assets/image/html.png" alt="HTML" />
+          <TecnologiesItem src="./assets/image/css.png" alt="CSS" />
         </div> 
         <ActionScrolling/>
       </section>
