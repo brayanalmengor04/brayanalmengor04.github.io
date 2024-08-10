@@ -1,3 +1,9 @@
+import reactImage from '/src/assets/image/reactim.png';
+import androidImage from '/src/assets/image/android.png';
+import javaImage from '/src/assets/image/java.png';
+import jsImage from './assets/image/javascript.png';
+import htmlImage from 'assets/image/html.png';
+import cssImage from '/src/assets/image/css.png'; 
 
 import './App.css' 
 import { Navbar } from './components/navbar/Navbar' 
@@ -69,12 +75,12 @@ export function App() {
       </section> 
       <section id="tecnologies" className='container__skill-principal'>
         <div className='container__skill-carrucel'>
-          <TecnologiesItem src="./assets/image/reactim.png" alt="React" />
-          <TecnologiesItem src="./assets/image/android.png" alt="Android" />
-          <TecnologiesItem src="./assets/image/java.png" alt="Java" />
-          <TecnologiesItem src="./assets/image/javascript.png" alt="JavaScript" />
-          <TecnologiesItem src="./assets/image/html.png" alt="HTML" />
-          <TecnologiesItem src="./assets/image/css.png" alt="CSS" />
+          <TecnologiesItem src={reactImage}alt="React" />
+          <TecnologiesItem src={androidImage} alt="Android" />
+          <TecnologiesItem src={javaImage} alt="Java" />
+          <TecnologiesItem src={jsImage} alt="JavaScript" />
+          <TecnologiesItem src={htmlImage} alt="HTML" />
+          <TecnologiesItem src={cssImage} alt="CSS" />
         </div> 
         <ActionScrolling/>
       </section>
