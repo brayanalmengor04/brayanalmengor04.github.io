@@ -1069,7 +1069,6 @@ ol {
 .about__pic__item.about__pic__item--large {
   width: 500px;
   height: 480px;
-  
   position: relative;
 }
 
@@ -1827,13 +1826,21 @@ ol {
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) { 
+  .about__pic__item.about__pic__item--large{
+    width: 330px;
+    height: 300px;
+  }
   .container {
     max-width: 1170px;
   }
 }
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about__pic__item.about__pic__item--large{
+    width: 330px;
+    height: 300px;
+  }
   .header__nav__menu {
     margin-right: 25px;
   }
@@ -1997,6 +2004,10 @@ ol {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+  .about__pic__item.about__pic__item--large{
+    width: 330px;
+    height: 300px;
+  }
   .services__title {
     margin-bottom: 50px;
   }
@@ -2178,6 +2189,10 @@ ol {
 }
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
+  .about__pic__item.about__pic__item--large{
+    width: 330px;
+    height: 300px;
+  }
   .hero__text h2 {
     font-size: 30px;
     line-height: 40px;
