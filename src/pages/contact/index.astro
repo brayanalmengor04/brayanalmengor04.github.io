@@ -1,0 +1,75 @@
+---
+import LayoutSection from "../../layouts/LayoutSection.astro";
+---
+<LayoutSection
+        titleSection="Contact"
+        imagePath="/img/bannerdev.png"
+>
+    <!-- Contact Widget Section Begin -->
+    <section class="contact-widget spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h4>Address</h4>
+                            <p>Panama City, Panama</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h4>Hotline</h4>
+                            <p>+507 65425634</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h4>Email</h4>
+                            <p>brayanalmengor300@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Widget Section End -->
+    <section class="contact spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact__map">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15960.485724003718!2d-79.516667!3d8.983333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3bba2b0c26fb33%3A0x774d0b54f5774137!2sPanama%20City%2C%20Panama!5e0!3m2!1sen!2sbd!4v1596152431947!5m2!1sen!2sbd"
+                                height="450" style="border:0;"></iframe>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact__form">
+                        <h3>Get in touch</h3>
+                        <form action="mailto:brayanalmengor300@gmail.com" method="post" enctype="text/plain">
+                            <input type="text" placeholder="Name" name="name" required>
+                            <input type="email" placeholder="Email" name="email" required>
+                            <input type="text" placeholder="Asunto" name="asunto">
+                            <textarea placeholder="Message" name="message" required></textarea>
+                            <button type="submit" class="site-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</LayoutSection>

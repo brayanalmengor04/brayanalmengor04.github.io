@@ -1,0 +1,40 @@
+---
+interface ProjectProps {
+    title: string;
+    videoUrl: string;
+    imageUrl: string;
+    categories: string[];
+    description?: string;
+    technologies: string[];
+    githubUrl: string;
+}
+
+const { title, videoUrl, imageUrl, categories, description, technologies, githubUrl } = Astro.props;
+---
+
+<div class={`col-lg-4 col-md-6 col-sm-6 mix ${categories.join(' ')}`}>
+    <div class="portfolio__item">
+        <div class="portfolio__item__video set-bg" data-setbg={`${imageUrl}`}>
+            <a href={videoUrl} class="play-btn video-popup">
+                <i class="fa fa-play"></i>
+            </a>
+        </div>
+        <div class="portfolio__item__text">
+            <h4>{title}</h4>
+            <ul>
+                {categories.map(category => (
+                        <li>{category}</li>
+                ))}
+            </ul>
+            {description && <p>{description}</p>}
+            <div class="portfolio__item__technologies">
+                {technologies.map(tech => (
+                        <i class={`technology-icon ${tech}`} title={tech}></i>
+                ))}
+            </div>
+            <a href={githubUrl} class="github-link" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-github"></i> View on GitHub
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+---
+import Footer from '../components/Footer/Footer.astro';
+import Navbar from '../components/Navbar/Navbar.astro';
+
+const { title } = Astro.props; 
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Meta Tags for SEO -->
+      <meta name="description" content="Explore the professional portfolio of Brayan Almengor, a passionate software developer specializing in web and mobile solutions.">
+      <meta name="author" content="Brayan Almengor">
+      <meta name="keywords" content="Brayan Almengor, software developer, portfolio, Panamá, web development, mobile development, Java, Spring Boot, Laravel, React, Angular">
+      <meta name="robots" content="index, follow">
+      <meta property="og:title" content="Brayan Almengor | Software Developer Portfolio">
+      <meta property="og:description" content="Discover projects and skills of Brayan Almengor, a software developer from Panama.">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https:/brayanalmengor04.netlify.app">
+      <meta property="og:image" content="https:/brayanalmengor04.netlify.app/img/previewporfolio.png">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Brayan Almengor | Software Developer Portfolio">
+      <meta name="twitter:description" content="Explore the professional journey of Brayan Almengor, a skilled software developer.">
+      <meta name="twitter:image" content="https:/brayanalmengor04.netlify.app/img/previewporfolio.png">
+
+    <title>{title}</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+      />
+      <link
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+              rel="stylesheet"
+      />
+
+      <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  </head>
+  <body>
+   <Navbar />
+   <slot>
+
+
+   </slot>
+   <Footer />
+    <script src="/js/jquery-3.3.1.min.js" is:inline></script>
+    <script src="/js/bootstrap.min.js" is:inline > </script>
+    <script src="/js/jquery.magnific-popup.min.js" is:inline></script>
+    <script src="/js/mixitup.min.js" is:inline></script>
+    <script src="/js/masonry.pkgd.min.js" is:inline></script>
+    <script src="/js/jquery.slicknav.js" is:inline></script>
+    <script src="/js/owl.carousel.min.js" is:inline></script>
+    <script src="/js/main.js" is:inline></script>
+
+  </body>
+</html>
