@@ -1838,7 +1838,7 @@ ol {
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about__pic__item.about__pic__item--large{
-    width: 330px;
+    width: 300px;
     height: 300px;
   }
   .header__nav__menu {
@@ -1876,7 +1876,7 @@ ol {
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about__pic__item.about__pic__item--large{
-    width: 330px;
+    width: 300px;
     height: 300px;
   }
   .hero__slider.owl-carousel .owl-dots {
@@ -2005,7 +2005,7 @@ ol {
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
   .about__pic__item.about__pic__item--large{
-    width: 330px;
+    width: 300px;
     height: 300px;
   }
   .services__title {
@@ -2190,7 +2190,7 @@ ol {
 /* Small Device = 320px */
 @media only screen and (max-width: 479px) {
   .about__pic__item.about__pic__item--large{
-    width: 330px;
+    width: 300px;
     height: 300px;
   }
   .hero__text h2 {
