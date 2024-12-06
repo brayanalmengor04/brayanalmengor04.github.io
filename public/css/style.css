@@ -1067,9 +1067,9 @@ ol {
   margin-bottom: 20px;
 }
 .about__pic__item.about__pic__item--large {
-  width: 300px;
-  height: 300px;
-  border: 3px solid red;
+  width: 500px;
+  height: 480px;
+  
   position: relative;
 }
 
@@ -1868,6 +1868,10 @@ ol {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about__pic__item.about__pic__item--large{
+    width: 330px;
+    height: 300px;
+  }
   .hero__slider.owl-carousel .owl-dots {
     max-width: 690px !important;
   }
