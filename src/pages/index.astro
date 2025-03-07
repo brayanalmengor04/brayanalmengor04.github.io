@@ -1,12 +1,12 @@
 ---
 import "../styles/global.css"; 
 import Layout from '../layouts/Layout.astro';   
-import Navbar from "../components/Navbar.astro"
+import Navbar from "../components/Navbar"
 
 // Section pages
 import Hero from "../sections/Hero.astro"
 ---
 <Layout> 
-	<Navbar />
+	<Navbar  client:load />
 	<Hero />
 </Layout>
