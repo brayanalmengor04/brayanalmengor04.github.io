@@ -1,3 +1,6 @@
+---
+const {title="Brayan Almengor |Software Developer Backend"} = Astro.props;
+---
 
 <!doctype html>
 <html lang="en">
@@ -5,7 +8,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Portfolio Web | Brayan Almengor</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
