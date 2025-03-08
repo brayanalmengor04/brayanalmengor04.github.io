@@ -12,8 +12,8 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
   return (
-    <div className="fixed top-0 w-full flex justify-center font-medium">
-      <nav className="w-[90%] flex items-center bg-primary-light border-3 border-[var(--color-theme-dark-light)] rounded-full px-2 py-2 mt-6 shadow-lg relative">
+    <div className="fixed top-0 w-full flex justify-center font-medium z-40">
+      <nav className="w-[90%] flex items-center bg-primary-light border-3 border-[var(--color-theme-dark-light)] rounded-full px-2 py-2 mt-6 relative">
         <ul className="w-full flex items-center justify-between text-white md:flex hidden">
           {navLinks.slice(0, 3).map((link, index) => (
             <li key={index} className={`flex-1 text-center rounded-full p-3 cursor-pointer ${
@@ -27,7 +27,7 @@ export default function Navbar() {
           ))}
           {/* BA en el centro con enlace a "/" */}
           <li className="flex-1 flex justify-center cursor-pointer">
-            <a href="/" className="bg-theme-magenta-blue text-white flex items-center justify-center rounded-full p-2 font-bold">
+            <a href="/" className="bg-theme-magenta-blue text-white flex items-center justify-center rounded-full p-2 font-extrabold">
               BA
             </a>
           </li>
@@ -40,7 +40,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
         {/* Responsive Navbar */}
         <div className="md:hidden flex w-full justify-between items-center px-4">
           <a href="/" className="w-12 h-12 bg-theme-magenta-blue text-white flex items-center justify-center rounded-full p-2 font-bold">
