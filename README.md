@@ -6,6 +6,7 @@
 
 <h1 align="center">PORTFOLIO - DESING BENTO V2</h1>
 <div align="center">
+
 ![Astro](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -16,7 +17,6 @@ Website developed by [brayanalmengor04](https://github.com/brayanalmengor04) tha
 </div> 
 
 ![banner](./public/screenshot.png)
-
 
 ## 🛠️ Technologies
 
