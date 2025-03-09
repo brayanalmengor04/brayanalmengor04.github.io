@@ -1,8 +1,7 @@
 ---
-import { Image } from 'astro:assets'; 
-import { ArrowBigRight } from 'lucide-astro'; 
-import { Facebook, Instagram, Linkedin } from 'lucide-astro';
-import avatar from '../assets/image/pruebaavatar.png';
+ 
+import { ArrowUpRight } from 'lucide-astro'; 
+import { Facebook, Instagram, Linkedin } from 'lucide-astro'; 
 ---
 <section class="w-full bg-primary flex flex-col md:flex-row">
 <div class="w-full md:w-1/2 flex flex-col justify-center items-start px-10 space-y-6 mt-40 md:mt-30 transition-all duration-300">
@@ -24,17 +23,21 @@ import avatar from '../assets/image/pruebaavatar.png';
   </div> 
     </div>
 </div>  
-<div class="w-full md:w-3/4 lg:w-1/2 flex justify-center items-center p-5">
-  <div class="relative mt-32 w-[90%] sm:w-3/4 h-3/4 bg-theme-magenta-blue rounded-3xl rounded-br-[40%]">
-    <Image src={avatar} alt="Programador con brazos cruzados" class="w-full h-full object-cover" />
-    <!-- Botón flotante en la esquina inferior derecha -->
-    <div class="absolute bottom-0 right-0 bg-primary h-20 w-10 p-20 rounded-full flex justify-center items-center">
-      <a href="#" class="p-8 text-white rounded-full bg-theme-magenta-blue font-bold transition-all duration-300 hover:p-12">
-        <ArrowBigRight class="w-10 h-10 text-white rotate-300 transition-all duration-300 hover:scale-125" />
-      </a>
+ <div class="card_wrapper w-full md:w-3/4 lg:w-1/2 flex justify-center items-center p-5">
+    <div>
+      <div class="card_box bg-theme-magenta-blue">
+      <div class="card_img_box">
+        <img class="" src="/image/pruebaavatar.png" alt="Best home food recipes">
+        <div class="card_icon bg-primary">
+            <a href="#">
+              <ArrowUpRight class="w-15 h-auto" />
+            </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </div> 
+ </div>
+
   <div class="hidden md:flex w-20 flex-col justify-center items-center space-y-4 text-white">
     <p class="text-sm rotate-90">Follow me Social:</p>
     <div class="w-px h-12 bg-gray-500"></div>

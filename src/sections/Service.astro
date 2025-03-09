@@ -1,62 +1,71 @@
 ---
-import { Image } from "astro:assets"; 
-import portfolio from "../assets/image/proyects/proyecto-prueba2.png"  
-import apirest from "../assets/image/proyects/diseño-api.png"  
-import movil from "../assets/image/proyects/movil-desing.png" 
-import { ArrowBigRight } from 'lucide-astro'; 
----
-
-<section class="flex flex-col items-center w-full min-h-screen bg-primary text-white py-16">
-    <div class="text-center max-w-3xl px-6">
+import { ArrowUpRight } from 'lucide-astro';  
+--- 
+<section class="card_wrapper bg-primary">
+    <div class="container mx-auto px-4">
+        <!-- Encabezado --> 
+        <div class="text-center">
         <h3 class="text-lg font-semibold tracking-wide uppercase text-gray-200">My Expertise</h3>
-        <h2 class="text-4xl font-bold mt-2">Innovative Solutions</h2>
+        <h2 class="text-4xl font-bold mt-2 text-white">Innovative Solutions</h2>
         <p class="mt-4 text-lg text-gray-300">
             I offer backend and frontend development for personal clients, creating secure and scalable solutions.  
             From APIs to full-stack apps, I build efficient systems with Spring Boot, Laravel, and modern technologies.  
             Let’s work together to bring your ideas to life!
         </p>
-    </div>
-    <!-- Servicios -->
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl px-6"> 
-
-    <div class="relative bg-theme-magenta-blue text-gray-100 rounded-3xl">
-        <h3 class="text-2xl font-medium text-white p-4">Innovative Web Solutions - Web Development</h3> 
-        <div class="w-full h-0.5 bg-white opacity-50"></div>
-        <div class="relative w-full h-60">
-            <Image src={portfolio} alt="Prueba" class="w-full h-full mt-10 object-cover rounded-br-[100px]" />
+      </div>
+      <!-- Grid de tarjetas -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+        <div>
+           <div class="card_box bg-theme-magenta-blue">
+                <div class="card_text_content">
+                    <h3><a href="#">Innovative Web Solutions - Web Development</a></h3>
+                <p class="text-white">Web development builds interactive sites, yet its core is simplicity.</p>
+                </div>
+            <div class="card_img_box">
+                <img class="w-full h-auto" src="/image/proyects/proyecto-prueba2.png" alt="Best home food recipes">
+              <div class="card_icon bg-primary">
+                  <a href="#">
+                    <ArrowUpRight class="w-15 h-auto" />
+                  </a>
+             </div>
+            </div>
+          </div>
+        </div> 
+        <div>
+          <div class="card_box card_box02 bg-theme-magenta-blue">
+              <div class="card_text_content">
+                  <h3><a href="#">Backend Developer Spring Boot</a></h3>
+                  <p class="text-white">Spring Boot dev builds secure APIs, and highly robust, server-side code.
+                    Clean Code
+                  </p>
+            </div>
+            <div class="card_img_box">
+                <img class="w-full h-auto" src="/image/proyects/diseño-api.png" alt="Home cooking safety tips">
+              <div class="card_icon bg-primary">
+                <a href="#">
+                    <ArrowUpRight class="w-15 h-auto" />
+                </a>
+            </div>
+            </div>
         </div>
-        <div class="absolute -bottom-5 -right-5 bg-primary w-20 h-20 p-15 rounded-full flex justify-center items-center">
-            <a href="#" class="bg-theme-magenta-blue text-white rounded-full p-3 transition-transform transform hover:scale-130">
-                <ArrowBigRight class="w-10 h-10 rotate-[300deg]" />
-            </a>
+        </div> 
+        <!-- Card 3 -->
+        <div>
+            <div class="card_box card_box03 bg-theme-magenta-blue">
+            <div class="card_text_content">
+                <h3><a href="#">Next-Gen Mobile Apps - Kotlin</a></h3>
+                <p class="text-white">Kotlin mobile dev creates smooth Android apps with pure native agile UI.</p>
+            </div>
+            <div class="card_img_box">
+              <img class="w-full h-auto" src="/image/proyects/movil-desing.png" alt="Home cooking snacks tips">
+              <div class="card_icon bg-primary">
+                  <a href="#">
+                    <ArrowUpRight class="w-15 h-auto" />
+                  </a>
+              </div>
+            </div>
+          </div>
         </div>
-    </div> 
-    <!-- Servicio 2 - API Rest Spring Boot -->
-    <div class="relative bg-theme-magenta-blue text-gray-100 rounded-3xl">
-        <h3 class="text-2xl font-medium text-white p-4">Robust API Development - Java Spring Boot</h3> 
-        <div class="w-full h-0.5 bg-white opacity-50"></div>
-        <div class="relative w-full h-60">
-            <Image src={apirest} alt="Prueba" class="w-full h-full mt-10 object-cover rounded-br-[100px]" />
-        </div>
-        <div class="absolute -bottom-5 -right-5 bg-primary w-20 h-20 p-15 rounded-full flex justify-center items-center">
-            <a href="#" class="bg-theme-magenta-blue text-white rounded-full p-3 transition-transform transform hover:scale-130">
-                <ArrowBigRight class="w-10 h-10 rotate-[300deg]" />
-            </a>
-        </div>
-    </div> 
-
-    <!-- Servicio 3 - Desarrollo Móvil -->
-    <div class="relative bg-theme-magenta-blue text-gray-100 rounded-3xl">
-        <h3 class="text-2xl font-medium text-white p-4">Next-Gen Mobile Apps - Kotlin</h3> 
-        <div class="w-full h-0.5 bg-white opacity-50"></div>
-        <div class="relative w-full h-60">
-            <Image src={movil} alt="Prueba" class="w-full h-full mt-10 object-cover rounded-bl-[5px] " />
-        </div>
-        <div class="absolute -bottom-5 -right-5 bg-primary w-20 h-20 p-15 rounded-full flex justify-center items-center">
-            <a href="#" class="bg-theme-magenta-blue text-white rounded-full p-3 transition-transform transform hover:scale-130">
-                <ArrowBigRight class="w-10 h-10 rotate-[300deg]" />
-            </a>
-        </div>
-    </div> 
+      </div>
     </div>
 </section>
