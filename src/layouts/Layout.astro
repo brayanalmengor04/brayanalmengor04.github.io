@@ -1,27 +1,51 @@
 ---
-const {title="Brayan Almengor |Software Developer Backend"} = Astro.props;
+const { 
+	title = "Brayan Almengor - Backend Developer & Software Engineer", 
+	description = "Backend developer specialized in Java, Spring Boot, Laravel, and more. Building scalable and efficient solutions.", 
+	keywords = "Backend Development, Java, Spring Boot, Laravel, API, Software Engineer", 
+	image = "/screenshot.png",
+  	url = "https://brayanalmengorpty.netlify.app/" 
+} = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../assets/style/inverted-card.css">
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content="Brayan Almengor" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+  <!-- Tema del sitio -->
+  <meta name="theme-color" content="#0d1117" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Canonical -->
+  <link rel="canonical" href={url} />
+</head>
+<body>
+  <slot />
+</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
