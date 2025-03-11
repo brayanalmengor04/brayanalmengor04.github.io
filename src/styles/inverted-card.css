@@ -42,6 +42,7 @@ button:focus, input:focus, textarea:focus {
     flex-shrink: 0;
 }
 
+/* Version para la light  */
 .card_wrapper .card_box .card_img_box .card_icon::before {
     content: "";
     position: absolute;
@@ -51,7 +52,7 @@ button:focus, input:focus, textarea:focus {
     width: 20px;
     height: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0.313rem 0.313rem 0 0.313rem #181720;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem #22212a;
 }
 
 .card_wrapper .card_box .card_img_box .card_icon::after {
@@ -63,8 +64,64 @@ button:focus, input:focus, textarea:focus {
     width: 20px;
     height: 20px;
     border-bottom-right-radius: 20px;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem #22212a;
+}
+
+/* Esta es para primary  */
+.card_wrapper .card_box .card_img_box .card_icon-primary {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 96px;
+    height: 96px;
+    border-top-left-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card_wrapper .card_box .card_img_box .card_icon-primary::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 20px;
     box-shadow: 0.313rem 0.313rem 0 0.313rem #181720;
 }
+
+.card_wrapper .card_box .card_img_box .card_icon-primary::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem #181720;
+} 
+.card_wrapper .card_box .card_img_box .card_icon-primary:hover a {
+	transform: scale(1.1);
+}
+
+.card_wrapper .card_box .card_img_box .card_icon-primary a {
+	background: #583ebc;
+	width: 76px;
+	height: 76px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border-radius: 50%;
+	color: #ffffff;
+	font-size: 21px;
+	transition: .5s;
+}
+/* ----------------------------------- */ 
 
 .card_wrapper .card_box .card_img_box .card_icon:hover a {
 	transform: scale(1.1);
