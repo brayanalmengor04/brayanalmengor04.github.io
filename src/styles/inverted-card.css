@@ -104,6 +104,7 @@ button:focus, input:focus, textarea:focus {
     border-bottom-right-radius: 20px;
     box-shadow: 0.313rem 0.313rem 0 0.313rem #181720;
 } 
+
 .card_wrapper .card_box .card_img_box .card_icon-primary:hover a {
 	transform: scale(1.1);
 }
