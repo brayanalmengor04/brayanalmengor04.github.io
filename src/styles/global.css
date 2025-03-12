@@ -6,7 +6,13 @@
     
     --color-theme-dark-light:#292831;
     --color-theme-magenta-blue:#583ebc;
-    --color-theme-white: #ffffff; 
+    --color-theme-white: #ffffff;  
+
+     /* Nuevos colores */
+     --color-electric-blue: #3A86FF;
+     --color-neon-green:   #2AF598;
+     --color-burnt-orange: #FF9F1C;
+     --color-soft-lila:    #9B5DE5;
 } 
 
 body {
