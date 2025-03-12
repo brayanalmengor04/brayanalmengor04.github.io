@@ -191,3 +191,10 @@ button:focus, input:focus, textarea:focus {
 .card_wrapper .card_box03 .card_icon a {
 	background: #583ebc !important;
 }
+
+@media (max-width: 767px) {
+    .card_box {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
