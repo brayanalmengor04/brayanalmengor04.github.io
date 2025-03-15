@@ -4,24 +4,46 @@ import { Icon } from 'astro-icon/components'
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 ---
-<section class="flex flex-col w-full h-full bg-primary p-10">
-    <div class="text-center mb-10">
-        <h3 class="text-4xl font-bold text-white">Featured Works</h3>
+<section class="flex flex-col w-full h-full bg-primary p-10"> 
+  <div class="text-center">
+        <h3 class="text-4xl font-bold text-white p-10">Featured Works</h3>
     </div>
-   
-    <div class="grid grid-cols-7 grid-rows-9 gap-4 grow">
-        <!-- Card 1 con efecto hover -->
-        <div class="relative col-span-2 row-span-2 bg-red-500 shadow-lg rounded-xl h-full overflow-hidden group">
-          <img src="https://placehold.co/150" 
-               alt="Imagen de ejemplo" 
-               class="absolute inset-0 w-full h-full object-cover rounded-xl transition-transform duration-300">
-          <!-- Overlay que aparece al hacer hover -->
 
-          <div class={`absolute inset-0 ${featuredWorks.portfolio.bg_overlay} opacity-0 group-hover:opacity-50 transition duration-300 flex items-center justify-center `}>
-            <span class="text-white font-bold">card 1</span>
-          </div>
-        </div>
-      
+    <div class="grid grid-cols-7 grid-rows-9 gap-4 grow">
+          <div class="relative col-span-2 row-span-2 bg-yellow-800 shadow-lg rounded-xl h-full overflow-hidden group">
+            <img
+              src={featuredWorks.cebuTech.img}
+              alt="Imagen de Cebu Tech - App Android"
+              class="absolute inset-0 w-full h-full object-cover rounded-xl transition-transform duration-300"
+            />
+            <div class={`cursor-pointer absolute inset-0 ${featuredWorks.cebuTech.bg_overlay} opacity-0 group-hover:opacity-90 transition duration-300 flex items-center justify-center p-2 sm:p-4`}>
+              <div class="w-full flex flex-col items-center md:flex-row md:justify-center sm:gap-2 gap-1">
+                {/* Título más pequeño en móviles */}
+                <h3 class="text-white font-bold text-xs sm:text-sm md:text-sm mb-1 sm:mb-2 text-center">
+                  {featuredWorks.cebuTech.title}
+                </h3>
+                {/* Sección de tecnologías (solo en escritorio) */}
+                <div class="w-full md:w-1/2 hidden md:flex flex-wrap justify-center gap-2 mt-2">
+                  {featuredWorks.cebuTech.technologies.map((tech, index) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div key={index}>
+                        <Icon className={`cursor-pointer w-6 h-6 text-gray-300 transition-colors ${tech.hoverBg}`} />
+                      </div>
+                    );
+                  })}
+                </div>
+                <div class="w-full md:w-1/2 flex justify-evenly">
+                  <a href={featuredWorks.cebuTech.githubLink} target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8 text-gray-300 hover:text-gray-900 transition-colors" />
+                  </a>
+                  <a href={featuredWorks.cebuTech.previewLink} target="_blank" rel="noopener noreferrer">
+                    <FiExternalLink className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8 text-gray-300 hover:text-purple-600 transition-colors" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>      
         <!-- Card 2 -->
         <div class="relative col-span-2 row-span-3 col-start-1 row-start-3 bg-blue-500 shadow-lg rounded-xl h-full overflow-hidden group">
           <img src="https://placehold.co/150" 
@@ -35,75 +57,90 @@ import { FiExternalLink } from "react-icons/fi";
         </div>
       
         <!-- Card 3 -->
-        <div class="relative col-span-2 row-span-3 col-start-1 row-start-6 bg-green-500 shadow-lg rounded-xl h-full overflow-hidden group">
+        <div class="relative col-span-2 row-span-4 col-start-1 row-start-6 bg-green-500 shadow-lg rounded-xl h-full overflow-hidden group">
           <img src="https://placehold.co/150" 
                alt="Imagen de ejemplo" 
                class="absolute inset-0 w-full h-full object-cover rounded-xl">
           <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 flex items-center justify-center">
             <span class="text-white font-bold">card 3</span>
           </div>
-        </div>
-
-
-        <!-- Card 4 -->
-        <div class="relative col-span-5 row-span-3 col-start-3 row-start-1 shadow-lg rounded-xl h-full overflow-hidden group">
-            <img
-              src={featuredWorks.portfolio.img}
-              alt="Imagen de ejemplo"
-              class="absolute inset-0 w-full h-full object-cover rounded-xl"
-            />
-            <div
-              class={`absolute inset-0 ${featuredWorks.portfolio.bg_overlay} opacity-0 group-hover:opacity-90 transition duration-300 flex items-center justify-center p-4`}
-            >
-              <div class="w-full flex">
-                <div class="w-1/2 flex flex-col items-center justify-center">
-                  <h3 class="text-white font-bold text-lg md:text-xl mb-2">
-                    {featuredWorks.portfolio.title}
-                  </h3>
-                  <p class="text-white text-xs md:text-sm mb-4 text-center">
-                    {featuredWorks.portfolio.description}
-                  </p>
-                  <div class="flex space-x-2">
-                    {featuredWorks.portfolio.technologies.map((tech, index) => {
-                      const Icon = tech.icon;
-                      return (
-                        <div>
-                          <Icon className={`cursor-pointer w-6 h-6 text-gray-300 transition-colors ${tech.hoverBg}`}
-                          />
-                        </div>
-                      );
-                    })}
+        </div> 
+        
+      <!-- Card 4 -->
+      <div class="relative col-span-5 row-span-3 col-start-3 row-start-1 shadow-lg rounded-xl h-full overflow-hidden group">
+        <img
+          src={featuredWorks.portfolio.img}
+          alt="Imagen de ejemplo"
+          class="absolute inset-0 w-full h-full object-cover rounded-xl"
+        />
+        <div
+          class={`cursor-pointer absolute inset-0 ${featuredWorks.portfolio.bg_overlay} opacity-0 group-hover:opacity-90 transition duration-300 flex items-center justify-center p-4`}
+        >
+          <div class="w-full flex flex-col items-center md:flex-row md:justify-center">
+            <h3 class="text-white font-bold text-sm md:text-lg mb-2 text-center">
+              {featuredWorks.portfolio.title}
+            </h3>
+            {/* Sección de tecnologías: solo se muestra en escritorio */}
+            <div class="w-full md:w-1/2 hidden md:flex flex-wrap justify-center gap-2 mt-2">
+              {featuredWorks.portfolio.technologies.map((tech, index) => {
+                const Icon = tech.icon;
+                return (
+                  <div key={index}>
+                    <Icon className={`cursor-pointer w-6 h-6 text-gray-300 transition-colors ${tech.hoverBg}`} />
                   </div>
-                </div>
-
-                <div class="w-1/2 flex flex-col items-center justify-center space-y-4">
-                  <a
-                    href={featuredWorks.portfolio.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer" >
-                    <FaGithub className="cursor-pointer w-8 h-8 text-gray-300 hover:text-purple-600 transition-colors" />
-                  </a>
-                  <a href={featuredWorks.portfolio.previewLink} target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FiExternalLink className="cursor-pointer w-8 h-8 text-gray-300 hover:text-purple-600 transition-colors" />
-                  </a>
-                </div>
-              </div>
+                );
+              })}
+            </div>
+            {/* Enlaces (GitHub y Preview): se muestran en todos los dispositivos */}
+            <div class="w-full md:w-1/2 flex justify-evenly">
+              <a href={featuredWorks.postifySC.githubLink} target="_blank" rel="noopener noreferrer">
+                <FaGithub className="cursor-pointer w-8 h-8 text-gray-300 hover:text-purple-600 transition-colors" />
+              </a>
+              <a href={featuredWorks.postifySC.previewLink} target="_blank" rel="noopener noreferrer">
+                <FiExternalLink className="cursor-pointer w-8 h-8 text-gray-300 hover:text-purple-600 transition-colors" />
+              </a>
             </div>
           </div>
-
-
-        <!-- Card 5 -->
-        <div class="relative col-span-3 row-span-3 col-start-3 row-start-4 bg-purple-500 shadow-lg rounded-xl h-full overflow-hidden group">
-          <img src="https://placehold.co/150" 
-               alt="Imagen de ejemplo" 
-               class="absolute inset-0 w-full h-full object-cover rounded-xl">
-          <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 flex items-center justify-center">
-            <span class="text-white font-bold">card 5</span>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="relative col-span-3 row-span-3 col-start-3 row-start-4 shadow-lg rounded-xl h-full overflow-hidden group">
+        <img
+          src={featuredWorks.postifySC.img}
+          alt="Imagen de Postify - Share & Connect"
+          class="absolute inset-0 w-full h-full object-cover rounded-xl"
+        />
+        <div
+          class={`cursor-pointer absolute inset-0 ${featuredWorks.postifySC.bg_overlay} opacity-0 group-hover:opacity-90 transition duration-300 flex items-center justify-center p-4`}
+        >
+          <div class="w-full flex flex-col items-center md:flex-row md:justify-center">
+            <h3 class="text-white font-bold text-sm md:text-lg mb-2 text-center">
+              {featuredWorks.postifySC.title}
+            </h3>
+            {/* Sección de tecnologías: solo se muestra en escritorio */}
+            <div class="w-full md:w-1/2 hidden md:flex flex-wrap justify-center gap-2 mt-2">
+              {featuredWorks.postifySC.technologies.map((tech, index) => {
+                const Icon = tech.icon;
+                return (
+                  <div key={index}>
+                    <Icon className={`cursor-pointer w-6 h-6 text-gray-300 transition-colors ${tech.hoverBg}`} />
+                  </div>
+                );
+              })}
+            </div>
+            {/* Enlaces (GitHub y Preview): se muestran en todos los dispositivos */}
+            <div class="w-full md:w-1/2 flex justify-evenly">
+              <a href={featuredWorks.postifySC.githubLink} target="_blank" rel="noopener noreferrer">
+                <FaGithub className="cursor-pointer w-8 h-8 text-gray-300 hover:text-gray-900 transition-colors" />
+              </a>
+              <a href={featuredWorks.postifySC.previewLink} target="_blank" rel="noopener noreferrer">
+                <FiExternalLink className="cursor-pointer w-8 h-8 text-gray-300 hover:text-purple-600 transition-colors" />
+              </a>
+            </div>
           </div>
         </div>
-      
+      </div>
+
         <!-- Card 6 -->
         <div class="relative col-span-2 row-span-2 col-start-6 row-start-4 bg-pink-500 shadow-lg rounded-xl h-full overflow-hidden group">
           <img src="https://placehold.co/150" 
@@ -115,7 +152,7 @@ import { FiExternalLink } from "react-icons/fi";
         </div>
       
         <!-- Card 7 -->
-        <div class="relative col-span-2 row-span-3 col-start-6 row-start-6 bg-indigo-500 shadow-lg rounded-xl h-full overflow-hidden group">
+        <div class="relative col-span-2 row-span-4 col-start-6 row-start-6 bg-indigo-500 shadow-lg rounded-xl h-full overflow-hidden group">
           <img src="https://placehold.co/150" 
                alt="Imagen de ejemplo" 
                class="absolute inset-0 w-full h-full object-cover rounded-xl">
@@ -123,18 +160,40 @@ import { FiExternalLink } from "react-icons/fi";
             <span class="text-white font-bold">card 7</span>
           </div>
         </div>
-      
-        <!-- Card 8 -->
-        <div class="relative col-span-3 row-span-2 col-start-3 row-start-7 bg-gray-500 shadow-lg rounded-xl h-full overflow-hidden group">
-          <img src="https://placehold.co/150" 
-               alt="Imagen de ejemplo" 
-               class="absolute inset-0 w-full h-full object-cover rounded-xl">
-          <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 flex items-center justify-center">
-            <span class="text-white font-bold">card 8</span>
+      <!-- Card 8 -->
+        <div class="relative col-span-3 row-span-3 col-start-3 row-start-7 shadow-lg rounded-xl h-full overflow-hidden group">
+          <img
+            src={featuredWorks.restaurantMenu.img}
+            alt="Imagen de Comprehensive Restaurant Menu Management System with Modern Features"
+            class="absolute inset-0 w-full h-full object-cover rounded-xl"
+          />
+          <div class={`cursor-pointer absolute inset-0 ${featuredWorks.restaurantMenu.bg_overlay} opacity-0 group-hover:opacity-90 transition duration-300 flex items-center justify-center p-4`}>
+            <div class="w-full flex flex-col items-center md:flex-row md:justify-center">
+              <h3 class="text-white font-bold text-sm md:text-lg mb-2 text-center">
+                {featuredWorks.restaurantMenu.title}
+              </h3>
+              {/* Sección de tecnologías (visible en escritorio) */}
+              <div class="w-full md:w-1/2 hidden md:flex flex-wrap justify-center gap-2 mt-2">
+                {featuredWorks.restaurantMenu.technologies.map((tech, index) => {
+                  const Icon = tech.icon;
+                  return (
+                    <div key={index}>
+                      <Icon className={`cursor-pointer w-6 h-6 text-gray-300 transition-colors ${tech.hoverBg}`} />
+                    </div>
+                  );
+                })}
+              </div>
+              <div class="w-full md:w-1/2 flex justify-evenly">
+                <a href={featuredWorks.restaurantMenu.githubLink} target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="cursor-pointer w-8 h-8 text-gray-300 hover:text-gray-900 transition-colors" />
+                </a>
+                <a href={featuredWorks.restaurantMenu.previewLink} target="_blank" rel="noopener noreferrer">
+                  <FiExternalLink className="cursor-pointer w-8 h-8 text-gray-300 hover:text-purple-600 transition-colors" />
+                </a>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
-      
       
 </section>
