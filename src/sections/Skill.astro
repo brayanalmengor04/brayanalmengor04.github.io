@@ -1,9 +1,10 @@
 ---
-
+import 'aos/dist/aos.css';
+import AOSClient from '../components/AOSClient';
 ---
 <section class="bg-primary flex w-full h-auto p-10 flex-col md:flex-row items-center">
     <!-- Texto -->
-    <div class="w-full md:w-2/5 pr-8">
+    <div data-aos="fade-right" class="w-full md:w-2/5 pr-8">
         <div class="text-start">
             <h3 class="text-lg font-semibold tracking-wide uppercase text-gray-200">My Skills</h3>
             <h2 class="text-4xl font-bold mt-3 text-white leading-tight">
@@ -15,16 +16,15 @@
                 From designing intuitive RESTful APIs to optimizing database efficiency,  
                 I ensure seamless, robust, and future-proof architectures.  
             </p>
-            
         </div>        
     </div> 
     <!-- Skill Bento -->
-    <div class="grid grid-cols-2 gap-5 mt-10 w-full md:w-3/5 md:grid-cols-6 md:grid-rows-7">
-        <div class="bg-theme-magenta-blue col-span-2 row-span-1 md:col-span-3 md:row-span-2 md:col-start-1 md:row-start-2 flex flex-wrap items-center justify-between rounded-xl shadow-lg p-3">
+    <div data-aos="fade-left" class="grid grid-cols-2 gap-5 mt-10 w-full md:w-3/5 md:grid-cols-6 md:grid-rows-7">
+        <!-- Card 1: MySQL -->
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-theme-magenta-blue col-span-2 row-span-1 md:col-span-3 md:row-span-2 md:col-start-1 md:row-start-2 flex flex-wrap items-center justify-between rounded-xl shadow-lg p-3">
           <div class="flex flex-col items-start w-1/2 space-y-1">
             <i>
-              <img src="/image/icon/mysql.svg" srcset="/image/icon/mysql@2x.png 2x, /image/icon/mysql@3x.png 3x" 
-                   alt="MySQL database icon" class="w-8 h-8 pd-5 bg-white rounded-xl">
+              <img src="/image/icon/mysql.svg"  alt="MySQL database icon" class="w-8 h-8 pd-5 bg-white rounded-xl">
             </i>
             <div class="text-start p-1">
               <h4 class="text-white font-semibold text-lg">MySQL</h4>    
@@ -32,14 +32,15 @@
             </div>
           </div>
           <div class="w-1/2 h-30">
-            <img src="/image/bento/mysql.jpg" srcset="/image/bento/mysql@2x.jpg 2x, /image/bento/mysql@3x.jpg 3x" 
+            <img src="/image/bento/mysql.jpg"  
                  alt="MySQL database banner" class="w-full h-full object-cover rounded-lg">
           </div>
         </div>  
-        <div class="bg-theme-magenta-blue col-span-1 row-span-1 md:col-span-2 md:row-span-4 md:col-start-2 md:row-start-4 flex flex-col rounded-xl shadow-lg p-3">
+        <!-- Card 2: Docker -->
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-theme-magenta-blue col-span-1 row-span-1 md:col-span-2 md:row-span-4 md:col-start-2 md:row-start-4 flex flex-col rounded-xl shadow-lg p-3">
           <div class="flex flex-col items-start w-full mb-1">
             <i>
-              <img src="/image/icon/docker1.svg" srcset="/image/icon/docker@2x.png 2x, /image/icon/docker@3x.png 3x" 
+              <img src="/image/icon/docker1.svg"  
                    alt="Docker containerization platform icon" class="w-8 h-8 pd-5 bg-white rounded-xl mb-1">
             </i>
             <div class="ml-2 text-start">
@@ -48,14 +49,15 @@
             </div>
           </div>
           <div class="h-full mt-3">
-            <img src="/image/bento/dockerbanner.jpg" srcset="/image/bento/dockerbanner@2x.jpg 2x, /image/bento/dockerbanner@3x.jpg 3x" 
+            <img src="/image/bento/dockerbanner.jpg" 
                  alt="Docker banner image showing containerization concept" class="w-full h-full object-cover rounded-lg">
           </div>
         </div>
-        <div class="bg-theme-magenta-blue col-span-1 row-span-1 md:col-span-2 md:row-span-4 md:col-start-4 md:row-start-1 flex flex-col rounded-xl shadow-lg p-3 overflow-hidden">
+        <!-- Card 3: Spring Boot -->
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-theme-magenta-blue col-span-1 row-span-1 md:col-span-2 md:row-span-4 md:col-start-4 md:row-start-1 flex flex-col rounded-xl shadow-lg p-3 overflow-hidden">
           <div class="flex flex-col items-start w-full mb-1">
             <i>
-              <img src="/image/icon/springboot.svg" srcset="/image/icon/springboot@2x.svg 2x, /image/icon/springboot@3x.svg 3x" 
+              <img src="/image/icon/springboot.svg" 
                    alt="Spring Boot framework icon" class="w-8 h-8 pd-5 bg-white rounded-xl mb-1">
             </i>
             <div class="text-start">
@@ -64,15 +66,15 @@
             </div>
           </div>
           <div class="w-full h-full flex mt-3">
-            <img src="/image/bento/springbootbanner.png" srcset="/image/bento/springbootbanner@2x.png 2x, /image/bento/springbootbanner@3x.png 3x" 
+            <img src="/image/bento/springbootbanner.png"
                  alt="Spring Boot banner with API development concept" class="w-full h-full object-cover rounded-lg">
           </div>
         </div>
-        <div class="bg-theme-magenta-blue col-span-2 row-span-1 md:col-span-3 md:row-span-2 md:col-start-4 md:row-start-5 flex flex-nowrap items-center rounded-xl shadow-lg p-3">
+        <!-- Card 4: Figma -->
+        <div data-aos="fade-up" data-aos-delay="400" class="bg-theme-magenta-blue col-span-2 row-span-1 md:col-span-3 md:row-span-2 md:col-start-4 md:row-start-5 flex flex-nowrap items-center rounded-xl shadow-lg p-3">
           <div class="w-1/2 flex flex-col items-start space-x-1">
-            <i >
-              <img src="/image/icon/figma.svg" srcset="/image/icon/figma@2x.png 2x, /image/icon/figma@3x.png 3x" 
-                   alt="Figma UI/UX design tool icon" class="w-8 h-8 bg-white rounded-xl">
+            <i>
+              <img src="/image/icon/figma.svg" alt="Figma UI/UX design tool icon" class="w-8 h-8 bg-white rounded-xl">
             </i>
             <div>
               <h4 class="text-white font-semibold text-lg">Figma</h4>    
@@ -80,10 +82,12 @@
             </div>
           </div>
           <div class="w-1/2 h-full">
-            <img src="/image/bento/figma.png" srcset="/image/bento/figma@2x.png 2x, /image/bento/figma@3x.png 3x" 
+            <img src="/image/bento/figma.png"  
                  alt="Figma banner showcasing UI/UX prototyping" class="w-full h-full object-cover rounded-lg">
           </div>
         </div>
       </div>
       
 </section>
+
+<AOSClient client:load />
