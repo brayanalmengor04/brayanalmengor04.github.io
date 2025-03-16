@@ -1,5 +1,5 @@
 import { SiHtml5, SiCss3, SiJavascript, SiAstro, SiSpring, SiReact, SiMysql,SiHibernate,SiDocker
-,SiLaravel,SiBootstrap,SiKotlin,SiComposer,SiJetpackcompose,SiAndroid
+,SiLaravel,SiBootstrap,SiKotlin,SiComposer,SiJetpackcompose,SiAndroid,SiFigma
  } from "react-icons/si"; 
 
 export const featuredWorks = {
@@ -62,6 +62,23 @@ export const featuredWorks = {
   ],
   githubLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
   previewLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
-  }, 
+  },   
+  figmaDesign: {
+    title: "Figma UI/UX Design",
+    description: "Modern UI/UX designs for web and mobile applications using Figma.",
+    img: "/image/proyects/figmaDesign.png",
+    bg_overlay: "bg-orange-800",
+    technologies: [
+      { name: "Figma", icon: SiFigma, hoverBg: "hover:text-white-500" }
+    ]
+  },
+  comingSoonProject: {
+    title: "Coming Soon",
+    description: "Comming soon proyects",
+    img: "/image/proyects/commingSoon.jpg",
+    bg_overlay: "bg-gray-800",
+    githubLink: "#", // Placeholder link
+    previewLink: "#", // Placeholder link
+  },
 
 };

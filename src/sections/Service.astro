@@ -1,74 +1,78 @@
 ---
-import { ArrowUpRight } from 'lucide-astro';  
---- 
+import { ArrowUpRight } from 'lucide-astro';   
+import AOSClient from '../components/AOSClient';
+import 'aos/dist/aos.css';
+---
 <section class="card_wrapper bg-primary-light">
     <div class="container mx-auto px-4">
-        <!-- Encabezado --> 
-        <div class="text-center">
-        <h3 class="text-lg font-semibold tracking-wide uppercase text-gray-200">My Expertise</h3>
-        <h2 class="text-4xl font-bold mt-2 text-white">Innovative Solutions</h2> 
-        <p class="mt-4 text-lg text-gray-300">
-            I offer backend and frontend development for personal clients, creating secure and scalable solutions.  
-            From APIs to full-stack apps, I build efficient systems with Spring Boot, Laravel, and modern technologies.  
-            Let’s work together to bring your ideas to life!
-        </p>
-      </div>
-      <!-- Grid de tarjetas -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-        <div>
-           <div class="card_box bg-theme-magenta-blue">
-                <div class="card_text_content">
-                    <h3><a href="#">Web Developer - Modern Desing</a></h3> 
-                    <div class="w-full border border-white mb-5"></div>   
-                <p class="text-white">Web development builds interactive sites, yet its core is simplicity.</p>
+        <!-- Encabezado -->
+        <div data-aos="fade-up" class="text-center">
+            <h3 class="text-lg font-semibold tracking-wide uppercase text-gray-200">My Expertise</h3>
+            <h2 class="text-4xl font-bold mt-2 text-white">Innovative Solutions</h2> 
+            <p class="mt-4 text-lg text-gray-300">
+                I offer backend and frontend development for personal clients, creating secure and scalable solutions.  
+                From APIs to full-stack apps, I build efficient systems with Spring Boot, Laravel, and modern technologies.  
+                Let’s work together to bring your ideas to life!
+            </p>
+        </div>
+        <!-- Grid de tarjetas -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <div class="card_box bg-theme-magenta-blue">
+                    <div class="card_text_content">
+                        <h3><a href="#">Web Developer - Modern Desing</a></h3> 
+                        <div class="w-full border border-white mb-5"></div>   
+                        <p class="text-white">Web development builds interactive sites, yet its core is simplicity.</p>
+                    </div>
+                    <div class="card_img_box">
+                        <img class="w-full h-auto" src="/image/website.png" alt="Best home food recipes">
+                        <div class="card_icon bg-primary-light">
+                            <a href="#">
+                                <ArrowUpRight class="w-15 h-auto" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            <div class="card_img_box">
-                <img class="w-full h-auto" src="/image/website.png" alt="Best home food recipes">
-              <div class="card_icon bg-primary-light">
-                  <a href="#">
-                    <ArrowUpRight class="w-15 h-auto" />
-                  </a>
-             </div>
-            </div>
-          </div>
-        </div> 
-        <div>
-          <div class="card_box card_box02 bg-theme-magenta-blue">
-              <div class="card_text_content">
-                  <h3><a href="#">Backend Developer Spring Boot</a></h3> 
-                  <div class="w-full border border-white mb-5"></div> 
-                  <p class="text-white">Spring Boot dev builds secure APIs, and highly robust, server-side code.
-                    Clean Code
-                  </p>
-            </div>
-            <div class="card_img_box">
-                <img class="w-full h-auto" src="/image/backend.png" alt="Home cooking safety tips">
-              <div class="card_icon bg-primary-light">
-                <a href="#">
-                    <ArrowUpRight class="w-15 h-auto" />
-                </a>
-            </div>
+            </div> 
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="card_box card_box02 bg-theme-magenta-blue">
+                    <div class="card_text_content">
+                        <h3><a href="#">Backend Developer Spring Boot</a></h3> 
+                        <div class="w-full border border-white mb-5"></div> 
+                        <p class="text-white">
+                            Spring Boot dev builds secure APIs, and highly robust, server-side code. Clean Code
+                        </p>
+                    </div>
+                    <div class="card_img_box">
+                        <img class="w-full h-auto" src="/image/backend.png" alt="Home cooking safety tips">
+                        <div class="card_icon bg-primary-light">
+                            <a href="#">
+                                <ArrowUpRight class="w-15 h-auto" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!-- Card 3 -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <div class="card_box card_box03 bg-theme-magenta-blue">
+                    <div class="card_text_content">
+                        <h3><a href="#">Next-Gen Mobile Apps - Kotlin</a></h3> 
+                        <div class="w-full border border-white mb-5"></div> 
+                        <p class="text-white">Kotlin mobile dev creates smooth Android apps with pure native agile UI.</p>
+                    </div>
+                    <div class="card_img_box">
+                        <img class="w-full h-auto" src="/image/desingmovil.png" alt="Home cooking snacks tips">
+                        <div class="card_icon bg-primary-light">
+                            <a href="#">
+                                <ArrowUpRight class="w-15 h-auto" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div> 
-        <!-- Card 3 -->
-        <div>
-            <div class="card_box card_box03 bg-theme-magenta-blue">
-            <div class="card_text_content">
-                <h3><a href="#">Next-Gen Mobile Apps - Kotlin</a></h3> 
-                <div class="w-full border border-white mb-5"></div> 
-                <p class="text-white">Kotlin mobile dev creates smooth Android apps with pure native agile UI.</p>
-            </div>
-            <div class="card_img_box">
-              <img class="w-full h-auto" src="/image/desingmovil.png" alt="Home cooking snacks tips">
-              <div class="card_icon bg-primary-light">
-                  <a href="#">
-                    <ArrowUpRight class="w-15 h-auto" />
-                  </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 </section>
+
+<AOSClient client:load />

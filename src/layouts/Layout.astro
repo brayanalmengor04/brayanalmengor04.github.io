@@ -1,11 +1,15 @@
 ---
+import 'aos/dist/aos.css'; 
+import AOSClient from '../components/AOSClient';
+
 const { 
 	title = "Brayan Almengor - Backend Developer & Software Engineer", 
 	description = "Backend developer specialized in Java, Spring Boot, Laravel, and more. Building scalable and efficient solutions.", 
 	keywords = "Backend Development, Java, Spring Boot, Laravel, API, Software Engineer", 
 	image = "/screenshot.png",
   	url = "https://brayanalmengorpty.netlify.app" 
-} = Astro.props;
+} = Astro.props; 
+
 ---
 
 <!DOCTYPE html>
@@ -37,11 +41,11 @@ const {
   <!-- Canonical -->
   <link rel="canonical" href={url} /> 
 </head>
-<body>
+<body class="overflow-x-hidden">
   <slot /> 
-
-
-</body>  
+  
+</body>   
+  <AOSClient client:load /> 
 </html>
 
 <style>

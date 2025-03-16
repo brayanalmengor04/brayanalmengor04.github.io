@@ -1,10 +1,12 @@
 ---
- 
 import { ArrowUpRight } from 'lucide-astro'; 
 import { Facebook, Instagram, Linkedin } from 'lucide-astro'; 
+import AOSClient from '../components/AOSClient';
+
 ---
 <section class="w-full bg-primary flex flex-col md:flex-row">
-<div class="w-full md:w-1/2 flex flex-col justify-center items-start px-10 space-y-6 mt-40 md:mt-30 transition-all duration-300">
+  <!-- Texto y botones -->
+<div data-aos="fade-right" class="w-full md:w-1/2 flex flex-col justify-center items-start px-10 space-y-6 mt-40 md:mt-30 transition-all duration-300">
   <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
     I'm <span class="text-theme-magenta-blue">Brayan Almengor</span>, <br> Backend Developer
   </h1>  
@@ -13,32 +15,34 @@ import { Facebook, Instagram, Linkedin } from 'lucide-astro';
     Passionate about building scalable, efficient, and high-performance systems, optimizing databases,  
     and designing robust APIs that drive seamless user experiences.
   </p>
-  <div class="flex justify-center sm:justify-start space-x-4 w-full">
-    <a href="#" class="w-2/5 sm:w-auto px-4 sm:px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-cyan-600 transition text-center">
+  <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 w-full">
+    <a href="#" class="w-full sm:w-auto px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-cyan-600 transition text-center">
       About Me
     </a>
-    <a href="#" class="w-2/5 sm:w-auto px-4 sm:px-6 py-3 text-white bg-theme-magenta-blue font-semibold rounded-lg hover:bg-white hover:text-primary transition text-center">
+    <a href="#" class="w-full sm:w-auto px-6 py-3 text-white bg-theme-magenta-blue font-semibold rounded-lg hover:bg-white hover:text-primary transition text-center">
       Download CV
     </a>
   </div> 
-    </div>
-</div>  
- <div class="card_wrapper w-full md:w-3/4 lg:w-1/2 flex justify-center items-center p-5">
+</div>
+  
+  <!-- Tarjeta (avatar y enlace) -->
+  <div data-aos="zoom-in" class="card_wrapper w-full md:w-3/4 lg:w-1/2 flex justify-center items-center p-5">
     <div>
       <div class="card_box bg-theme-magenta-blue">
-      <div class="card_img_box">
-        <img class="" src="/image/pruebaavatar.png" alt="Best home food recipes">
-        <div class="card_icon-primary bg-primary">
+        <div class="card_img_box">
+          <img src="/image/pruebaavatar.png" alt="Best home food recipes">
+          <div class="card_icon-primary bg-primary">
             <a href="#">
               <ArrowUpRight class="w-15 h-auto" />
             </a>
+          </div>
         </div>
       </div>
-    </div>
-  </div> 
- </div>
+    </div> 
+  </div>
 
-  <div class="hidden md:flex w-20 flex-col justify-center items-center space-y-4 text-white">
+  <!-- Iconos de redes sociales -->
+  <div data-aos="fade-up" class="hidden md:flex w-20 flex-col justify-center items-center space-y-4 text-white">
     <p class="text-sm rotate-90">Follow me Social:</p>
     <div class="w-px h-12 bg-gray-500"></div>
     <a href="#" class="p-2 bg-white rounded-full hover:scale-110 transition-transform duration-300">
@@ -52,3 +56,5 @@ import { Facebook, Instagram, Linkedin } from 'lucide-astro';
     </a>
   </div>
 </section>
+
+<AOSClient client:load />
