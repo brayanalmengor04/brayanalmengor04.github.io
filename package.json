@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "@iconify-json/mdi": "^1.2.3",
     "@tailwindcss/vite": "^4.0.12",
@@ -18,6 +19,7 @@
     "lucide-astro": "^0.479.0",
     "lucide-react": "^0.479.0",
     "lucide-svelte": "^0.479.0",
+    "primereact": "^10.9.3",
     "react-icons": "^5.5.0",
     "tailwindcss": "^4.0.12"
   },
