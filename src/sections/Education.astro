@@ -1,0 +1,63 @@
+---
+import AOSClient from "../components/AOSClient";
+---
+<section class="bg-primary py-12 px-6">
+    <AOSClient client:load />
+    <div class="text-center mb-8" data-aos="fade-up">
+      <h3 class="text-lg font-semibold tracking-wide uppercase text-gray-200">My Academic Journey</h3>
+      <h2 class="text-4xl font-bold mt-2 text-white">Education & Training</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-5 gap-4 max-w-6xl mx-auto">
+      <!-- Main Education Card -->
+      <div class="col-span-1 md:col-span-3 md:row-span-5 bg-primary-light p-6 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-101 cursor-pointer" data-aos="fade-right">
+        <div class="mb-4">
+          <img src="/image/education.jpg" alt="Education Image" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="text-white">
+          <div class="flex items-center space-x-2 mb-2">
+            <span class="text-lg font-semibold flex items-center gap-2">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.78552 9.5 12.7855 14l9-4.5-9-4.5-8.99998 4.5Zm0 0V17m3-6v6.2222c0 .3483 2 1.7778 5.99998 1.7778 4 0 6-1.3738 6-1.7778V11"/>
+                  </svg>
+                  
+              Bachelor's in Software Development
+            </span>
+            <span class="text-gray-400">2025</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">
+            I am currently pursuing a Bachelor's degree in Software Development at the Technological University of Panama, enhancing my skills in programming, software architecture, and innovative technologies for building efficient and scalable applications.
+          </p>
+        </div>
+      </div>
+      
+    <!-- Comercio -->
+<div class="col-span-1 md:col-span-2 md:row-span-3 md:col-start-4 bg-primary-light p-6 rounded-lg shadow-md text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer" data-aos="fade-left">
+    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"> 
+      <svg class="w-14 h-14 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20v-9l-4 1.125V20h4Zm0 0h8m-8 0V6.66667M16 20v-9l4 1.125V20h-4Zm0 0V6.66667M18 8l-6-4-6 4m5 1h2m-2 3h2"/>
+      </svg>           
+      Diploma in Commerce from Moisés Castillo Ocaña High School
+    </h3>
+    <span class="text-gray-400 block mb-4">2019</span>
+    <p class="text-gray-300 text-sm leading-relaxed">
+      I earned a Diploma in Commerce at Moisés Castillo Ocaña High School, gaining knowledge in business fundamentals, financial analysis, and economic theories, which built a strong foundation for my career.
+    </p>
+  </div>
+  
+   <div class="col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-4 bg-primary-light p-6 rounded-lg shadow-md text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer" data-aos="fade-up">
+    <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
+        </svg>
+        Certification Course
+        </h3>
+        <span class="text-gray-400 block mb-4">2022</span>
+        <p class="text-gray-300 text-sm leading-relaxed">
+            I completed Udemy courses in software development, focusing on agile methodologies and innovative practices to complement my formal education.
+        </p>
+    </div>
+
+    
+    </div>
+  </section>
+  

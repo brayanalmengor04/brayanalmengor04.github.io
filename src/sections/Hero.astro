@@ -16,23 +16,21 @@ import AOSClient from '../components/AOSClient';
     and designing robust APIs that drive seamless user experiences.
   </p>
   <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 w-full">
-    <a href="#" class="w-full sm:w-auto px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-cyan-600 transition text-center">
+    <a href="#" class="w-full sm:w-auto px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-primary-light hover:text-white transition text-center">
       About Me
     </a>
-    <a href="#" class="w-full sm:w-auto px-6 py-3 text-white bg-theme-magenta-blue font-semibold rounded-lg hover:bg-white hover:text-primary transition text-center">
+    <a href="/file/Brayan_Almengor_Desarrollador_Backend.pdf" target="_blank"  class="w-full sm:w-auto px-6 py-3 text-white bg-theme-magenta-blue font-semibold rounded-lg hover:bg-white hover:text-primary transition text-center">
       Download CV
     </a>
   </div> 
 </div>
-  
-  <!-- Tarjeta (avatar y enlace) -->
   <div data-aos="zoom-in" class="card_wrapper w-full md:w-3/4 lg:w-1/2 flex justify-center items-center p-5">
     <div>
       <div class="card_box bg-theme-magenta-blue">
         <div class="card_img_box">
-          <img src="/image/pruebaavatar.png" alt="Best home food recipes">
+          <img src="/image/pruebaavatar.png" alt="Avatar demo design">
           <div class="card_icon-primary bg-primary">
-            <a href="#">
+            <a href="https://www.linkedin.com/in/brayan-antonio/" target="_blank">
               <ArrowUpRight class="w-15 h-auto" />
             </a>
           </div>
@@ -40,21 +38,24 @@ import AOSClient from '../components/AOSClient';
       </div>
     </div> 
   </div>
+ <!-- Iconos de redes sociales -->
+<div data-aos="fade-up" class="hidden md:flex w-20 flex-col justify-center items-center space-y-4 text-white">
+  <p class="text-sm rotate-90">Follow me Social:</p>
+  <div class="w-px h-12 bg-gray-500"></div>
+  
+  <a href="#" class="p-2 rounded-full bg-white transition-all duration-300 transform hover:scale-125 hover:rotate-6 hover:shadow-lg hover:bg-gradient-to-r from-purple-600 to-indigo-600">
+    <Facebook class="w-5 h-5 text-purple-600 hover:text-white transition-colors duration-300" />
+  </a>
 
-  <!-- Iconos de redes sociales -->
-  <div data-aos="fade-up" class="hidden md:flex w-20 flex-col justify-center items-center space-y-4 text-white">
-    <p class="text-sm rotate-90">Follow me Social:</p>
-    <div class="w-px h-12 bg-gray-500"></div>
-    <a href="#" class="p-2 bg-white rounded-full hover:scale-110 transition-transform duration-300">
-      <Facebook class="w-5 h-5 text-purple-600" />
-    </a>
-    <a href="#" class="p-2 bg-white rounded-full hover:scale-110 transition-transform duration-300">
-      <Instagram class="w-5 h-5 text-purple-600" />
-    </a>
-    <a href="#" class="p-2 bg-white rounded-full hover:scale-110 transition-transform duration-300">
-      <Linkedin class="w-5 h-5 text-purple-600" />
-    </a>
-  </div>
+  <a href="#" class="p-2 rounded-full bg-white transition-all duration-300 transform hover:scale-125 hover:rotate-6 hover:shadow-lg hover:bg-gradient-to-r from-purple-600 to-indigo-600">
+    <Instagram class="w-5 h-5 text-purple-600 hover:text-white transition-colors duration-300" />
+  </a>
+
+  <a href="www.linkedin.com/in/brayan-antonio" target="_blank" class="p-2 rounded-full bg-white transition-all duration-300 transform hover:scale-125 hover:rotate-6 hover:shadow-lg hover:bg-gradient-to-r from-purple-600 to-indigo-600">
+    <Linkedin class="w-5 h-5 text-purple-600 hover:text-white transition-colors duration-300" />
+  </a>
+</div>
+
 </section>
 
 <AOSClient client:load />
