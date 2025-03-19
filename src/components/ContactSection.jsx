@@ -54,7 +54,7 @@ export default function ContactSection() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2" data-aos="fade-right" data-aos-delay="300">
+          <div className="lg:col-span-2" data-aos="fade-up" data-aos-delay="300">
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div data-aos="fade-up" data-aos-delay="350">
@@ -149,7 +149,7 @@ export default function ContactSection() {
             )}
           </div>
 
-          <div className="space-y-8" data-aos="fade-left" data-aos-delay="300">
+          <div className="space-y-8" data-aos="fade-up" data-aos-delay="300">
             <div 
               className="bg-[var(--color-theme-dark-light)] p-6 rounded-md flex items-start gap-4" 
               data-aos="flip-left" 
