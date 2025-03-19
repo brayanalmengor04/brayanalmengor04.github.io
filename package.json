@@ -16,6 +16,7 @@
     "@tailwindcss/vite": "^4.0.12",
     "aos": "^2.3.4",
     "astro": "^5.4.2",
+    "axios": "^1.8.3",
     "lucide-astro": "^0.479.0",
     "lucide-react": "^0.479.0",
     "lucide-svelte": "^0.479.0",

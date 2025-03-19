@@ -1,48 +1,32 @@
 "use client";
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaBuilding, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
-import emailjs from "@emailjs/browser"; 
+import emailjs from "@emailjs/browser";
+import { useEmailSender } from "../hook/useEmailSender";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    firstName: "", 
-    lastName: "", 
-    email: "", 
-    phone: "",
+  const [formData, setFormData] = useState({firstName: "",lastName: "",email: "",phone: "",
     message: ""
   });
-  const [statusMessage, setStatusMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { sendEmail, isLoading, statusMessage } = useEmailSender();
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => {const { name, value } = e.target;
+  setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
-    setStatusMessage("");
     const currentTime = new Date().toLocaleString();
     const dataToSend = { ...formData, time: currentTime };
-
-    emailjs.send("service_mjpqkut", "template_ybuhjd1", dataToSend, "OVGze8PngAHdh0X9V")
-      .then(() => {
-        setStatusMessage("Your message has been sent successfully!");
-        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
-        setIsModalOpen(true);
-      })
-      .catch((err) => {
-        setStatusMessage("Something went wrong. Please try again later.");
-        console.error(err);
-      })
-      .finally(() => setIsLoading(false));
+    const result = await sendEmail(dataToSend);
+    if (result.success) {
+      setFormData({firstName: "",lastName: "",email: "",phone: "",message: ""
+      });
+      setIsModalOpen(true);
+    }
   };
-
   return (
-    <section 
-      className="bg-[var(--color-primary-light)] text-gray-200 py-16 px-4 md:px-8" 
-      id="contact">
+    <section className="bg-[var(--color-primary-light)] text-gray-200 py-16 px-4 md:px-8" id="contact">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12" data-aos="zoom-in" data-aos-delay="200">
           <h2 className="text-3xl font-bold mb-3">Contact Us</h2>
@@ -137,11 +121,11 @@ export default function ContactSection() {
                 type="submit" 
                 className="bg-theme-magenta-blue hover:bg-primary text-white font-medium py-2.5 px-5 rounded-md flex items-center gap-2 cursor-pointer" 
                 disabled={isLoading}
-              >
+              > 
                 <FaPaperPlane className="text-sm" />
                 {isLoading ? "Sending..." : "Send Message"}
               </button>
-            </form>
+            </form> 
             {statusMessage && (
               <p className="mt-4 text-sm text-center text-gray-400" data-aos="fade-up" data-aos-delay="700">
                 {statusMessage}
@@ -174,7 +158,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="font-semibold text-lg mb-1">Address:</h3>
-                <p className="text-gray-400">PANAMÁ , PANAMÁ CITY , ARRAIJAN</p>
+                <p className="text-gray-400">PANAMÁ, PANAMÁ CITY, ARRAIJAN</p>
                 <p className="text-gray-400">ZIP Code: 7002</p>
               </div>
             </div>
@@ -182,9 +166,7 @@ export default function ContactSection() {
         </div>
       </div>
       {isModalOpen && (
-        <div 
-          className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50" 
-        >
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm mx-auto text-center">
             <FaCheckCircle className="text-green-500 text-6xl mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2 text-gray-700">Message Sent</h3>
@@ -197,7 +179,7 @@ export default function ContactSection() {
             </button>
           </div>
         </div>
-      )}
+      )} 
     </section>
   );
 }
