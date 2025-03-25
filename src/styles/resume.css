@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+.resume-title {
+  @apply text-white text-[26px] font-bold mt-5 mb-5;
+}
+
+/* Resume Item */
+.resume-item {
+  @apply relative pl-5 pb-5 border-l-2;
+  border-color: var(--color-white);
+}
+
+.resume-item h4 {
+  @apply text-[18px] font-semibold uppercase mb-2;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.resume-item h5 {
+  @apply text-[16px] font-semibold px-4 py-1 inline-block mb-2;
+}
+
+.resume-item ul {
+  @apply list-disc ml-5;
+}
+
+.resume-item ul li {
+  @apply pb-2;
+}
+
+.resume-item:last-child {
+  @apply pb-0;
+}
+
+/* Pseudo-elemento para el bullet de la línea de tiempo */
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: -9px;
+  top: 0;
+  background: var(--color-primary);
+  border: 2px solid var(--color-white);
+}

@@ -78,7 +78,7 @@ export default function ContactSection() {
                     name="email" 
                     value={formData.email} 
                     onChange={handleChange} 
-                    placeholder="name@example.com" 
+                    placeholder="transmitter@gmail.com" 
                     className="w-full p-2.5 bg-[var(--color-theme-dark-light)] border border-gray-700 rounded-md" 
                     required 
                   />
