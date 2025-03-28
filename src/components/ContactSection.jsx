@@ -1,30 +1,44 @@
 "use client";
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaBuilding, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
-import { useEmailSender } from "../hook/useEmailSender";
 
-export default function ContactSection() {
-  const [formData, setFormData] = useState({firstName: "",lastName: "",email: "",phone: "",
+export default function ContactSection() { 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  // Estado para almacenar los datos del formulario
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
     message: ""
   });
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const { sendEmail, isLoading, statusMessage } = useEmailSender();
 
-  const handleChange = (e) => {const { name, value } = e.target;
-  setFormData((prevData) => ({ ...prevData, [name]: value }));
+  // Función para manejar cambios en los campos
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const currentTime = new Date().toLocaleString();
-    const dataToSend = { ...formData, time: currentTime };
-    const result = await sendEmail(dataToSend);
-    if (result.success) {
-      setFormData({firstName: "",lastName: "",email: "",phone: "",message: ""
-      });
-      setIsModalOpen(true);
-    }
+
+  // Función para manejar el envío del formulario usando mailto
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Construir el asunto y cuerpo del correo a partir de los datos del formulario
+    const subject = encodeURIComponent(`Nuevo mensaje de ${formData.firstName} ${formData.lastName}`);
+    const body = encodeURIComponent(
+      `Nombre: ${formData.firstName} ${formData.lastName}\n` +
+      `Email: ${formData.email}\n` +
+      `Teléfono: ${formData.phone}\n\n` +
+      `Mensaje:\n${formData.message}`
+    );
+    // Corregir para un envio desde backend
+    window.location.href = `mailto:brayanalmengor300@gmail.com?subject=${subject}&body=${body}`;
+    setIsModalOpen(true);
   };
+
   return (
     <section className="bg-[var(--color-primary-light)] text-gray-200 py-16 px-4 md:px-8" id="contact">
       <div className="max-w-6xl mx-auto">
@@ -120,17 +134,11 @@ export default function ContactSection() {
               <button 
                 type="submit" 
                 className="bg-theme-magenta-blue hover:bg-primary text-white font-medium py-2.5 px-5 rounded-md flex items-center gap-2 cursor-pointer" 
-                disabled={isLoading}
               > 
                 <FaPaperPlane className="text-sm" />
-                {isLoading ? "Sending..." : "Send Message"}
+                Send Message
               </button>
             </form> 
-            {statusMessage && (
-              <p className="mt-4 text-sm text-center text-gray-400" data-aos="fade-up" data-aos-delay="700">
-                {statusMessage}
-              </p>
-            )}
           </div>
 
           <div className="space-y-8" data-aos="fade-up" data-aos-delay="300">
