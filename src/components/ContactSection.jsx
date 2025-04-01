@@ -1,11 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaBuilding, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
+import useFormSubmit from "../hook/useFormSubmit"; // Ajusta la ruta según tu estructura
 
 export default function ContactSection() { 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  // Estado para almacenar los datos del formulario
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -13,8 +12,7 @@ export default function ContactSection() {
     phone: "",
     message: ""
   });
-
-  // Función para manejar cambios en los campos
+  const { submitForm, loading, error } = useFormSubmit();
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -22,23 +20,22 @@ export default function ContactSection() {
       [name]: value
     }));
   };
-
-  // Función para manejar el envío del formulario usando mailto
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Construir el asunto y cuerpo del correo a partir de los datos del formulario
-    const subject = encodeURIComponent(`Nuevo mensaje de ${formData.firstName} ${formData.lastName}`);
-    const body = encodeURIComponent(
-      `Nombre: ${formData.firstName} ${formData.lastName}\n` +
-      `Email: ${formData.email}\n` +
-      `Teléfono: ${formData.phone}\n\n` +
-      `Mensaje:\n${formData.message}`
-    );
-    // Corregir para un envio desde backend
-    window.location.href = `mailto:brayanalmengor300@gmail.com?subject=${subject}&body=${body}`;
-    setIsModalOpen(true);
+    try {
+      await submitForm(formData); 
+      setFormData({ 
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+      setIsModalOpen(true);
+    } catch (err) {
+      console.error("Error enviando el formulario:", err);
+    }
   };
-
   return (
     <section className="bg-[var(--color-primary-light)] text-gray-200 py-16 px-4 md:px-8" id="contact">
       <div className="max-w-6xl mx-auto">
@@ -134,6 +131,7 @@ export default function ContactSection() {
               <button 
                 type="submit" 
                 className="bg-theme-magenta-blue hover:bg-primary text-white font-medium py-2.5 px-5 rounded-md flex items-center gap-2 cursor-pointer" 
+                disabled={loading}
               > 
                 <FaPaperPlane className="text-sm" />
                 Send Message
