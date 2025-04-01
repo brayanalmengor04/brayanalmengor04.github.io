@@ -1,5 +1,6 @@
 import { SiHtml5, SiCss3, SiJavascript, SiAstro, SiSpring, SiReact, SiMysql,SiHibernate,SiDocker
-,SiLaravel,SiBootstrap,SiKotlin,SiComposer,SiJetpackcompose,SiAndroid,SiFigma
+,SiLaravel,SiBootstrap,SiKotlin,SiComposer,SiJetpackcompose,SiAndroid,SiFigma,SiElectron,SiTailwindcss,
+SiSpringboot
  } from "react-icons/si"; 
 
 export const featuredWorks = {
@@ -63,6 +64,21 @@ export const featuredWorks = {
   githubLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
   previewLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
   },   
+  finnantrack: {
+    title: "Finnantrack - S.M.B",
+    description: "FINNANTRACK es una app para pequeños negocios, enfocada en la administración general y la facturación electrónica. El software es una solución integral para la gestión de clientes, ventas, inventario, reportes financieros y facturación electrónica según las regulaciones fiscales del país objetivo.",
+    img: "/image/proyects/Finantrack.png",
+    bg_overlay: "bg-purple-600",
+    technologies: [
+      { name: "Electron", icon: SiElectron, hoverBg: "hover:text-purple-500" },
+      { name: "React", icon: SiReact, hoverBg: "hover:text-cyan-500" },
+      { name: "TailwindCSS", icon: SiTailwindcss, hoverBg: "hover:text-teal-500" },
+      { name: "JavaScript", icon: SiJavascript, hoverBg: "hover:text-yellow-500" },
+      { name: "Spring Boot", icon: SiSpringboot, hoverBg: "hover:text-green-500" },
+    ],
+    githubLink: "https://github.com/brayanalmengor04/my-finnantrack-app",
+    previewLink: "https://github.com/brayanalmengor04/my-finnantrack-app",
+  },
   figmaDesign: {
     title: "Figma UI/UX Design",
     description: "Modern UI/UX designs for web and mobile applications using Figma.",
