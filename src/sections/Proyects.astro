@@ -61,17 +61,41 @@ import AOSClient from '../components/AOSClient.jsx';
       </div>
     </div>
 
-    <!-- Card 3 -->
-    <div data-aos="fade-right" data-aos-delay="200" class="relative col-span-2 row-span-4 col-start-1 row-start-6 bg-green-500 shadow-lg rounded-xl h-full overflow-hidden group transition-transform duration-300 transform hover:scale-105 cursor-pointer">
-      <img src={featuredWorks.comingSoonProject.img} 
-           alt="Coming Soon" 
-           class="absolute inset-0 w-full h-full object-cover rounded-xl">
-      <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 group-focus-within:opacity-50 transition duration-300 flex items-center justify-center">
-        <span class="text-white font-bold">
-          {featuredWorks.comingSoonProject.title}
-        </span>
+    <div
+    data-aos="fade-right"
+    data-aos-delay="200"
+    class="relative col-span-2 row-span-4 col-start-1 row-start-6 bg-blue-800 shadow-lg rounded-xl h-full overflow-hidden group transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+  >
+    <img
+      src={featuredWorks.finnantrack.img}
+      alt="Finnantrack - Smart management for business"
+      class="absolute inset-0 w-full h-full object-cover rounded-xl transition-transform duration-300"
+    />
+    <div class={`cursor-pointer absolute inset-0 ${featuredWorks.finnantrack.bg_overlay} opacity-0 group-hover:opacity-90 group-focus-within:opacity-90 transition duration-300 flex flex-col items-center justify-center p-2 sm:p-4`}>
+      <h3 class="text-white font-bold text-lg sm:text-xl md:text-2xl mb-2 text-center">
+        {featuredWorks.finnantrack.title}
+      </h3>
+      <div class="w-full md:w-1/2 hidden md:flex flex-wrap justify-center gap-2 mt-2">
+        {featuredWorks.finnantrack.technologies.map((tech, index) => {
+          const Icon = tech.icon;
+          return (
+            <div key={index}>
+              <Icon className={`cursor-pointer w-6 h-6 sm:w-8 sm:h-8 text-gray-300 transition-colors ${tech.hoverBg}`} />
+            </div>
+          );
+        })}
       </div>
-    </div> 
+      <div class="w-full md:w-1/2 flex justify-evenly mt-4">
+        <a href={featuredWorks.finnantrack.githubLink} target="_blank" rel="noopener noreferrer">
+          <FaGithub className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8 text-gray-300 hover:text-purple-600 transition-colors" />
+        </a>
+        <a href={featuredWorks.finnantrack.previewLink} target="_blank" rel="noopener noreferrer">
+          <FiExternalLink className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8 text-gray-300 hover:text-purple-600 transition-colors" />
+        </a>
+      </div>
+    </div>
+  </div>
+  
 
     <!-- Card 4 -->
     <div data-aos="zoom-in" data-aos-delay="300" class="relative col-span-5 row-span-3 col-start-3 row-start-1 shadow-lg rounded-xl h-full overflow-hidden group transition-transform duration-300 transform hover:scale-105 cursor-pointer">
