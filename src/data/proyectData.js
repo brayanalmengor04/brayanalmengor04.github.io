@@ -20,6 +20,38 @@ export const featuredWorks = {
     previewLink: "https://brayanalmengorpty.netlify.app/",
   }, 
 
+  ecoParaisoLodge: {
+    title: "EcoParaíso Lodge - Hotel Booking System",
+    description:
+      "🌿 Full-stack project built with Laravel 11 and React for managing hotel room reservations. Users can explore hotels, view room details, register, log in, and request bookings. Administrators have full control through an admin panel to manage hotels, rooms, and approve or cancel bookings. Designed with a strong focus on user experience and seamless automation.",
+    img: "/image/proyects/EcoParaiso.png",
+    default_color: "text-green-700",
+    technologies: [
+      { name: "Laravel", icon: SiLaravel, hoverBg: "hover:text-red-500" },
+      { name: "React", icon: SiReact, hoverBg: "hover:text-cyan-500" },
+      { name: "Bootstrap", icon: SiBootstrap, hoverBg: "hover:text-purple-500" },
+      { name: "MySQL", icon: SiMysql, hoverBg: "hover:text-blue-500" },
+      { name: "JavaScript", icon: SiJavascript, hoverBg: "hover:text-yellow-500" },
+    ],
+    githubLink: "https://github.com/brayanalmengor04/eco-paraiso-lodge",
+    previewLink: "https://www.youtube.com/watch?v=Jq6kzhLGq7U", // YouTube demo
+  },
+    
+  restaurantMenu: {
+    title: "Restaurant Menu Management",
+  description: "A robust web application designed for efficient restaurant menu creation and management. This platform integrates REST APIs to handle various functionalities, including nationality management, advanced dish administration, user authentication, and QR code generation for seamless customer access. Built using Laravel, Bootstrap, and MySQL, it ensures a modern and responsive user experience.",
+  img: "/image/proyects/restaurantmenu.png",
+  bg_overlay: "bg-red-800",
+  technologies: [
+    { name: "Laravel", icon: SiLaravel, hoverBg: "hover:text-red-500" },
+    { name: "Bootstrap", icon: SiBootstrap, hoverBg: "hover:text-purple-500" },
+    { name: "MySQL", icon: SiMysql, hoverBg: "hover:text-blue-500" },
+    { name: "JavaScript", icon: SiJavascript, hoverBg: "hover:text-yellow-500" },
+    { name: "HTML5", icon: SiHtml5, hoverBg: "hover:text-orange-500" },
+  ],
+  githubLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
+  previewLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
+  },   
   postifySC: {
     title: "Postify - Share & Connect",
     description: "Backend system for creating posts and comments between users",
@@ -49,21 +81,6 @@ export const featuredWorks = {
   previewLink: "https://github.com/Anell-dev/BoviCare",
   }, 
 
-  restaurantMenu: {
-    title: "Restaurant Menu Management",
-  description: "A robust web application designed for efficient restaurant menu creation and management. This platform integrates REST APIs to handle various functionalities, including nationality management, advanced dish administration, user authentication, and QR code generation for seamless customer access. Built using Laravel, Bootstrap, and MySQL, it ensures a modern and responsive user experience.",
-  img: "/image/proyects/restaurantmenu.png",
-  bg_overlay: "bg-red-800",
-  technologies: [
-    { name: "Laravel", icon: SiLaravel, hoverBg: "hover:text-red-500" },
-    { name: "Bootstrap", icon: SiBootstrap, hoverBg: "hover:text-purple-500" },
-    { name: "MySQL", icon: SiMysql, hoverBg: "hover:text-blue-500" },
-    { name: "JavaScript", icon: SiJavascript, hoverBg: "hover:text-yellow-500" },
-    { name: "HTML5", icon: SiHtml5, hoverBg: "hover:text-orange-500" },
-  ],
-  githubLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
-  previewLink: "https://github.com/brayanalmengor04/restaurant-menu-web",
-  },   
   finnantrack: {
     title: "Finnantrack - S.M.B",
     description: "FINNANTRACK es una app para pequeños negocios, enfocada en la administración general y la facturación electrónica. El software es una solución integral para la gestión de clientes, ventas, inventario, reportes financieros y facturación electrónica según las regulaciones fiscales del país objetivo.",
@@ -88,6 +105,7 @@ export const featuredWorks = {
       { name: "Figma", icon: SiFigma, hoverBg: "hover:text-white-500" }
     ]
   },
+
   comingSoonProject: {
     title: "Coming Soon",
     description: "Comming soon proyects",
