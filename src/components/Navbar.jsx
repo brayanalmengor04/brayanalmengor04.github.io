@@ -9,7 +9,7 @@ export default function Navbar() {
     { name: "Home", id: "home" },
     { name: "Service", id: "service" },
     { name: "Skill", id: "skill" },
-    { name: "Resume", id: "resume" },
+    { name: "Resume", id: "portfolio" },
     { name: "Portfolio", id: "portfolio" },
     { name: "Contact", id: "contact" },
   ];
