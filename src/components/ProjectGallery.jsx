@@ -24,7 +24,7 @@ const ProjectGallery = () => {
   });
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="p-6 max-w-6xl mx-auto " id="portfolio">
       <h2 className="text-3xl text-white font-bold mb-6 text-center">Portfolio Projects</h2>
 
       {/* Filters */}
