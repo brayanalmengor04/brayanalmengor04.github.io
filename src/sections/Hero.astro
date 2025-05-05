@@ -1,8 +1,16 @@
 ---
 import { ArrowUpRight } from 'lucide-astro'; 
-import { Facebook, Instagram, Linkedin } from 'lucide-astro'; 
+import { Facebook, Instagram, Linkedin,Sun, Moon} from 'lucide-astro';  
+import ThemeToggleButton from '../components/theme/ThemeToggleButton';
 import AOSClient from '../components/AOSClient';
 
+
+let isDark = false
+
+function toggleMode() {
+  isDark = !isDark
+  document.documentElement.classList.toggle('dark', isDark)
+}
 ---
 <section class="w-full bg-primary flex flex-col md:flex-row" id="home">
   <!-- Texto y botones -->
@@ -37,9 +45,12 @@ import AOSClient from '../components/AOSClient';
         </div>
       </div>
     </div> 
-  </div>
+  </div> 
  <!-- Iconos de redes sociales -->
-<div data-aos="fade-up" class="hidden md:flex w-20 flex-col justify-center items-center space-y-4 text-white">
+<div data-aos="fade-up" class="hidden md:flex w-20 flex-col justify-center items-center space-y-4 text-white"> 
+
+  <!-- Componente modo oscuro -->
+  <ThemeToggleButton />
   <p class="text-sm rotate-90">Follow me Social:</p>
   <div class="w-px h-12 bg-gray-500"></div>
   
@@ -53,7 +64,7 @@ import AOSClient from '../components/AOSClient';
 
   <a href="https://www.linkedin.com/in/brayan-antonio/" target="_blank" class="p-2 rounded-full bg-white transition-all duration-300 transform hover:scale-125 hover:rotate-6 hover:shadow-lg hover:bg-gradient-to-r from-purple-600 to-indigo-600">
     <Linkedin class="w-5 h-5 text-purple-600 hover:text-white transition-colors duration-300" />
-  </a>
+  </a> 
 </div>
 
 </section>
