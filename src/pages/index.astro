@@ -1,11 +1,9 @@
 ---
 import "../styles/global.css";   
 import "../styles/resume.css"
-import "../styles/inverted-card.css"
+import "../styles/inverted-card.css" 
 import Layout from '../layouts/Layout.astro';   
 import Navbar from "../components/Navbar" 
-
-// Section pages
 import Hero from "../sections/Hero.astro" 
 import Service from "../sections/Service.astro" 
 import Skill from "../sections/Skill.astro"
@@ -13,7 +11,6 @@ import Proyects from "../sections/Proyects.astro";
 import Education from "../sections/Education.astro";
 import Footer from "../sections/Footer.astro"; 
 import Contact from "../sections/Contact.astro";
-
 ---
 <Layout> 
 	<Navbar  client:load />
@@ -24,4 +21,5 @@ import Contact from "../sections/Contact.astro";
 	<Education />  
 	<Contact />
 	<Footer /> 
+	<!-- <script src="../hook/Layout.js"></script> -->
 </Layout>
