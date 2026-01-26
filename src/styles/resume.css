@@ -1,34 +1,66 @@
 @import "tailwindcss";
 
+/* ========================================
+   📝 THEME-AWARE RESUME STYLES
+   ======================================== */
+
 .resume-title {
-  @apply text-white text-[26px] font-bold mt-5 mb-5;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Resume Item */
 .resume-item {
-  @apply relative pl-5 pb-5 border-l-2;
-  border-color: var(--color-white);
+  position: relative;
+  padding-left: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-left: 2px solid var(--border-accent);
+  transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .resume-item h4 {
-  @apply text-[18px] font-semibold uppercase mb-2;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .resume-item h5 {
-  @apply text-[16px] font-semibold px-4 py-1 inline-block mb-2;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-radius: 0.25rem;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resume-item p {
+  color: var(--text-secondary);
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .resume-item ul {
-  @apply list-disc ml-5;
+  list-style-type: disc;
+  margin-left: 1.25rem;
 }
 
 .resume-item ul li {
-  @apply pb-2;
+  padding-bottom: 0.5rem;
+  color: var(--text-secondary);
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .resume-item:last-child {
-  @apply pb-0;
+  padding-bottom: 0;
 }
 
 /* Pseudo-elemento para el bullet de la línea de tiempo */
@@ -40,6 +72,17 @@
   border-radius: 50%;
   left: -9px;
   top: 0;
-  background: var(--color-primary);
-  border: 2px solid var(--color-white);
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-primary);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light mode enhancements */
+:root.light .resume-item::before {
+  box-shadow: 0 2px 4px rgba(87, 52, 208, 0.2);
+}
+
+:root.light .resume-item {
+  border-left-color: var(--border-accent);
 }

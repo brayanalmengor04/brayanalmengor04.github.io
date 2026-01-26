@@ -1,33 +1,48 @@
-button:focus, input:focus, textarea:focus {
-	outline: 0;
+/* ========================================
+   🎨 THEME-AWARE INVERTED CARD STYLES
+   ======================================== */
+
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 0;
 }
 
 .card_wrapper {
-	padding: 80px 0; 
+    padding: 80px 0;
 }
 
 .card_wrapper .head_text {
-	text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .card_wrapper .card_box {
-	overflow: hidden; 
-	
-	border-radius: 20px;
-	margin-top: 55px; 
-
-	/* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 55px;
+    /* Smooth theme transitions */
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .card_wrapper .card_box .card_img_box {
-	position: relative;
+    position: relative;
 }
 
 .card_wrapper .card_box .card_img_box img {
-	border-radius: 20px;
-} 
-.prueba{
-	border: 3px solid red;
+    border-radius: 20px;
+    transition: transform 0.3s ease, filter 0.4s ease;
 }
+
+/* Light mode image enhancement */
+:root.light .card_wrapper .card_box .card_img_box img {
+    filter: brightness(1.05) contrast(1.02);
+}
+
+/* ========================================
+   🎯 CARD ICON - SECONDARY (bg-secondary)
+   Uses var(--bg-secondary) for background
+   ======================================== */
 
 .card_wrapper .card_box .card_img_box .card_icon {
     position: absolute;
@@ -35,14 +50,16 @@ button:focus, input:focus, textarea:focus {
     right: 0px;
     width: 96px;
     height: 96px;
+    background: var(--bg-secondary);
     border-top-left-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Version para la light  */
+/* Pseudo-element decorations with theme-aware shadows */
 .card_wrapper .card_box .card_img_box .card_icon::before {
     content: "";
     position: absolute;
@@ -52,7 +69,8 @@ button:focus, input:focus, textarea:focus {
     width: 20px;
     height: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0.313rem 0.313rem 0 0.313rem #22212a;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem var(--bg-secondary);
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card_wrapper .card_box .card_img_box .card_icon::after {
@@ -64,21 +82,28 @@ button:focus, input:focus, textarea:focus {
     width: 20px;
     height: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0.313rem 0.313rem 0 0.313rem #22212a;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem var(--bg-secondary);
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Esta es para primary  */
+/* ========================================
+   ⭐ CARD ICON PRIMARY (bg-primary)
+   Uses var(--bg-primary) for background
+   ======================================== */
+
 .card_wrapper .card_box .card_img_box .card_icon-primary {
     position: absolute;
     bottom: 0px;
     right: 0px;
     width: 96px;
     height: 96px;
+    background: var(--bg-primary);
     border-top-left-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card_wrapper .card_box .card_img_box .card_icon-primary::before {
@@ -90,7 +115,8 @@ button:focus, input:focus, textarea:focus {
     width: 20px;
     height: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0.313rem 0.313rem 0 0.313rem #181720;
+    box-shadow: 0.313rem 0.313rem 0 0.313rem var(--bg-primary);
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card_wrapper .card_box .card_img_box .card_icon-primary::after {
@@ -102,48 +128,77 @@ button:focus, input:focus, textarea:focus {
     width: 20px;
     height: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0.313rem 0.313rem 0 0.313rem #181720;
-} 
+    box-shadow: 0.313rem 0.313rem 0 0.313rem var(--bg-primary);
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   🎨 ICON HOVER EFFECTS & LINKS
+   ======================================== */
 
 .card_wrapper .card_box .card_img_box .card_icon-primary:hover a {
-	transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
 }
 
 .card_wrapper .card_box .card_img_box .card_icon-primary a {
-	background: #583ebc;
-	width: 76px;
-	height: 76px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	border-radius: 50%;
-	color: #ffffff;
-	font-size: 21px;
-	transition: .5s;
+    background: var(--accent-primary);
+    width: 76px;
+    height: 76px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 21px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.4s ease,
+        box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(88, 62, 188, 0.3);
 }
-/* ----------------------------------- */ 
+
+/* Light mode - enhanced shadow */
+:root.light .card_wrapper .card_box .card_img_box .card_icon-primary a {
+    box-shadow: 0 4px 16px rgba(208, 52, 138, 0.25);
+}
+
+/* .card_wrapper .card_box .card_img_box .card_icon-primary a:hover {
+    box-shadow: 0 8px 24px rgba(88, 62, 188, 0.5);
+} */
+
+/* ========================================
+   🔷 SECONDARY ICON STYLES
+   ======================================== */
 
 .card_wrapper .card_box .card_img_box .card_icon:hover a {
-	transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
 }
 
 .card_wrapper .card_box .card_img_box .card_icon a {
-	background: #583ebc;
-	width: 76px;
-	height: 76px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	border-radius: 50%;
-	color: #ffffff;
-	font-size: 21px;
-	transition: .5s;
+    background: var(--accent-primary);
+    width: 76px;
+    height: 76px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 21px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.4s ease,
+        box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(88, 62, 188, 0.3);
+}
+
+/* Light mode - enhanced shadow */
+:root.light .card_wrapper .card_box .card_img_box .card_icon a {
+    box-shadow: 0 4px 16px rgba(87, 52, 208, 0.25);
 }
 
 .card_wrapper .card_box .card_img_box .card_icon:hover a {
-	text-decoration: none;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(88, 62, 188, 0.5);
 }
 
 .card_wrapper .card_box .card_img_box .card_icon a i {
@@ -151,50 +206,131 @@ button:focus, input:focus, textarea:focus {
     font-weight: 400;
 }
 
+/* ========================================
+   📝 CARD TEXT CONTENT
+   ======================================== */
+
 .card_wrapper .card_box .card_text_content {
-	padding: 25px;
+    padding: 25px;
 }
 
 .card_wrapper .card_box .card_text_content h3 {
-	font-size: 30px;
-	font-weight: 700;
-	padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
 }
 
 .card_wrapper .card_box .card_text_content h3 a {
-	color: #fff;
-	text-transform: capitalize;
+    color: #fff;
+    text-transform: capitalize;
+    transition: opacity 0.3s ease;
 }
 
 .card_wrapper .card_box .card_text_content h3 a:hover {
-	text-decoration: none;
+    text-decoration: none;
+    opacity: 0.9;
 }
 
+/* Badge/Tag styling with theme awareness */
 .card_wrapper .card_box .card_text_content span {
-	background: #d3b19a;
-	height: 28px;
-	padding: 0 10px;
-	border-radius: 5px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	text-transform: uppercase;
-	font-weight: 500;
-	margin-right: 5px;
+    background: linear-gradient(135deg, #d3b19a 0%, #c9a88f 100%);
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.card_wrapper .card_box .card_text_content span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Light mode badge enhancement */
+:root.light .card_wrapper .card_box .card_text_content span {
+    box-shadow: 0 2px 6px rgba(211, 177, 154, 0.3);
+}
+
+/* ========================================
+   🎯 CARD VARIATIONS
+   ======================================== */
 
 .card_wrapper .card_box02 .card_icon a {
-	background: #583ebc !important;
+    background: var(--accent-primary);
 }
 
 .card_wrapper .card_box03 .card_icon a {
-	background: #583ebc !important;
+    background: var(--accent-primary);
 }
+
+/* ========================================
+   📱 RESPONSIVE DESIGN
+   ======================================== */
 
 @media (max-width: 767px) {
     .card_box {
-      width: 90%;
-      margin: 0 auto;
+        width: 90%;
+        margin: 0 auto;
     }
-  }
+
+    /* Slightly smaller icons on mobile */
+    .card_wrapper .card_box .card_img_box .card_icon,
+    .card_wrapper .card_box .card_img_box .card_icon-primary {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card_wrapper .card_box .card_img_box .card_icon a,
+    .card_wrapper .card_box .card_img_box .card_icon-primary a {
+        width: 64px;
+        height: 64px;
+        font-size: 18px;
+    }
+}
+
+/* ========================================
+   ✨ SPECIAL EFFECTS & ANIMATIONS
+   ======================================== */
+
+/* Smooth hover lift effect for entire card */
+.card_wrapper .card_box {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .card_wrapper .card_box:hover {
+    transform: translateY(-4px);
+} */
+
+/* Dark mode - deeper shadows on hover */
+/* :root:not(.light) .card_wrapper .card_box:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+} */
+
+/* Light mode - softer purple shadows on hover */
+:root.light .card_wrapper .card_box:hover {
+    box-shadow: 0 12px 32px rgba(87, 52, 208, 0.15);
+}
+
+/* Accessibility: Focus styles */
+.card_wrapper .card_box .card_img_box .card_icon a:focus,
+.card_wrapper .card_box .card_img_box .card_icon-primary a:focus {
+    outline: 3px solid var(--accent-secondary);
+    outline-offset: 3px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

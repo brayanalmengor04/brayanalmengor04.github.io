@@ -1,22 +1,289 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary :#181720;  
-    --color-primary-light:#22212a;
-    
-    --color-theme-dark-light:#292831;
-    --color-theme-magenta-blue:#583ebc;
-    --color-theme-white: #ffffff;  
+    /* Base Colors - Dark Mode (Default) */
+    --color-primary: #181720;
+    --color-primary-light: #22212a;
+    --color-theme-dark-light: #292831;
+    --color-theme-magenta-blue: #583ebc;
+    --color-theme-white: #ffffff;
 
-     /* Nuevos colores */
-     --color-electric-blue: #3A86FF; 
-     --color-white :#FFFFFF;
-     --color-neon-green:   #2AF598;
-     --color-burnt-orange: #FF9F1C;
-     --color-soft-lila:    #9B5DE5;
-} 
+    /* Accent Colors */
+    --color-electric-blue: #3A86FF;
+    --color-white: #FFFFFF;
+    --color-neon-green: #2AF598;
+    --color-burnt-orange: #FF9F1C;
+    --color-soft-lila: #9B5DE5;
+}
+
+/* Root Theme Variables - Dark Mode (Default) */
+:root {
+    /* Background Colors */
+    --bg-primary: #181720;
+    --bg-secondary: #22212a;
+    --bg-tertiary: #292831;
+    --bg-card: #1e1d26;
+    --bg-hover: #2a2933;
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --text-accent: #583ebc;
+
+    /* Border Colors */
+    --border-primary: #2a2933;
+    --border-secondary: #3a3944;
+    --border-accent: #583ebc;
+
+    /* Accent Colors */
+    --accent-primary: #583ebc;
+    --accent-secondary: #9B5DE5;
+    --accent-glow: rgba(88, 62, 188, 0.3);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #583ebc 0%, #9B5DE5 100%);
+    --gradient-secondary: linear-gradient(135deg, #3A86FF 0%, #583ebc 100%);
+    --gradient-accent: linear-gradient(135deg, #2AF598 0%, #3A86FF 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px var(--accent-glow);
+
+    /* Icon & Social Colors */
+    --icon-bg: #ffffff;
+    --icon-color: #583ebc;
+    --social-gradient-hover: linear-gradient(135deg, #583ebc 0%, #9B5DE5 100%);
+
+    /* Card Gradients - Dark Mode (Magenta Blue) */
+    --card-gradient-primary: #583ebc;
+    --card-gradient-secondary: linear-gradient(135deg, #583ebc 0%, #9B5DE5 100%);
+    --card-gradient-accent: linear-gradient(135deg, #2AF598 0%, #3A86FF 100%);
+
+    /* Button Colors */
+    --button-primary: #583ebc;
+    --button-hover: #4a33a0;
+
+    /* Keyword Gradients - Dark Mode (Vibrant Purple/Pink) */
+    --keyword-gradient-start: #a855f7;
+    --keyword-gradient-end: #ec4899;
+    --keyword-glow: rgba(168, 85, 247, 0.4);
+}
+
+/* Light Mode Theme - Warm Terracotta & Sage Elegance 🌿✨ */
+:root.light {
+    /* Background Colors - Creamy Warmth */
+    --bg-primary: #fdfbf7;
+    --bg-secondary: #fffefb;
+    --bg-tertiary: #f9f6f0;
+    --bg-card: #ffffff;
+    --bg-hover: #faf7f2;
+
+    /* Text Colors - Rich Earth Tones */
+    --text-primary: #2d2416;
+    --text-secondary: #5a4a36;
+    --text-muted: #8b7d6b;
+    --text-accent: #c85a3f;
+
+    /* Border Colors - Subtle Sand */
+    --border-primary: #ebe6dc;
+    --border-secondary: #d9d0c1;
+    --border-accent: #c85a3f;
+
+    /* Accent Colors - Terracotta & Burnt Sienna */
+    --accent-primary: #c85a3f;
+    --accent-secondary: #e07856;
+    --accent-glow: rgba(200, 90, 63, 0.18);
+
+    /* Gradients - Warm Sunset & Sage */
+    --gradient-primary: linear-gradient(135deg, #c85a3f 0%, #e8956d 100%);
+    --gradient-secondary: linear-gradient(135deg, #b8956a 0%, #c85a3f 100%);
+    --gradient-accent: linear-gradient(135deg, #7ba584 0%, #b8956a 100%);
+
+    /* Shadows - Soft Amber Glow */
+    --shadow-sm: 0 2px 8px rgba(200, 90, 63, 0.08);
+    --shadow-md: 0 4px 16px rgba(200, 90, 63, 0.12);
+    --shadow-lg: 0 8px 32px rgba(200, 90, 63, 0.16);
+    --shadow-glow: 0 0 24px rgba(200, 90, 63, 0.22);
+
+    /* Icon & Social Colors */
+    --icon-bg: #c85a3f;
+    --icon-color: #ffffff;
+    --social-gradient-hover: linear-gradient(135deg, #c85a3f 0%, #e8956d 100%);
+
+    /* Card Gradients - Terracotta Sunset Dreams */
+    --card-gradient-primary: linear-gradient(135deg, #d97458 0%, #e8956d 100%);
+    --card-gradient-secondary: linear-gradient(135deg, #c6956f 0%, #d97458 100%);
+    --card-gradient-accent: linear-gradient(135deg, #8ab594 0%, #b8a87d 100%);
+
+    /* Button Colors */
+    --button-primary: #d97458;
+    --button-hover: #c85a3f;
+
+    /* Keyword Gradients - Light Mode (Warm Coral/Salmon) */
+    --keyword-gradient-start: #ff6b6b;
+    --keyword-gradient-end: #ee5a24;
+    --keyword-glow: rgba(255, 107, 107, 0.3);
+}
+
+/* Smooth Transitions for Theme Changes */
+* {
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 body {
-    font-family: 'Poppins', sans-serif; 
-    background-color: var(--color-primary);
-  }
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme-Aware Utility Classes */
+
+/* Background Utilities */
+.bg-primary {
+    background-color: var(--bg-primary) !important;
+}
+
+.bg-primary-light,
+.bg-secondary {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-tertiary {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.bg-card {
+    background-color: var(--bg-card) !important;
+}
+
+/* Text Color Utilities */
+.text-theme-primary {
+    color: var(--text-primary) !important;
+}
+
+.text-theme-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-theme-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Legacy support - maps to theme variables */
+.text-white {
+    color: var(--text-primary) !important;
+}
+
+.text-gray-200,
+.text-gray-300 {
+    color: var(--text-secondary) !important;
+}
+
+.text-gray-400,
+.text-gray-500 {
+    color: var(--text-muted) !important;
+}
+
+/* Border Utilities */
+.border-theme {
+    border-color: var(--border-primary) !important;
+}
+
+.border-theme-secondary {
+    border-color: var(--border-secondary) !important;
+}
+
+/* Special Background - Magenta Blue Accent (Dynamic) */
+.bg-theme-magenta-blue {
+    background: var(--card-gradient-primary) !important;
+}
+
+/* Hover Background - Theme Adaptive */
+.hover-bg-accent:hover {
+    background: var(--accent-primary) !important;
+}
+
+/* Text Accent - Theme Adaptive */
+.text-accent {
+    color: var(--accent-primary) !important;
+}
+
+/* Card Gradient Utility - For explicit gradient usage */
+.bg-card-gradient {
+    background: var(--card-gradient-primary) !important;
+}
+
+.bg-card-gradient-secondary {
+    background: var(--card-gradient-secondary) !important;
+}
+
+/* Enhanced Theme-aware Components */
+.theme-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-card:hover {
+    background: var(--bg-hover);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* Light mode card enhancements */
+:root.light .theme-card {
+    border-color: var(--border-secondary);
+}
+
+:root.light .theme-card:hover {
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(200, 90, 63, 0.15);
+}
+
+.theme-glow {
+    box-shadow: var(--shadow-glow);
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animated-gradient {
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+/* Drop shadow glow effect */
+.drop-shadow-glow {
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}

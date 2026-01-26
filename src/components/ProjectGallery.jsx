@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { featuredWorks } from "../data/proyectData";
-import { motion, AnimatePresence } from "framer-motion"; 
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; 
+import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const categories = ["All", "Web", "Android", "UI/UX"];
 const categoryMap = {
@@ -33,7 +33,7 @@ const ProjectGallery = () => {
   };
   return (
     <div className="p-6 max-w-6xl mx-auto" id="portfolio">
-      <h2 className="text-3xl text-white font-bold mb-6 text-center">Portfolio Projects</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: 'var(--text-primary)' }}>Portfolio Projects</h2>
       <div className="flex justify-center gap-4 mb-8 flex-wrap">
         {categories.map((cat) => (
           <button
@@ -42,11 +42,12 @@ const ProjectGallery = () => {
               setActiveCategory(cat);
               setCurrentPage(1);
             }}
-            className={`px-4 py-2 rounded-full font-semibold border transition-all duration-300 cursor-pointer ${
-              activeCategory === cat
-                ? "bg-theme-magenta-blue text-white"
-                : "border-gray-400 text-gray-700 hover:bg-gray-200"
-            }`}
+            // Aqui son los botones de las categoria cambiar al cambiar modo light las letras se vuelvan blancas
+            className={`px-4 py-2 rounded-full font-semibold border transition-all duration-300 cursor-pointer ${activeCategory === cat
+              ? "bg-theme-magenta-blue text-white border-theme-magenta-blue"
+              : "text-theme-secondary hover:bg-theme-magenta-blue hover:text-white"
+              }`}
+            style={{ borderColor: activeCategory === cat ? 'var(--accent-primary)' : 'var(--border-secondary)' }}
           >
             {cat}
           </button>
@@ -60,9 +61,10 @@ const ProjectGallery = () => {
             const displayedDescription = isExpanded
               ? project.description
               : shouldTruncate
-              ? project.description.slice(0, MAX_DESC_LENGTH) + "..."
-              : project.description;
+                ? project.description.slice(0, MAX_DESC_LENGTH) + "..."
+                : project.description;
             return (
+              // Aqui deno cambiar el bg-theme-magenta-blue de forma dinamica al cambiar el modo light y las letras de forma dinamica al cambiar el modo light
               <motion.div
                 key={key}
                 initial={{ opacity: 0, y: 30 }}
@@ -74,7 +76,7 @@ const ProjectGallery = () => {
                 <img src={project.img} alt={project.title} className="w-full h-48 object-cover" />
                 <div className="p-4 flex flex-col flex-grow">
                   <h3 className="text-xl text-white font-bold mb-2">{project.title}</h3>
-                  <motion.div layout className="text-gray-300 text-sm mb-3">
+                  <motion.div layout className="text-sm mb-3" style={{ color: 'var(--text-secondary)' }}>
                     {displayedDescription}
                     {shouldTruncate && (
                       <button
@@ -100,7 +102,22 @@ const ProjectGallery = () => {
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 mt-4 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors text-sm"
+                        className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-semibold hover:scale-105 hover:shadow-lg"
+                        style={{
+                          background: "var(--bg-secondary)",
+                          color: "var(--text-primary)",
+                          border: "2px solid var(--border-secondary)"
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "var(--accent-primary)";
+                          e.currentTarget.style.color = "#ffffff";
+                          e.currentTarget.style.borderColor = "var(--accent-primary)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "var(--bg-secondary)";
+                          e.currentTarget.style.color = "var(--text-primary)";
+                          e.currentTarget.style.borderColor = "var(--border-secondary)";
+                        }}
                       >
                         <FaGithub className="text-xl" />
                         GitHub
@@ -111,7 +128,20 @@ const ProjectGallery = () => {
                         href={project.previewLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 mt-4 text-white px-4 py-2 rounded-lg transition-colors text-sm"
+                        className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-semibold hover:scale-105 hover:shadow-lg"
+                        style={{
+                          background: "var(--accent-primary)",
+                          color: "#ffffff",
+                          border: "2px solid var(--accent-primary)"
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "var(--gradient-primary)";
+                          e.currentTarget.style.transform = "scale(1.05)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "var(--accent-primary)";
+                          e.currentTarget.style.transform = "scale(1)";
+                        }}
                       >
                         <FaExternalLinkAlt className="text-xl" />
                         Demo
@@ -129,11 +159,10 @@ const ProjectGallery = () => {
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className={`px-4 py-2 rounded-lg text-white font-semibold ${
-              currentPage === 1
-                ? "bg-gray-500 cursor-not-allowed"
-                : "bg-theme-magenta-blue hover:bg-purple-700 cursor-pointer"
-            } transition-all`}
+            className={`px-4 py-2 rounded-lg text-white font-semibold ${currentPage === 1
+              ? "bg-gray-500 cursor-not-allowed"
+              : "bg-theme-magenta-blue hover:bg-purple-700 cursor-pointer"
+              } transition-all`}
           >
             Prev
           </button>
@@ -141,11 +170,10 @@ const ProjectGallery = () => {
             <button
               key={num}
               onClick={() => handlePageChange(num)}
-              className={`px-4 py-2 rounded-lg font-bold transition-all cursor-pointer ${
-                currentPage === num
-                  ? "bg-white text-theme-magenta-blue"
-                  : "bg-theme-magenta-blue text-white hover:bg-purple-700"
-              }`}
+              className={`px-4 py-2 rounded-lg font-bold transition-all cursor-pointer ${currentPage === num
+                ? "bg-white text-theme-magenta-blue"
+                : "bg-theme-magenta-blue text-white hover:bg-purple-700"
+                }`}
             >
               {num}
             </button>
@@ -153,11 +181,10 @@ const ProjectGallery = () => {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-lg text-white font-semibold cursor-pointer ${
-              currentPage === totalPages
-                ? "bg-gray-500 cursor-not-allowed"
-                : "bg-theme-magenta-blue hover:bg-purple-700"
-            } transition-all`}
+            className={`px-4 py-2 rounded-lg text-white font-semibold cursor-pointer ${currentPage === totalPages
+              ? "bg-gray-500 cursor-not-allowed"
+              : "bg-theme-magenta-blue hover:bg-purple-700"
+              } transition-all`}
           >
             Next
           </button>
