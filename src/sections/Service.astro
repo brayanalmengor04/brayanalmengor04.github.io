@@ -1,138 +1,357 @@
 ---
-import { ArrowUpRight } from "lucide-astro";
+import {
+    Terminal,
+    Database,
+    GitBranch,
+    ServerCrash,
+    Globe2,
+    Smartphone,
+    Cpu,
+    Code2,
+    Layers,
+    Briefcase,
+    CheckCircle2,
+    ExternalLink,
+} from "lucide-astro";
 import AOSClient from "../components/AOSClient";
 import "aos/dist/aos.css";
+
+// Updated Hologram: No background change, just border glow and icon color
+const HologramContainer =
+    "relative w-24 h-24 md:w-28 md:h-28 shrink-0 rounded-2xl overflow-hidden flex items-center justify-center border border-white/5 transition-all duration-500 group-hover:border-white/20";
 ---
 
-<section class="card_wrapper bg-secondary" id="service">
-    <div class="container mx-auto px-4">
-        <!-- Encabezado -->
-        <div data-aos="fade-up" class="text-center">
-            <h3
-                class="text-lg font-semibold tracking-wide uppercase text-theme-secondary"
+<section
+    class="py-24 bg-background relative overflow-hidden"
+    id="experience-services"
+>
+    <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none opacity-20"
+    >
+    </div>
+
+    <div class="container mx-auto px-4 max-w-6xl relative z-10">
+        <div class="mb-24 md:pl-12" data-aos="fade-right">
+            <div
+                class="flex items-center gap-3 mb-4 text-muted-foreground font-mono text-sm"
             >
-                My Expertise
-            </h3>
-            <h2 class="text-4xl font-bold mt-2 text-theme-primary">
-                Innovative Solutions
+                <Terminal class="w-4 h-4 text-blue-500" />
+                <span>~/developer/portfolio</span>
+            </div>
+            <h2
+                class="text-5xl md:text-7xl font-black text-foreground mb-4 leading-tight tracking-tight cursor-target"
+            >
+                Experience <br />
+                <span
+                    class="text-transparent bg-clip-text bg-[image:var(--gradient-primary)] animate-gradient-x"
+                >
+                    & Core Stack_
+                </span>
             </h2>
-            <p class="mt-4 text-lg text-theme-secondary">
-                I offer backend and frontend development for personal clients,
-                creating secure and scalable solutions. From APIs to full-stack
-                apps, I build efficient systems with Spring Boot, Laravel, and
-                modern technologies. Let’s work together to bring your ideas to
-                life!
-            </p>
         </div>
-        <!-- Grid de tarjetas -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-            <div data-aos="fade-up" data-aos-delay="100">
-                <!-- Todos los card que tenga bg-theme magenta blue cambiarlo forma dinamica en light -->
+
+        <div
+            class="relative border-l-[2px] border-dashed border-border/30 md:ml-12 space-y-32"
+        >
+            <div class="relative pl-8 md:pl-16" data-aos="fade-up">
                 <div
-                    class="card_box bg-theme-magenta-blue transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                    class="absolute -left-[11px] top-2 h-5 w-5 rounded-full bg-background border-[3px] border-[var(--accent-primary)] flex items-center justify-center z-10 shadow-[0_0_20px_var(--accent-glow)]"
                 >
-                    <div class="card_text_content">
-                        <h3>
-                            <a
-                                href="https://es.wikipedia.org/wiki/Desarrollador_web"
-                                target="_blank"
-                                class="text-white"
-                                >Web Developer - Modern Desing</a
-                            >
-                        </h3>
-                        <div class="w-full border border-white mb-5"></div>
-                        <p class="text-white">
-                            Web development builds interactive sites, yet its
-                            core is simplicity.
-                        </p>
+                    <div
+                        class="h-2 w-2 rounded-full bg-[var(--accent-primary)] animate-pulse"
+                    >
                     </div>
-                    <div class="card_img_box">
-                        <img
-                            class="w-full h-auto"
-                            src="/image/website.png"
-                            alt="Best home food recipes"
-                        />
-                        <div class="card_icon bg-primary-light">
+                </div>
+
+                <div class="group relative cursor-target">
+                    <div
+                        class="flex flex-col md:flex-row gap-10 md:gap-16 items-start"
+                    >
+                        <div
+                            class="shrink-0 flex flex-col items-center gap-6 mt-2"
+                        >
                             <a
-                                href="https://es.wikipedia.org/wiki/Desarrollador_web"
+                                href="https://www.senacyt.gob.pa/"
                                 target="_blank"
+                                rel="noopener noreferrer"
+                                class="block cursor-target relative group/logo"
                             >
-                                <ArrowUpRight class="w-15 h-auto" />
+                                <div
+                                    class="absolute -inset-4 bg-[var(--accent-primary)]/20 rounded-full blur-xl opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500"
+                                >
+                                </div>
+                                <img
+                                    src="/image/experience/logo-senacyt.webp"
+                                    alt="SENACYT"
+                                    class="w-40 h-40 md:w-56 md:h-auto object-contain filter drop-shadow-2xl opacity-90 group-hover/logo:opacity-100 transition-all duration-500 dark-mode-logo relative z-10"
+                                />
                             </a>
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="mb-8">
+                                <h3
+                                    class="text-4xl md:text-5xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300"
+                                >
+                                    Software Developer
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-4 text-sm font-medium"
+                                >
+                                    <a
+                                        href="https://www.senacyt.gob.pa/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors cursor-target group/link"
+                                    >
+                                        <Briefcase
+                                            class="w-4 h-4 text-accent"
+                                        />
+                                        <span
+                                            class="border-b border-transparent group-hover/link:border-accent transition-all"
+                                            >SENACYT Panama</span
+                                        >
+                                        <ExternalLink
+                                            class="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-all -translate-x-2 group-hover/link:translate-x-0"
+                                        />
+                                    </a>
+                                    <span
+                                        class="px-3 py-1 rounded-full bg-[var(--accent-primary)]/10 text-accent font-mono text-xs border border-[var(--accent-primary)]/20"
+                                    >
+                                        JUL 2025 — DEC 2025 (INTERN)
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4
+                                    class="text-xs font-mono tracking-[0.2em] text-accent/80 mb-4 flex items-center gap-2"
+                                >
+                                    <span
+                                        class="w-8 h-[1px] bg-[var(--accent-primary)]/50"
+                                    ></span>
+                                    // SCOPE OF WORK & IMPACT
+                                </h4>
+
+                                <p
+                                    class="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 group-hover:text-foreground/90 transition-colors duration-500"
+                                >
+                                    Development of critical government systems,
+                                    focusing on data integrity, backend
+                                    optimization, and high-performance database
+                                    architecture.
+                                </p>
+                            </div>
+
+                            <ul
+                                class="space-y-4 text-base text-muted-foreground mb-8"
+                            >
+                                <li class="flex items-start gap-4 group/item">
+                                    <CheckCircle2
+                                        class="w-5 h-5 text-accent mt-1 shrink-0 group-hover/item:scale-110 transition-transform"
+                                    />
+                                    <span
+                                        class="group-hover/item:text-foreground transition-colors"
+                                    >
+                                        Optimization of internal modules using <strong
+                                            class="text-foreground"
+                                            >Laravel</strong
+                                        > and <strong class="text-foreground"
+                                            >jQuery</strong
+                                        >.
+                                    </span>
+                                </li>
+                                <li class="flex items-start gap-4 group/item">
+                                    <CheckCircle2
+                                        class="w-5 h-5 text-accent mt-1 shrink-0 group-hover/item:scale-110 transition-transform"
+                                    />
+                                    <span
+                                        class="group-hover/item:text-foreground transition-colors"
+                                    >
+                                        Designed scalable database architectures
+                                        in <strong class="text-foreground"
+                                            >Oracle</strong
+                                        >.
+                                    </span>
+                                </li>
+                                <li class="flex items-start gap-4 group/item">
+                                    <CheckCircle2
+                                        class="w-5 h-5 text-accent mt-1 shrink-0 group-hover/item:scale-110 transition-transform"
+                                    />
+                                    <span
+                                        class="group-hover/item:text-foreground transition-colors"
+                                    >
+                                        Full lifecycle development and version
+                                        control with <strong
+                                            class="text-foreground">Git</strong
+                                        >.
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <div class="flex flex-wrap gap-2">
+                                {
+                                    [
+                                        "Laravel",
+                                        "Oracle DB",
+                                        "JavaScript",
+                                        "Git",
+                                        "Figma",
+                                    ].map((tech) => (
+                                        <span class="px-3 py-1.5 rounded text-sm bg-secondary/30 border border-border/50 text-muted-foreground font-mono hover:text-accent hover:border-[var(--accent-primary)]/50 transition-colors cursor-default">
+                                            {tech}
+                                        </span>
+                                    ))
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-up" data-aos-delay="200">
+
+            <div class="relative pl-8 md:pl-16" data-aos="fade-in">
                 <div
-                    class="card_box card_box02 bg-theme-magenta-blue transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                    class="absolute -left-[26px] top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-1 py-2 bg-background z-10"
                 >
-                    <div class="card_text_content">
-                        <h3>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Spring_Boot"
-                                target="_blank"
-                                class="text-white"
-                                >Backend Developer Spring Boot</a
-                            >
+                    <GitBranch class="w-6 h-6 text-foreground/40" />
+                    <Layers class="w-4 h-4 text-foreground/20" />
+                </div>
+                <div
+                    class="font-mono text-sm text-muted-foreground/60 pl-4 border-l-2 border-blue-500/20"
+                >
+                    <span class="text-blue-500">$</span> git checkout -b personal-projects
+                </div>
+            </div>
+
+            <div
+                class="relative pl-8 md:pl-16 group cursor-target"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+                <div
+                    class="absolute -left-[9px] top-8 h-4 w-4 rounded-full bg-background border-[2px] border-purple-500 z-10 group-hover:scale-125 transition-transform duration-300"
+                >
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center gap-8 py-4"
+                >
+                    <div class="max-w-xl order-2 md:order-1">
+                        <span
+                            class="font-mono text-xs text-purple-500 mb-2 block tracking-widest group-hover:translate-x-1 transition-transform"
+                            >01 // SERVER-SIDE</span
+                        >
+                        <h3
+                            class="text-3xl font-bold text-foreground mb-4 group-hover:text-purple-500 transition-colors duration-300"
+                        >
+                            Backend Architecture
                         </h3>
-                        <div class="w-full border border-white mb-5"></div>
-                        <p class="text-white">
-                            Spring Boot dev builds secure APIs, and highly
-                            robust, server-side code. Clean Code
+                        <p
+                            class="text-muted-foreground text-lg leading-relaxed group-hover:text-foreground/80 transition-colors"
+                        >
+                            Building robust RESTful APIs. Complex business
+                            logic, security, and performance using <span
+                                class="font-semibold text-foreground"
+                                >Spring Boot</span
+                            > and <span class="font-semibold text-foreground"
+                                >Laravel</span
+                            >.
                         </p>
                     </div>
-                    <div class="card_img_box">
-                        <img
-                            class="w-full h-auto"
-                            src="/image/backend.png"
-                            alt="Home cooking safety tips"
+
+                    <div class={`${HologramContainer} order-1 md:order-2`}>
+                        <Database
+                            class="w-12 h-12 text-muted-foreground/50 group-hover:text-purple-500 transition-colors duration-500"
+                            stroke-width="1.5"
                         />
-                        <div class="card_icon bg-primary-light">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Spring_Boot"
-                                target="_blank"
-                            >
-                                <ArrowUpRight class="w-15 h-auto" />
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div data-aos="fade-up" data-aos-delay="300">
+
+            <div
+                class="relative pl-8 md:pl-16 group cursor-target"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
                 <div
-                    class="card_box card_box03 bg-theme-magenta-blue transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                    class="absolute -left-[9px] top-8 h-4 w-4 rounded-full bg-background border-[2px] border-blue-500 z-10 group-hover:scale-125 transition-transform duration-300"
                 >
-                    <div class="card_text_content">
-                        <h3>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Mobile_app_development"
-                                target="_blank"
-                                class="text-white"
-                                >Developer Mobile Apps - Kotlin</a
-                            >
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center gap-8 py-4"
+                >
+                    <div class="max-w-xl order-2 md:order-1">
+                        <span
+                            class="font-mono text-xs text-blue-500 mb-2 block tracking-widest group-hover:translate-x-1 transition-transform"
+                            >02 // FRONTEND & MIGRATIONS</span
+                        >
+                        <h3
+                            class="text-3xl font-bold text-foreground mb-4 group-hover:text-blue-500 transition-colors duration-300"
+                        >
+                            Web Modern & Legacy
                         </h3>
-                        <div class="w-full border border-white mb-5"></div>
-                        <p class="text-white">
-                            Kotlin mobile dev creates smooth Android apps with
-                            pure native agile UI.
+                        <p
+                            class="text-muted-foreground text-lg leading-relaxed group-hover:text-foreground/80 transition-colors"
+                        >
+                            Responsive interfaces (UI/UX). Specialist in <span
+                                class="font-semibold text-foreground"
+                                >refactoring</span
+                            > and supporting <span
+                                class="text-blue-500 font-semibold inline-flex items-center gap-1"
+                                ><ServerCrash class="w-4 h-4" />Legacy</span
+                            > systems.
                         </p>
                     </div>
-                    <div class="card_img_box">
-                        <img
-                            class="w-full h-auto"
-                            src="/image/desingmovil.png"
-                            alt="Home cooking snacks tips"
+
+                    <div class={`${HologramContainer} order-1 md:order-2`}>
+                        <Globe2
+                            class="w-12 h-12 text-muted-foreground/50 group-hover:text-blue-500 transition-colors duration-500"
+                            stroke-width="1.5"
                         />
-                        <div class="card_icon bg-primary-light">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Mobile_app_development"
-                                target="_blank"
-                            >
-                                <ArrowUpRight class="w-15 h-auto" />
-                            </a>
-                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative pl-8 md:pl-16 group cursor-target"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+                <div
+                    class="absolute -left-[9px] top-8 h-4 w-4 rounded-full bg-background border-[2px] border-orange-500 z-10 group-hover:scale-125 transition-transform duration-300"
+                >
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center gap-8 py-4"
+                >
+                    <div class="max-w-xl order-2 md:order-1">
+                        <span
+                            class="font-mono text-xs text-orange-500 mb-2 block tracking-widest group-hover:translate-x-1 transition-transform"
+                            >03 // NATIVE APP</span
+                        >
+                        <h3
+                            class="text-3xl font-bold text-foreground mb-4 group-hover:text-orange-500 transition-colors duration-300"
+                        >
+                            Native Android
+                        </h3>
+                        <p
+                            class="text-muted-foreground text-lg leading-relaxed group-hover:text-foreground/80 transition-colors"
+                        >
+                            Native development with <span
+                                class="font-semibold text-foreground"
+                                >Kotlin</span
+                            >. Absolute priority on pure performance and fluid
+                            user experience.
+                        </p>
+                    </div>
+
+                    <div class={`${HologramContainer} order-1 md:order-2`}>
+                        <Smartphone
+                            class="w-12 h-12 text-muted-foreground/50 group-hover:text-orange-500 transition-colors duration-500"
+                            stroke-width="1.5"
+                        />
                     </div>
                 </div>
             </div>
@@ -141,3 +360,29 @@ import "aos/dist/aos.css";
 </section>
 
 <AOSClient client:load />
+
+<style>
+    @keyframes gradient-x {
+        0%,
+        100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+    .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradient-x 3s ease infinite;
+    }
+
+    /* Dark Mode Logo Effect: Default is dark, so apply white filter unless .light class is present */
+    :global(:not(.light)) .dark-mode-logo {
+        filter: brightness(0) invert(1)
+            drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
+
+    :global(.light) .dark-mode-logo {
+        filter: none;
+    }
+</style>

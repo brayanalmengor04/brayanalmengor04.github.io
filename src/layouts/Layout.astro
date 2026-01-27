@@ -1,6 +1,7 @@
 ---
 import "aos/dist/aos.css";
 import AOSClient from "../components/AOSClient";
+import TargetCursor from "../components/TargetCursor";
 
 const {
   title = "Brayan Almengor - Backend Developer & Software Engineer",
@@ -59,9 +60,10 @@ const {
     </script>
   </head>
   <body class="overflow-x-hidden">
+    <TargetCursor client:load />
     <slot />
+    <AOSClient client:load />
   </body>
-  <AOSClient client:load />
 </html>
 
 <style>
