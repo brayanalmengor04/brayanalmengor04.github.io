@@ -1,4 +1,6 @@
 ---
 import ProjectGallery from "../components/ProjectGallery";
---- 
-<ProjectGallery client:visible /> 
+const { lang = "es" } = Astro.props;
+---
+
+<ProjectGallery client:visible lang={lang} />

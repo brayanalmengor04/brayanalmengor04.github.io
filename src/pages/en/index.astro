@@ -1,0 +1,31 @@
+---
+import "../../styles/global.css";
+import "../../styles/resume.css";
+import "../../styles/inverted-card.css";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar";
+import Hero from "../../sections/Hero.astro";
+import Service from "../../sections/Service.astro";
+import Skill from "../../sections/Skill.astro";
+import Proyects from "../../sections/Proyects.astro";
+import Education from "../../sections/Education.astro";
+import Footer from "../../sections/Footer.astro";
+import Contact from "../../sections/Contact.astro";
+
+const lang = "en";
+---
+
+<Layout
+    title="Brayan Almengor - Backend Developer & Software Engineer"
+    lang={lang}
+>
+    <Navbar client:load lang={lang} />
+    <Hero lang={lang} />
+    <Service lang={lang} />
+    <Skill lang={lang} />
+    <Proyects lang={lang} />
+    <Education lang={lang} />
+    <Contact lang={lang} />
+    <Footer lang={lang} />
+    <!-- <script src="../../hook/Layout.js"></script> -->
+</Layout>

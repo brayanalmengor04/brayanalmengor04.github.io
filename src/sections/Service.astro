@@ -15,8 +15,32 @@ import {
 } from "lucide-astro";
 import AOSClient from "../components/AOSClient";
 import "aos/dist/aos.css";
+import { useTranslations } from "../i18n/utils";
 
-// Updated Hologram: No background change, just border glow and icon color
+const { lang = "es" } = Astro.props;
+const t = useTranslations(lang);
+
+// Helper for replacements
+const strong = (text) => `<strong class="text-foreground">${text}</strong>`;
+const replaceTech = (str) => {
+    return str
+        .replace("{laravel}", strong("Laravel"))
+        .replace("{jquery}", strong("jQuery"))
+        .replace("{oracle}", strong("Oracle"))
+        .replace("{git}", strong("Git"))
+        .replace("{springboot}", strong("Spring Boot"))
+        .replace("{kotlin}", strong("Kotlin"))
+        .replace("{refactoring}", strong("Refactoring"))
+        .replace(
+            "{legacy}",
+            `<span class="text-blue-500 font-semibold inline-flex items-center gap-1"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server-crash"><path d="M6 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><path d="M6 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2"/><path d="M6 6h.01"/><path d="M6 18h.01"/><path d="m13 6-4 6h6l-4 6"/></svg>Legacy</span>`,
+        ); // Hardcoded icon here for simplicity or pass component
+};
+
+const legacyReplacement = (str) => {
+    return replaceTech(str);
+};
+
 const HologramContainer =
     "relative w-24 h-24 md:w-28 md:h-28 shrink-0 rounded-2xl overflow-hidden flex items-center justify-center border border-white/5 transition-all duration-500 group-hover:border-white/20";
 ---
@@ -36,16 +60,17 @@ const HologramContainer =
                 class="flex items-center gap-3 mb-4 text-muted-foreground font-mono text-sm"
             >
                 <Terminal class="w-4 h-4 text-blue-500" />
-                <span>~/developer/portfolio</span>
+                <span>{t("service.path")}</span>
             </div>
             <h2
                 class="text-5xl md:text-7xl font-black text-foreground mb-4 leading-tight tracking-tight cursor-target"
             >
-                Experience <br />
+                {t("service.title")}
+                <br />
                 <span
                     class="text-transparent bg-clip-text bg-[image:var(--gradient-primary)] animate-gradient-x"
                 >
-                    & Core Stack_
+                    {t("service.subtitle")}
                 </span>
             </h2>
         </div>
@@ -93,7 +118,7 @@ const HologramContainer =
                                 <h3
                                     class="text-4xl md:text-5xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300"
                                 >
-                                    Software Developer
+                                    {t("service.senacyt.role")}
                                 </h3>
                                 <div
                                     class="flex flex-wrap items-center gap-4 text-sm font-medium"
@@ -118,7 +143,7 @@ const HologramContainer =
                                     <span
                                         class="px-3 py-1 rounded-full bg-[var(--accent-primary)]/10 text-accent font-mono text-xs border border-[var(--accent-primary)]/20"
                                     >
-                                        JUL 2025 — DEC 2025 (INTERN)
+                                        {t("service.senacyt.date")}
                                     </span>
                                 </div>
                             </div>
@@ -130,16 +155,13 @@ const HologramContainer =
                                     <span
                                         class="w-8 h-[1px] bg-[var(--accent-primary)]/50"
                                     ></span>
-                                    // SCOPE OF WORK & IMPACT
+                                    {t("service.senacyt.scope")}
                                 </h4>
 
                                 <p
                                     class="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 group-hover:text-foreground/90 transition-colors duration-500"
                                 >
-                                    Development of critical government systems,
-                                    focusing on data integrity, backend
-                                    optimization, and high-performance database
-                                    architecture.
+                                    {t("service.senacyt.desc")}
                                 </p>
                             </div>
 
@@ -152,14 +174,10 @@ const HologramContainer =
                                     />
                                     <span
                                         class="group-hover/item:text-foreground transition-colors"
-                                    >
-                                        Optimization of internal modules using <strong
-                                            class="text-foreground"
-                                            >Laravel</strong
-                                        > and <strong class="text-foreground"
-                                            >jQuery</strong
-                                        >.
-                                    </span>
+                                        set:html={replaceTech(
+                                            t("service.senacyt.item1"),
+                                        )}
+                                    />
                                 </li>
                                 <li class="flex items-start gap-4 group/item">
                                     <CheckCircle2
@@ -167,12 +185,10 @@ const HologramContainer =
                                     />
                                     <span
                                         class="group-hover/item:text-foreground transition-colors"
-                                    >
-                                        Designed scalable database architectures
-                                        in <strong class="text-foreground"
-                                            >Oracle</strong
-                                        >.
-                                    </span>
+                                        set:html={replaceTech(
+                                            t("service.senacyt.item2"),
+                                        )}
+                                    />
                                 </li>
                                 <li class="flex items-start gap-4 group/item">
                                     <CheckCircle2
@@ -180,12 +196,10 @@ const HologramContainer =
                                     />
                                     <span
                                         class="group-hover/item:text-foreground transition-colors"
-                                    >
-                                        Full lifecycle development and version
-                                        control with <strong
-                                            class="text-foreground">Git</strong
-                                        >.
-                                    </span>
+                                        set:html={replaceTech(
+                                            t("service.senacyt.item3"),
+                                        )}
+                                    />
                                 </li>
                             </ul>
 
@@ -219,7 +233,8 @@ const HologramContainer =
                 <div
                     class="font-mono text-sm text-muted-foreground/60 pl-4 border-l-2 border-blue-500/20"
                 >
-                    <span class="text-blue-500">$</span> git checkout -b personal-projects
+                    <span class="text-blue-500">$</span>
+                    {t("service.git")}
                 </div>
             </div>
 
@@ -239,24 +254,17 @@ const HologramContainer =
                     <div class="max-w-xl order-2 md:order-1">
                         <span
                             class="font-mono text-xs text-purple-500 mb-2 block tracking-widest group-hover:translate-x-1 transition-transform"
-                            >01 // SERVER-SIDE</span
+                            >{t("service.item1.tag")}</span
                         >
                         <h3
                             class="text-3xl font-bold text-foreground mb-4 group-hover:text-purple-500 transition-colors duration-300"
                         >
-                            Backend Architecture
+                            {t("service.item1.title")}
                         </h3>
                         <p
                             class="text-muted-foreground text-lg leading-relaxed group-hover:text-foreground/80 transition-colors"
-                        >
-                            Building robust RESTful APIs. Complex business
-                            logic, security, and performance using <span
-                                class="font-semibold text-foreground"
-                                >Spring Boot</span
-                            > and <span class="font-semibold text-foreground"
-                                >Laravel</span
-                            >.
-                        </p>
+                            set:html={replaceTech(t("service.item1.desc"))}
+                        />
                     </div>
 
                     <div class={`${HologramContainer} order-1 md:order-2`}>
@@ -284,24 +292,17 @@ const HologramContainer =
                     <div class="max-w-xl order-2 md:order-1">
                         <span
                             class="font-mono text-xs text-blue-500 mb-2 block tracking-widest group-hover:translate-x-1 transition-transform"
-                            >02 // FRONTEND & MIGRATIONS</span
+                            >{t("service.item2.tag")}</span
                         >
                         <h3
                             class="text-3xl font-bold text-foreground mb-4 group-hover:text-blue-500 transition-colors duration-300"
                         >
-                            Web Modern & Legacy
+                            {t("service.item2.title")}
                         </h3>
                         <p
                             class="text-muted-foreground text-lg leading-relaxed group-hover:text-foreground/80 transition-colors"
-                        >
-                            Responsive interfaces (UI/UX). Specialist in <span
-                                class="font-semibold text-foreground"
-                                >refactoring</span
-                            > and supporting <span
-                                class="text-blue-500 font-semibold inline-flex items-center gap-1"
-                                ><ServerCrash class="w-4 h-4" />Legacy</span
-                            > systems.
-                        </p>
+                            set:html={replaceTech(t("service.item2.desc"))}
+                        />
                     </div>
 
                     <div class={`${HologramContainer} order-1 md:order-2`}>
@@ -329,22 +330,17 @@ const HologramContainer =
                     <div class="max-w-xl order-2 md:order-1">
                         <span
                             class="font-mono text-xs text-orange-500 mb-2 block tracking-widest group-hover:translate-x-1 transition-transform"
-                            >03 // NATIVE APP</span
+                            >{t("service.item3.tag")}</span
                         >
                         <h3
                             class="text-3xl font-bold text-foreground mb-4 group-hover:text-orange-500 transition-colors duration-300"
                         >
-                            Native Android
+                            {t("service.item3.title")}
                         </h3>
                         <p
                             class="text-muted-foreground text-lg leading-relaxed group-hover:text-foreground/80 transition-colors"
-                        >
-                            Native development with <span
-                                class="font-semibold text-foreground"
-                                >Kotlin</span
-                            >. Absolute priority on pure performance and fluid
-                            user experience.
-                        </p>
+                            set:html={replaceTech(t("service.item3.desc"))}
+                        />
                     </div>
 
                     <div class={`${HologramContainer} order-1 md:order-2`}>

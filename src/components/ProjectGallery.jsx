@@ -10,7 +10,10 @@ const categoryMap = {
   "UI/UX": ["figmaDesign"],
 };
 
-const ProjectGallery = () => {
+import { useTranslations } from "../i18n/utils";
+
+const ProjectGallery = ({ lang = "es" }) => {
+  const t = useTranslations(lang);
   const [activeCategory, setActiveCategory] = useState("All");
   const [expandedCards, setExpandedCards] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
@@ -33,7 +36,7 @@ const ProjectGallery = () => {
   };
   return (
     <div className="p-6 max-w-6xl mx-auto" id="portfolio">
-      <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: 'var(--text-primary)' }}>Portfolio Projects</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: 'var(--text-primary)' }}>{t('project.title')}</h2>
       <div className="flex justify-center gap-4 mb-8 flex-wrap">
         {categories.map((cat) => (
           <button
@@ -57,12 +60,14 @@ const ProjectGallery = () => {
         <AnimatePresence>
           {currentProjects.map(([key, project]) => {
             const isExpanded = expandedCards[key];
-            const shouldTruncate = project.description.length > MAX_DESC_LENGTH;
+            const title = t(`project.${key}.title`) || project.title;
+            const description = t(`project.${key}.desc`) || project.description;
+            const shouldTruncate = description.length > MAX_DESC_LENGTH;
             const displayedDescription = isExpanded
-              ? project.description
+              ? description
               : shouldTruncate
-                ? project.description.slice(0, MAX_DESC_LENGTH) + "..."
-                : project.description;
+                ? description.slice(0, MAX_DESC_LENGTH) + "..."
+                : description;
             return (
               // Aqui deno cambiar el bg-theme-magenta-blue de forma dinamica al cambiar el modo light y las letras de forma dinamica al cambiar el modo light
               <motion.div
@@ -73,9 +78,9 @@ const ProjectGallery = () => {
                 transition={{ duration: 0.3 }}
                 className="bg-theme-magenta-blue rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-gray-200 flex flex-col"
               >
-                <img src={project.img} alt={project.title} className="w-full h-48 object-cover" />
+                <img src={project.img} alt={title} className="w-full h-48 object-cover" />
                 <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-xl text-white font-bold mb-2">{project.title}</h3>
+                  <h3 className="text-xl text-white font-bold mb-2">{title}</h3>
                   <motion.div layout className="text-sm mb-3" style={{ color: 'var(--text-secondary)' }}>
                     {displayedDescription}
                     {shouldTruncate && (
@@ -83,7 +88,7 @@ const ProjectGallery = () => {
                         onClick={() => toggleExpand(key)}
                         className="ml-1 text-green-300 text-xs cursor-pointer"
                       >
-                        {isExpanded ? "Show Less" : "Read More"}
+                        {isExpanded ? t('project.btn.showless') : t('project.btn.readmore')}
                       </button>
                     )}
                   </motion.div>
@@ -120,7 +125,7 @@ const ProjectGallery = () => {
                         }}
                       >
                         <FaGithub className="text-xl" />
-                        GitHub
+                        {t('project.btn.github')}
                       </a>
                     )}
                     {project.previewLink && (
@@ -144,7 +149,7 @@ const ProjectGallery = () => {
                         }}
                       >
                         <FaExternalLinkAlt className="text-xl" />
-                        Demo
+                        {t('project.btn.demo')}
                       </a>
                     )}
                   </div>
@@ -164,7 +169,7 @@ const ProjectGallery = () => {
               : "bg-theme-magenta-blue hover:bg-purple-700 cursor-pointer"
               } transition-all`}
           >
-            Prev
+            {t('project.btn.prev')}
           </button>
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
             <button
@@ -186,7 +191,7 @@ const ProjectGallery = () => {
               : "bg-theme-magenta-blue hover:bg-purple-700"
               } transition-all`}
           >
-            Next
+            {t('project.btn.next')}
           </button>
         </div>
       )}

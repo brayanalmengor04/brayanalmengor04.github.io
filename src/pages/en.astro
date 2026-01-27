@@ -11,20 +11,20 @@ import Proyects from "../sections/Proyects.astro";
 import Education from "../sections/Education.astro";
 import Footer from "../sections/Footer.astro";
 import Contact from "../sections/Contact.astro";
-const lang = "es";
+const lang = "en";
 ---
 
 <Layout
-	title="Brayan Almengor - Backend Developer & Software Engineer"
-	lang={lang}
+    title="Brayan Almengor - Backend Developer & Software Engineer"
+    lang={lang}
 >
-	<Navbar client:load lang={lang} />
-	<Hero lang={lang} />
-	<Service lang={lang} />
-	<Skill lang={lang} />
-	<Proyects lang={lang} />
-	<Education lang={lang} />
-	<Contact lang={lang} />
-	<Footer lang={lang} />
-	<!-- <script src="../hook/Layout.js"></script> -->
+    <Navbar client:load lang={lang} />
+    <Hero lang={lang} />
+    <Service lang={lang} />
+    <Skill lang={lang} />
+    <Proyects lang={lang} />
+    <Education lang={lang} />
+    <Contact lang={lang} />
+    <Footer lang={lang} />
+    <!-- <script src="../hook/Layout.js"></script> -->
 </Layout>

@@ -1,10 +1,13 @@
-"use client";
 import React, { useState } from "react";
-import { FaMapMarkerAlt, FaBuilding, FaPaperPlane, FaCheckCircle } from "react-icons/fa";
-import useFormSubmit from "../hook/useFormSubmit"; // Ajusta la ruta según tu estructura
+import { FaMapMarkerAlt, FaBuilding, FaPaperPlane } from "react-icons/fa";
+import { ImSpinner8 } from "react-icons/im";
+import useFormSubmit from "../hook/useFormSubmit";
+import Swal from 'sweetalert2';
 
-export default function ContactSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+import { useTranslations } from "../i18n/utils";
+
+export default function ContactSection({ lang = "es" }) {
+  const t = useTranslations(lang);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,8 +25,31 @@ export default function ContactSection() {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Client-side Rate Limiting
+    const lastSubmission = localStorage.getItem('lastSubmissionTime');
+    const COOLDOWN_TIME = 2 * 60 * 1000; // 2 minutes in ms
+
+    if (lastSubmission) {
+      const timePassed = Date.now() - parseInt(lastSubmission);
+      if (timePassed < COOLDOWN_TIME) {
+        const secondsLeft = Math.ceil((COOLDOWN_TIME - timePassed) / 1000);
+        Swal.fire({
+          icon: 'warning',
+          title: t('contact.alert.wait.title'),
+          text: t('contact.alert.wait.text').replace('{seconds}', secondsLeft),
+          confirmButtonColor: 'var(--color-neon-green)'
+        });
+        return;
+      }
+    }
+
     try {
       await submitForm(formData);
+
+      // Update local storage timestamp
+      localStorage.setItem('lastSubmissionTime', Date.now().toString());
+
       setFormData({
         firstName: "",
         lastName: "",
@@ -31,20 +57,33 @@ export default function ContactSection() {
         phone: "",
         message: ""
       });
-      setIsModalOpen(true);
+
+      Swal.fire({
+        icon: 'success',
+        title: t('contact.alert.success.title'),
+        text: t('contact.alert.success.text'),
+        confirmButtonColor: '#10b981',
+        background: '#fff',
+        color: '#333'
+      });
+
     } catch (err) {
       console.error("Error enviando el formulario:", err);
+      Swal.fire({
+        icon: 'error',
+        title: t('contact.alert.error.title'),
+        text: err.message || t('contact.alert.error.text'),
+        confirmButtonColor: '#ef4444'
+      });
     }
   };
   return (
     <section className="py-16 px-4 md:px-8" id="contact" style={{ background: 'var(--bg-secondary)', color: 'var(--text-secondary)' }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12" data-aos="zoom-in" data-aos-delay="200">
-          <h2 className="text-3xl font-bold mb-3">Contact Us</h2>
+          <h2 className="text-3xl font-bold mb-3">{t('contact.title')}</h2>
           <p className="max-w-2xl mx-auto" style={{ color: 'var(--text-muted)' }}>
-            Have questions or need assistance? We're here to help!
-            Our team is dedicated to providing innovative solutions and personalized support.
-            Reach out to us, and let’s build something great together.
+            {t('contact.desc')}
           </p>
         </div>
 
@@ -53,28 +92,28 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div data-aos="fade-up" data-aos-delay="350">
-                  <label htmlFor="firstName" className="block text-sm mb-1">First Name</label>
+                  <label htmlFor="firstName" className="block text-sm mb-1">{t('contact.form.firstname')}</label>
                   <input
                     type="text"
                     id="firstName"
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    placeholder="Bonnie"
+                    placeholder={t('contact.form.firstname.ph')}
                     className="w-full p-2.5 border rounded-md"
                     style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
                     required
                   />
                 </div>
                 <div data-aos="fade-up" data-aos-delay="400">
-                  <label htmlFor="lastName" className="block text-sm mb-1">Last Name</label>
+                  <label htmlFor="lastName" className="block text-sm mb-1">{t('contact.form.lastname')}</label>
                   <input
                     type="text"
                     id="lastName"
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    placeholder="Green"
+                    placeholder={t('contact.form.lastname.ph')}
                     className="w-full p-2.5 border rounded-md"
                     style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
                     required
@@ -84,28 +123,28 @@ export default function ContactSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div data-aos="fade-up" data-aos-delay="450">
-                  <label htmlFor="email" className="block text-sm mb-1">Your Email</label>
+                  <label htmlFor="email" className="block text-sm mb-1">{t('contact.form.email')}</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="transmitter@gmail.com"
+                    placeholder={t('contact.form.email.ph')}
                     className="w-full p-2.5 border rounded-md"
                     style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
                     required
                   />
                 </div>
                 <div data-aos="fade-up" data-aos-delay="500">
-                  <label htmlFor="phone" className="block text-sm mb-1">Phone</label>
+                  <label htmlFor="phone" className="block text-sm mb-1">{t('contact.form.phone')}</label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+12 345 6789"
+                    placeholder={t('contact.form.phone.ph')}
                     className="w-full p-2.5 border rounded-md"
                     style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
                   />
@@ -113,14 +152,14 @@ export default function ContactSection() {
               </div>
 
               <div className="mb-4" data-aos="fade-up" data-aos-delay="550">
-                <label htmlFor="message" className="block text-sm mb-1">Your Message</label>
+                <label htmlFor="message" className="block text-sm mb-1">{t('contact.form.message')}</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  placeholder="Leave a comment..."
+                  placeholder={t('contact.form.message.ph')}
                   className="w-full p-2.5 border rounded-md"
                   style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
                   required
@@ -128,18 +167,30 @@ export default function ContactSection() {
               </div>
 
               <div className="text-sm mb-6" data-aos="fade-up" data-aos-delay="600" style={{ color: 'var(--text-muted)' }}>
-                By submitting this form, you agree to our{" "}
-                <a href="#" className="text-[var(--color-neon-green)] hover:underline">terms and conditions</a> and{" "}
-                <a href="#" className="text-[var(--color-neon-green)] hover:underline">privacy policy</a>, which explain how we may collect, use, and disclose your personal information, including to third parties.
+                {t('contact.legal')}{" "}
+                <a href="#" className="text-[var(--color-neon-green)] hover:underline">{t('contact.legal.terms')}</a> {lang === 'en' ? 'and' : 'y'}{" "}
+                <a href="#" className="text-[var(--color-neon-green)] hover:underline">{t('contact.legal.privacy')}</a>{t('contact.legal.suffix')}
               </div>
 
               <button
                 type="submit"
-                className="bg-theme-magenta-blue hover:bg-primary text-white font-medium py-2.5 px-5 rounded-md flex items-center gap-2 cursor-pointer"
+                className={`font-medium py-2.5 px-5 rounded-md flex items-center gap-2 transition-all duration-300 ${loading
+                  ? 'bg-gray-400 cursor-not-allowed opacity-70'
+                  : 'bg-theme-magenta-blue hover:bg-primary text-white cursor-pointer hover:shadow-lg'
+                  }`}
                 disabled={loading}
               >
-                <FaPaperPlane className="text-sm" />
-                Send Message
+                {loading ? (
+                  <>
+                    <ImSpinner8 className="text-lg animate-spin" />
+                    {t('contact.btn.sending')}
+                  </>
+                ) : (
+                  <>
+                    <FaPaperPlane className="text-sm" />
+                    {t('contact.btn.send')}
+                  </>
+                )}
               </button>
             </form>
           </div>
@@ -155,7 +206,7 @@ export default function ContactSection() {
                 <FaBuilding className="text-xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-1">Developer Info:</h3>
+                <h3 className="font-semibold text-lg mb-1">{t('contact.info.dev')}</h3>
                 <p className="text-gray-400">TechSolutions</p>
               </div>
             </div>
@@ -170,7 +221,7 @@ export default function ContactSection() {
                 <FaMapMarkerAlt className="text-xl" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-1">Address:</h3>
+                <h3 className="font-semibold text-lg mb-1">{t('contact.info.addr')}</h3>
                 <p className="text-gray-400">PANAMÁ, PANAMÁ CITY, ARRAIJAN</p>
                 <p className="text-gray-400">ZIP Code: 7002</p>
               </div>
@@ -178,21 +229,20 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-      {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm mx-auto text-center">
-            <FaCheckCircle className="text-green-500 text-6xl mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2 text-gray-700">Message Sent</h3>
-            <p className="mb-4 text-green-700">Your message has been sent successfully</p>
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded"
-            >
-              OK
-            </button>
-          </div>
-        </div>
-      )}
+
+      <style jsx>{`
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .animate-spin {
+          animation: spin 1s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }

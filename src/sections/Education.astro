@@ -1,5 +1,9 @@
 ---
 import AOSClient from "../components/AOSClient";
+import { useTranslations } from "../i18n/utils";
+
+const { lang = "es" } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section class="bg-primary py-12 px-6">
@@ -8,10 +12,10 @@ import AOSClient from "../components/AOSClient";
     <h3
       class="text-lg font-semibold tracking-wide uppercase text-theme-secondary"
     >
-      My Academic Journey
+      {t("education.subtitle")}
     </h3>
     <h2 class="text-4xl font-bold mt-2 text-theme-primary">
-      Education & Training
+      {t("education.title")}
     </h2>
   </div>
   <div
@@ -50,15 +54,12 @@ import AOSClient from "../components/AOSClient";
               ></path>
             </svg>
 
-            Bachelor's in Software Development
+            {t("education.card1.title")}
           </span>
-          <span class="text-theme-muted">2025</span>
+          <span class="text-theme-muted">{t("education.card1.date")}</span>
         </div>
         <p class="text-theme-secondary leading-relaxed">
-          I am currently pursuing a Bachelor's degree in Software Development at
-          the Technological University of Panama, enhancing my skills in
-          programming, software architecture, and innovative technologies for
-          building efficient and scalable applications.
+          {t("education.card1.desc")}
         </p>
       </div>
     </div>
@@ -86,13 +87,13 @@ import AOSClient from "../components/AOSClient";
             d="M8 20v-9l-4 1.125V20h4Zm0 0h8m-8 0V6.66667M16 20v-9l4 1.125V20h-4Zm0 0V6.66667M18 8l-6-4-6 4m5 1h2m-2 3h2"
           ></path>
         </svg>
-        Diploma in Commerce from Moisés Castillo Ocaña High School
+        {t("education.card2.title")}
       </h3>
-      <span class="text-theme-muted block mb-4">2019</span>
+      <span class="text-theme-muted block mb-4"
+        >{t("education.card2.date")}</span
+      >
       <p class="text-theme-secondary text-sm leading-relaxed">
-        I earned a Diploma in Commerce at Moisés Castillo Ocaña High School,
-        gaining knowledge in business fundamentals, financial analysis, and
-        economic theories, which built a strong foundation for my career.
+        {t("education.card2.desc")}
       </p>
     </div>
 
@@ -118,13 +119,13 @@ import AOSClient from "../components/AOSClient";
             d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
           ></path>
         </svg>
-        Certification Course
+        {t("education.card3.title")}
       </h3>
-      <span class="text-theme-muted block mb-4">2022</span>
+      <span class="text-theme-muted block mb-4"
+        >{t("education.card3.date")}</span
+      >
       <p class="text-theme-secondary text-sm leading-relaxed">
-        I completed Udemy courses in software development, focusing on agile
-        methodologies and innovative practices to complement my formal
-        education.
+        {t("education.card3.desc")}
       </p>
     </div>
   </div>

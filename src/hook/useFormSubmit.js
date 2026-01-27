@@ -9,7 +9,7 @@ const useFormSubmit = () => {
     setError(null);
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/brayanalmengor300@gmail.com", // Reemplaza con tu correo
+        "/api/send-email",
         {
           method: "POST",
           headers: {
@@ -18,11 +18,15 @@ const useFormSubmit = () => {
           body: JSON.stringify(formData)
         }
       );
+
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error("Error submitting form");
+        throw new Error(result.message || "Error submitting form");
       }
-      await response.json();
+
       setLoading(false);
+      return result;
     } catch (err) {
       setError(err);
       setLoading(false);

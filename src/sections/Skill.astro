@@ -1,6 +1,10 @@
 ---
 import "aos/dist/aos.css";
 import AOSClient from "../components/AOSClient";
+import { useTranslations } from "../i18n/utils";
+
+const { lang = "es" } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section
@@ -13,16 +17,13 @@ import AOSClient from "../components/AOSClient";
       <h3
         class="text-lg font-semibold tracking-wide uppercase text-theme-secondary"
       >
-        My Skills
+        {t("skill.subtitle")}
       </h3>
       <h2 class="text-4xl font-bold mt-3 text-theme-primary leading-tight">
-        Robust Backend Architectures & High-Performance Systems
+        {t("skill.title")}
       </h2>
       <p class="mt-5 text-lg text-theme-secondary">
-        I craft high-performance, scalable backend systems with Spring Boot,
-        architecting resilient solutions that power modern applications. From
-        designing intuitive RESTful APIs to optimizing database efficiency, I
-        ensure seamless, robust, and future-proof architectures.
+        {t("skill.desc")}
       </p>
     </div>
   </div>
@@ -48,8 +49,7 @@ import AOSClient from "../components/AOSClient";
         <div class="text-start p-1">
           <h4 class="text-white font-semibold text-lg">MySQL</h4>
           <p class="text-white text-xs">
-            Relational database management system used for structured data
-            storage and retrieval.
+            {t("skill.mysql.desc")}
           </p>
         </div>
       </div>
@@ -78,8 +78,7 @@ import AOSClient from "../components/AOSClient";
         <div class="ml-2 text-start">
           <h4 class="text-white font-semibold text-lg">Docker</h4>
           <p class="text-white text-xs">
-            Containerization platform to deploy, manage, and scale applications
-            efficiently.
+            {t("skill.docker.desc")}
           </p>
         </div>
       </div>
@@ -108,8 +107,7 @@ import AOSClient from "../components/AOSClient";
         <div class="text-start">
           <h4 class="text-white font-semibold text-lg">Spring Boot</h4>
           <p class="text-white text-xs">
-            Framework for building robust API REST services and backend
-            applications.
+            {t("skill.springboot.desc")}
           </p>
         </div>
       </div>
@@ -138,8 +136,7 @@ import AOSClient from "../components/AOSClient";
         <div>
           <h4 class="text-white font-semibold text-lg">Figma</h4>
           <p class="text-white text-xs">
-            UI/UX design tool for prototyping and designing user-friendly
-            interfaces.
+            {t("skill.figma.desc")}
           </p>
         </div>
       </div>

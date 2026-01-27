@@ -1,0 +1,46 @@
+---
+import { Languages } from "lucide-astro";
+
+const { lang } = Astro.props;
+
+const targetLang = lang === "es" ? "en" : "es";
+const targetUrl = targetLang === "es" ? "/" : "/en";
+const label = lang === "es" ? "EN" : "ES"; // Show the OTHER language to switch to, or current? Usually "EN" to switch to English.
+// If I am in ES, I see "EN" or "English" to switch.
+// Let's use a nice icon with the text.
+---
+
+<a
+    href={targetUrl}
+    class="language-picker p-2 rounded-full transition-all duration-300 transform hover:scale-125 hover:rotate-12 hover:shadow-lg flex items-center justify-center relative group"
+    aria-label={`Switch to ${targetLang === "en" ? "English" : "Spanish"}`}
+>
+    <!-- Background effect -->
+    <div
+        class="absolute inset-0 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 bg-gradient-to-tr from-[var(--color-neon-blue)] to-[var(--color-neon-pink)]"
+    >
+    </div>
+
+    <Languages
+        class="w-5 h-5 text-white relative z-10 group-hover:text-[var(--color-neon-green)] transition-colors duration-300"
+    />
+
+    <!-- Tooltip -->
+    <span
+        class="absolute right-full mr-3 px-2 py-1 rounded text-xs font-bold text-white bg-[var(--bg-card)] border border-[var(--border-primary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl"
+    >
+        {targetLang.toUpperCase()}
+    </span>
+</a>
+
+<style>
+    .language-picker {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-muted);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .language-picker:hover {
+        border-color: var(--color-neon-blue);
+        box-shadow: 0 0 15px var(--color-neon-blue);
+    }
+</style>
