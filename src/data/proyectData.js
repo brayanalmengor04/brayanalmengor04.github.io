@@ -1,5 +1,5 @@
 import { SiHtml5, SiCss3, SiJavascript, SiAstro, SiSpring, SiReact, SiMysql,SiHibernate,SiDocker
-,SiLaravel,SiBootstrap,SiKotlin,SiComposer,SiJetpackcompose,SiAndroid,SiFigma,SiElectron,SiTailwindcss,
+,SiLaravel,SiBootstrap,SiKotlin,SiJetpackcompose,SiAndroid,SiFigma,SiElectron,SiTailwindcss,
 SiSpringboot
  } from "react-icons/si"; 
 
