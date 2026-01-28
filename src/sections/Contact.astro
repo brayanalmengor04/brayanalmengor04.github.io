@@ -1,4 +1,7 @@
 ---
-import ContactSection from '../components/ContactSection.jsx';
+import ContactSection from "../components/ContactSection.jsx";
+
+const { lang } = Astro.props;
 ---
-<ContactSection client:load />
+
+<ContactSection client:load lang={lang} />

@@ -13,12 +13,39 @@ export default function Navbar({ lang = "es" }) {
 
   const navLinks = [
     { name: lang === "es" ? "Inicio" : "Home", id: "home" },
-    { name: lang === "es" ? "Servicios" : "Service", id: "experience-services" }, // Updated ID to match section
+    { name: lang === "es" ? "Experiencia" : "Experience", id: "experience-services" }, // Updated label
     { name: lang === "es" ? "Habilidades" : "Skill", id: "skill" },
-    { name: lang === "es" ? "Resumen" : "Resume", id: "portfolio" }, // Keep ID as is for now
+    { name: lang === "es" ? "Certificaciones" : "Certifications", id: "certifications" }, // New Certifications link
     { name: lang === "es" ? "Portafolio" : "Portfolio", id: "portfolio" },
     { name: lang === "es" ? "Contacto" : "Contact", id: "contact" },
   ];
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-10% 0px -45% 0px", // Adjusts the "active" area to be around the center-top
+      threshold: [0, 0.1, 0.2, 0.5], // Multiple thresholds for better granularity
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    navLinks.forEach((link) => {
+      const section = document.getElementById(link.id);
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      navLinks.forEach((link) => {
+        const section = document.getElementById(link.id);
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, [navLinks]);
 
   const handleLinkClick = (id) => {
     setActiveLink(id);

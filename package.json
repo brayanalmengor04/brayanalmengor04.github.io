@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "brayanalmengor04",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -25,10 +25,12 @@
     "lucide-svelte": "^0.479.0",
     "mjml": "^4.18.0",
     "nodemailer": "^7.0.13",
+    "pdfjs-dist": "^5.4.530",
     "primereact": "^10.9.3",
     "react-icons": "^5.5.0",
     "resend": "^4.2.0",
     "sweetalert2": "^11.26.17",
+    "swiper": "^12.0.3",
     "tailwindcss": "^4.0.12"
   },
   "devDependencies": {

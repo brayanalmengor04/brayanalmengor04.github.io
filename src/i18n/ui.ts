@@ -13,6 +13,42 @@ export const ui = {
         'nav.resume': 'Resumen',
         'nav.portfolio': 'Portafolio',
         'nav.contact': 'Contacto',
+        'nav.certifications': 'Certificaciones',
+
+        'certifications.title': 'Certificaciones & Logros',
+        'certifications.subtitle': 'Reconocimientos Profesionales',
+        'certifications.download': 'Ver Archivos de Certificación',
+        'ui.download': 'Descargar',
+        'certifications.card1.title': 'Desarrollador Java SE 8',
+        'certifications.card1.org': 'Oracle University',
+        'certifications.card1.date': '2024',
+        'certifications.card2.title': 'Fundamentos de AWS Cloud',
+        'certifications.card2.org': 'Amazon Web Services',
+        'certifications.card2.date': 'En Progreso',
+        'certifications.card3.title': 'Master en Spring Boot 3',
+        'certifications.card3.org': 'Udemy',
+        'certifications.card3.date': '2023',
+
+        // New Certifications
+        'certifications.cti.title': 'Taller de co-creación: Innovar, transferir y transformar en CTI abierta e inclusiva',
+        'certifications.cti.org': 'Senacyt',
+        'certifications.cti.date': '12 Horas',
+
+        'certifications.angular.title': 'Angular 17 Overview & Basics',
+        'certifications.angular.org': 'LearnQuest',
+        'certifications.angular.date': '40 Horas',
+
+        'certifications.senacyt.title': 'Pasantía Profesional',
+        'certifications.senacyt.org': 'Senacyt',
+        'certifications.senacyt.date': '6 Meses',
+
+        'certifications.udemy.title': 'Máster en Java',
+        'certifications.udemy.org': 'Udemy',
+        'certifications.udemy.date': '150 Horas',
+
+        'certifications.bbva.title': 'Data & Cybersecurity',
+        'certifications.bbva.org': 'BBVA',
+        'certifications.bbva.date': '20 Horas',
 
         'hero.greeting': "Soy",
         'hero.role': "Desarrollador Backend",
@@ -133,6 +169,43 @@ export const ui = {
         'nav.resume': 'Resume',
         'nav.portfolio': 'Portfolio',
         'nav.contact': 'Contact',
+        'nav.certifications': 'Certifications',
+
+        'certifications.title': 'Certifications & Achievements',
+        'certifications.subtitle': 'Professional Awards',
+        'certifications.download': 'View Certification Files',
+        'ui.download': 'Download',
+        'certifications.card1.title': 'Java SE 8 Developer',
+        'certifications.card1.org': 'Oracle University',
+        'certifications.card1.date': '2024',
+        'certifications.card2.title': 'AWS Cloud Practitioner',
+        'certifications.card2.org': 'Amazon Web Services',
+        'certifications.card2.date': 'In Progress',
+        'certifications.card3.title': 'Master in Spring Boot 3',
+        'certifications.card3.org': 'Udemy',
+        'certifications.card3.date': '2023',
+
+        // Certifications
+        'certifications.cti.title': 'Co-creation Workshop: Innovating, Transferring and Transforming in Open and Inclusive CTI',
+        'certifications.cti.org': 'Senacyt',
+        'certifications.cti.date': '12 Hours',
+
+        'certifications.angular.title': 'Angular 17 Overview & Basics',
+        'certifications.angular.org': 'LearnQuest',
+        'certifications.angular.date': '40 Hours',
+
+        'certifications.senacyt.title': 'Professional Internship',
+        'certifications.senacyt.org': 'Senacyt',
+        'certifications.senacyt.date': '6 Months',
+
+        'certifications.udemy.title': 'Java Master Program',
+        'certifications.udemy.org': 'Udemy',
+        'certifications.udemy.date': '150 Hours',
+
+        'certifications.bbva.title': 'Data & Cybersecurity',
+        'certifications.bbva.org': 'BBVA',
+        'certifications.bbva.date': '20 Hours',
+
 
         'hero.greeting': "I'm",
         'hero.role': "Backend Developer",

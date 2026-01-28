@@ -95,6 +95,18 @@ const TargetCursor = ({
                 return;
             }
 
+            // DYNAMIC UPDATE: Recalculate rect for active target to track animations (scaling/movement)
+            if (activeTarget && isActiveRef.current) {
+                const rect = activeTarget.getBoundingClientRect();
+                const { borderWidth, cornerSize } = constants;
+                targetCornerPositionsRef.current = [
+                    { x: rect.left - borderWidth, y: rect.top - borderWidth },
+                    { x: rect.right + borderWidth - cornerSize, y: rect.top - borderWidth },
+                    { x: rect.right + borderWidth - cornerSize, y: rect.bottom + borderWidth - cornerSize },
+                    { x: rect.left - borderWidth, y: rect.bottom + borderWidth - cornerSize }
+                ];
+            }
+
             const strength = activeStrengthRef.current;
             if (strength === 0) return;
 
@@ -320,7 +332,11 @@ const TargetCursor = ({
     }
 
     return (
-        <div ref={cursorRef} className="target-cursor-wrapper">
+        <div
+            ref={cursorRef}
+            className="target-cursor-wrapper"
+            style={{ zIndex: 999999, pointerEvents: 'none' }}
+        >
             <div ref={dotRef} className="target-cursor-dot" />
             <div className="target-cursor-corner corner-tl" />
             <div className="target-cursor-corner corner-tr" />
