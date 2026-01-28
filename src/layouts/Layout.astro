@@ -7,7 +7,7 @@ const {
   title = "Brayan Almengor - Backend Developer & Software Engineer",
   description = "Backend developer specialized in Java, Spring Boot, Laravel, and more. Building scalable and efficient solutions.",
   keywords = "Backend Development, Java, Spring Boot, Laravel, API, Software Engineer",
-  image = "/screenshot.png",
+  image = "/image/proyects/portfolio-design.png",
   url = "https://brayanalmengorpty.netlify.app",
   lang = "es",
 } = Astro.props;
@@ -23,27 +23,133 @@ const {
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Brayan Almengor" />
+
+    <!-- Robots & SEO Directives -->
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+
+    <!-- Language & Geo -->
+    <meta name="language" content={lang === "es" ? "Spanish" : "English"} />
+    <meta name="geo.region" content="PA" />
+    <meta name="geo.placename" content="Panama" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
+    <meta property="og:site_name" content="Brayan Almengor Portfolio" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <!-- Twitter -->
+    <meta property="og:image" content={`${url}${image}`} />
+    <meta property="og:image:secure_url" content={`${url}${image}`} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Brayan Almengor - Backend Developer Portfolio"
+    />
+    <meta property="og:locale" content={lang === "es" ? "es_PA" : "en_US"} />
+    <meta
+      property="og:locale:alternate"
+      content={lang === "es" ? "en_US" : "es_PA"}
+    />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@brayanalmengor04" />
+    <meta name="twitter:creator" content="@brayanalmengor04" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
-    <!-- Tema del sitio -->
-    <meta name="theme-color" content="#0d1117" />
+    <meta name="twitter:image" content={`${url}${image}`} />
+    <meta
+      name="twitter:image:alt"
+      content="Brayan Almengor - Backend Developer Portfolio"
+    />
+
+    <!-- Additional Social Meta -->
+    <meta property="profile:first_name" content="Brayan" />
+    <meta property="profile:last_name" content="Almengor" />
+    <meta property="profile:username" content="brayanalmengor04" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Brayan Almengor",
+        "url": "https://brayanalmengorpty.netlify.app",
+        "image": "https://brayanalmengorpty.netlify.app/image/proyects/portfolio-design.png",
+        "sameAs": [
+          "https://github.com/brayanalmengor04",
+          "https://www.linkedin.com/in/brayan-antonio"
+        ],
+        "jobTitle": "Backend Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "SENACYT"
+        },
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "Laravel",
+          "Backend Development",
+          "API Development",
+          "Database Design"
+        ],
+        "email": "brayanalmengor300@gmail.com",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universidad Tecnológica de Panamá"
+        }
+      }
+    </script>
+
+    <!-- Theme & Appearance -->
+    <meta
+      name="theme-color"
+      content="#0d1117"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta name="color-scheme" content="dark light" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <!-- Canonical -->
     <link rel="canonical" href={url} />
+
+    <!-- Alternate Languages -->
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://brayanalmengorpty.netlify.app/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://brayanalmengorpty.netlify.app/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://brayanalmengorpty.netlify.app/"
+    />
 
     <!-- Theme Initialization Script (prevents FOUC) -->
     <script is:inline>

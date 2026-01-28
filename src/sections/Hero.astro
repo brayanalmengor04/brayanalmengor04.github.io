@@ -4,10 +4,20 @@ import { Facebook, Instagram, Linkedin } from "lucide-astro";
 import ThemeToggleButton from "../components/theme/ThemeToggleButton";
 import LanguagePicker from "../components/LanguagePicker.astro";
 import AOSClient from "../components/AOSClient";
+import TypedText from "../components/TypedText.tsx";
 import { useTranslations } from "../i18n/utils";
 
 const { lang = "es" } = Astro.props;
 const t = useTranslations(lang);
+
+// Prepare roles array for typing animation
+const roles = [
+  t("hero.roles.1"),
+  t("hero.roles.2"),
+  t("hero.roles.3"),
+  t("hero.roles.4"),
+  t("hero.roles.5"),
+];
 
 // Estilos de texto (Gradientes para Java y Spring Boot)
 const javaSpan = `<span class="tech-keyword font-bold" style="background: linear-gradient(135deg, var(--keyword-gradient-start), var(--keyword-gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: 0 0 30px var(--keyword-glow); transition: all 0.3s ease;">Java</span>`;
@@ -40,8 +50,10 @@ const descriptionHtml = t("hero.description")
         >
           Brayan Almengor
         </span>, <br />
-        <span class="text-2xl md:text-4xl text-gray-400 font-light mt-2 block">
-          {t("hero.role")}
+        <span
+          class="text-2xl md:text-4xl mt-2 block max-w-full overflow-hidden"
+        >
+          <TypedText client:load roles={roles} />
         </span>
       </h1>
     </div>

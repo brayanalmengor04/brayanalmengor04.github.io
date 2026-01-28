@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { featuredWorks } from "../data/proyectData";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaRocket } from "react-icons/fa";
 
-const categories = ["All", "Web", "Android", "UI/UX"];
+const categories = ["All", "Web", "Android", "UI/UX", "Bot"];
 const categoryMap = {
-  Web: ["portfolio", "postifySC", "restaurantMenu", "finnantrack"],
+  Web: ["portfolio", "ecoParaisoLodge", "restaurantMenu"],
   Android: ["cebuTech"],
   "UI/UX": ["figmaDesign"],
+  Bot: ["nexaryBot"],
 };
 
 import { useTranslations } from "../i18n/utils";
@@ -80,7 +81,15 @@ const ProjectGallery = ({ lang = "es" }) => {
               >
                 <img src={project.img} alt={title} className="w-full h-48 object-cover" />
                 <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-xl text-white font-bold mb-2">{title}</h3>
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl text-white font-bold">{title}</h3>
+                    {project.isProduction && (
+                      <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-green-500/20 border border-green-500/50">
+                        <FaRocket className="text-green-400 text-xs" />
+                        <span className="text-green-400 text-xs font-semibold">LIVE</span>
+                      </div>
+                    )}
+                  </div>
                   <motion.div layout className="text-sm mb-3" style={{ color: 'var(--text-secondary)' }}>
                     {displayedDescription}
                     {shouldTruncate && (
@@ -101,13 +110,13 @@ const ProjectGallery = ({ lang = "es" }) => {
                       />
                     ))}
                   </div>
-                  <div className="flex justify-between mt-auto">
-                    {project.githubLink && (
+                  <div className="flex justify-between gap-2 mt-auto">
+                    {project.githubLink && project.githubLink !== "#" && (
                       <a
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-semibold hover:scale-105 hover:shadow-lg"
+                        className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-semibold hover:scale-105 hover:shadow-lg flex-1"
                         style={{
                           background: "var(--bg-secondary)",
                           color: "var(--text-primary)",
@@ -128,12 +137,12 @@ const ProjectGallery = ({ lang = "es" }) => {
                         {t('project.btn.github')}
                       </a>
                     )}
-                    {project.previewLink && (
+                    {(project.isProduction ? project.productionUrl : project.previewLink) && (
                       <a
-                        href={project.previewLink}
+                        href={project.isProduction ? project.productionUrl : project.previewLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-semibold hover:scale-105 hover:shadow-lg"
+                        className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-semibold hover:scale-105 hover:shadow-lg flex-1"
                         style={{
                           background: "var(--accent-primary)",
                           color: "#ffffff",
