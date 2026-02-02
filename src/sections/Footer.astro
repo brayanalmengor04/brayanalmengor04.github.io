@@ -27,11 +27,6 @@ const t = useTranslations(lang);
       <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">
         {t("footer.connect")}
       </h2>
-      <button
-        class="bg-theme-magenta-blue hover:bg-primary text-white rounded-md px-4 sm:px-6 py-2 mt-4 md:mt-0 cursor-pointer"
-      >
-        {t("footer.btn")}
-      </button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
       <div class="space-y-4 sm:space-y-6 text-center md:text-left">
@@ -95,15 +90,15 @@ const t = useTranslations(lang);
           </li>
           <li>
             <a
-              href="#resume"
+              href="#skill"
               class="text-theme-muted hover:text-theme-primary transition-colors text-sm"
             >
-              {t("nav.resume")}
+              {t("nav.skill")}
             </a>
           </li>
           <li>
             <a
-              href="#service"
+              href="#experience-services"
               class="text-theme-muted hover:text-theme-primary transition-colors text-sm"
             >
               {t("nav.service")}
@@ -111,10 +106,10 @@ const t = useTranslations(lang);
           </li>
           <li>
             <a
-              href="#resume"
+              href="#certifications"
               class="text-theme-muted hover:text-theme-primary transition-colors text-sm"
             >
-              {t("nav.resume")}
+              {t("nav.certifications")}
             </a>
           </li>
           <li>
@@ -127,58 +122,49 @@ const t = useTranslations(lang);
           </li>
         </ul>
       </div>
+      <!-- Contacto -->
       <div class="text-center md:text-left">
         <h3 class="font-medium mb-4">{t("footer.contact")}</h3>
         <ul class="space-y-2">
-          <li class="text-theme-muted text-sm">brayanalmengor300@gmail.com</li>
-          <li class="text-theme-muted text-sm">brayanalmengor.netlify.app</li>
+          <li>
+            <a
+              href="#contact"
+              class="text-theme-muted hover:text-theme-primary transition-colors text-sm"
+            >
+              {t("footer.contactform")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://brayanalmengor.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-theme-muted hover:text-theme-primary transition-colors text-sm"
+            >
+              brayanalmengor.netlify.app
+            </a>
+          </li>
         </ul>
       </div>
+      <!-- Tecnologías -->
       <div class="text-center md:text-left">
-        <h3 class="font-medium mb-4">{t("footer.latest")}</h3>
-        <div class="flex justify-center md:justify-start relative group">
-          <input
-            type="email"
-            placeholder={t("footer.email.placeholder")}
-            class="px-4 py-2 rounded-l-md w-full text-sm focus:outline-none transition-all duration-300"
-            style="background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-secondary);"
-          />
-          <button
-            class="rounded-r-md px-4 py-2 flex items-center justify-center transition-all duration-300 hover:shadow-lg"
-            style="background: var(--accent-primary); color: white; border: 1px solid var(--accent-primary);"
-            onmouseover="this.style.background='var(--gradient-primary)'; this.style.transform='scale(1.05)';"
-            onmouseout="this.style.background='var(--accent-primary)'; this.style.transform='scale(1)';"
-          >
-            <FaArrowRight size={18} />
-          </button>
-        </div>
+        <h3 class="font-medium mb-4">{t("footer.tech")}</h3>
+        <ul class="space-y-2">
+          <li class="text-theme-muted text-sm">Java & Spring Boot</li>
+          <li class="text-theme-muted text-sm">React & Astro</li>
+          <li class="text-theme-muted text-sm">MySQL & Oracle</li>
+          <li class="text-theme-muted text-sm">REST APIs</li>
+          <li class="text-theme-muted text-sm">Git & CI/CD</li>
+        </ul>
       </div>
     </div>
 
     <div
       class="border-t border-gray-800 mt-8 sm:mt-12 pt-4 sm:pt-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left"
     >
-      <!-- 🎉 ¡Año dinámico que se actualiza solo! -->
       <p class="text-theme-muted text-sm">
-        {t("footer.copyright").replace("{year}", currentYear)}
+        {t("footer.copyright").replace("{year}", String(currentYear))}
       </p>
-      <div
-        class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0"
-      >
-        <a
-          href="#"
-          class="text-theme-muted hover:text-theme-primary transition-colors text-sm"
-        >
-          {t("footer.terms")}
-        </a>
-        <span class="text-theme-muted">|</span>
-        <a
-          href="#"
-          class="text-theme-muted hover:text-theme-primary transition-colors text-sm"
-        >
-          {t("footer.privacy")}
-        </a>
-      </div>
     </div>
   </div>
 </footer>
