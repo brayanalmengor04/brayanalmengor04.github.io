@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import { ExternalLink, ZoomIn, ChevronLeft, ChevronRight, MoveHorizontal, Download, Maximize2 } from 'lucide-react';
+import { ExternalLink, ZoomIn, ChevronLeft, ChevronRight, MoveHorizontal, Maximize2 } from 'lucide-react';
 import { certifications } from '../data/certifications';
 import { ui } from '../i18n/ui';
 
@@ -209,7 +209,7 @@ export default function CertificationsCarousel({ lang = 'es' }) {
                     <div className="absolute inset-0 overflow-hidden">
                         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/20 dark:from-blue-400/10 dark:to-purple-400/10 rounded-full blur-3xl animate-pulse" />
                         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tr from-pink-500/20 to-orange-500/20 dark:from-pink-400/10 dark:to-orange-400/10 rounded-full blur-3xl animate-pulse delay-1000" />
-                        <div className="absolute inset-0 bg-black/70 dark:bg-black/80 backdrop-blur-2xl" />
+                        <div className="absolute inset-0 bg-white/90 dark:bg-black/85 backdrop-blur-2xl" />
                     </div>
 
                     <div
@@ -237,15 +237,6 @@ export default function CertificationsCarousel({ lang = 'es' }) {
                                 <p className="text-gray-600 dark:text-white/70 text-xs md:text-sm truncate mt-0.5">{t(selectedPdf.orgKey)}</p>
                             </div>
 
-                            <a
-                                href={selectedPdf.file}
-                                download
-                                className="relative flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-purple-500/50 dark:hover:shadow-purple-400/30 hover:scale-105 active:scale-95 text-sm md:text-base whitespace-nowrap overflow-hidden group"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                <Download className="relative w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-y-0.5" />
-                                <span className="relative">{t('ui.download')}</span>
-                            </a>
                         </div>
 
                         {/* Premium PDF Viewer Container */}
@@ -259,7 +250,7 @@ export default function CertificationsCarousel({ lang = 'es' }) {
                                 <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/5 bg-white dark:bg-gray-800">
                                     <iframe
                                         src={`${selectedPdf.file}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
-                                        className="w-full h-full"
+                                        className="w-full h-full dark:brightness-90 dark:contrast-95"
                                         title="PDF Viewer"
                                         style={{
                                             border: 'none',

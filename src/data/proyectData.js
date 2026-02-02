@@ -24,7 +24,7 @@ export const featuredWorks = {
   ecoParaisoLodge: {
     title: "EcoParaíso Lodge - Hotel Booking System",
     description:
-      "🌿 Full-stack project built with Laravel 11 and React for managing hotel room reservations. Users can explore hotels, view room details, register, log in, and request bookings. Administrators have full control through an admin panel to manage hotels, rooms, and approve or cancel bookings. Designed with a strong focus on user experience and seamless automation.",
+      "🌿 Sistema integral de reservas hoteleras que digitaliza y automatiza el proceso de gestión de habitaciones. Permite a los usuarios explorar hoteles, consultar disponibilidad y solicitar reservas de manera intuitiva, mientras que los administradores cuentan con un panel completo para gestionar propiedades, habitaciones y aprobar o cancelar reservas en tiempo real. Soluciona la necesidad de centralizar la gestión hotelera con una experiencia fluida y profesional.",
     img: "/image/proyects/EcoParaiso.png",
     default_color: "text-green-700",
     technologies: [
@@ -36,7 +36,6 @@ export const featuredWorks = {
     ],
     isProduction: false,
     githubLink: "https://github.com/brayanalmengor04/eco-paraiso-lodge",
-    previewLink: "https://www.youtube.com/watch?v=Jq6kzhLGq7U", // YouTube demo
   },
 
   restaurantMenu: {
@@ -70,8 +69,8 @@ export const featuredWorks = {
   },
 
   cebuTech: {
-    title: "Cebu Tech - App Android",
-    description: "Kotlin Application ganaderia",
+    title: "CebuTech - Gestión Ganadera Inteligente",
+    description: "🐄 CebuTech es una aplicación de gestión ganadera diseñada para facilitar el control y análisis de los animales en granjas y ganaderías. Usando inteligencia artificial, CebuTech asiste a los usuarios en la toma de decisiones sobre la salud, alimentación y manejo del ganado, proporcionando recomendaciones detalladas y análisis de salud. Esta versión incluye la implementación de IA Gemini 1.5 Flash para consultas ganaderas avanzadas y sugerencias automáticas de bienestar animal.",
     img: "/image/proyects/cebutech.jpeg",
     bg_overlay: "bg-yellow-800",
     technologies: [

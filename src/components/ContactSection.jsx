@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaMapMarkerAlt, FaBuilding, FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa";
 import { ImSpinner8 } from "react-icons/im";
 import useFormSubmit from "../hook/useFormSubmit";
 import Swal from 'sweetalert2';
@@ -87,8 +87,8 @@ export default function ContactSection({ lang = "es" }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2" data-aos="fade-up" data-aos-delay="300">
+        <div className="max-w-3xl mx-auto">
+          <div data-aos="fade-up" data-aos-delay="300">
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div data-aos="fade-up" data-aos-delay="350">
@@ -166,11 +166,7 @@ export default function ContactSection({ lang = "es" }) {
                 ></textarea>
               </div>
 
-              <div className="text-sm mb-6" data-aos="fade-up" data-aos-delay="600" style={{ color: 'var(--text-muted)' }}>
-                {t('contact.legal')}{" "}
-                <a href="#" className="text-[var(--color-neon-green)] hover:underline">{t('contact.legal.terms')}</a> {lang === 'en' ? 'and' : 'y'}{" "}
-                <a href="#" className="text-[var(--color-neon-green)] hover:underline">{t('contact.legal.privacy')}</a>{t('contact.legal.suffix')}
-              </div>
+
 
               <button
                 type="submit"
@@ -193,39 +189,6 @@ export default function ContactSection({ lang = "es" }) {
                 )}
               </button>
             </form>
-          </div>
-
-          <div className="space-y-8" data-aos="fade-up" data-aos-delay="300">
-            <div
-              className="p-6 rounded-md flex items-start gap-4"
-              style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', border: '1px solid' }}
-              data-aos="flip-left"
-              data-aos-delay="350"
-            >
-              <div className="p-3 rounded-md" style={{ background: 'var(--bg-primary)', color: 'var(--text-secondary)' }}>
-                <FaBuilding className="text-xl" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-1">{t('contact.info.dev')}</h3>
-                <p className="text-gray-400">TechSolutions</p>
-              </div>
-            </div>
-
-            <div
-              className="p-6 rounded-md flex items-start gap-4"
-              style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', border: '1px solid' }}
-              data-aos="flip-right"
-              data-aos-delay="400"
-            >
-              <div className="p-3 rounded-md" style={{ background: 'var(--bg-primary)', color: 'var(--text-secondary)' }}>
-                <FaMapMarkerAlt className="text-xl" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-1">{t('contact.info.addr')}</h3>
-                <p className="text-gray-400">PANAMÁ, PANAMÁ CITY, ARRAIJAN</p>
-                <p className="text-gray-400">ZIP Code: 7002</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
