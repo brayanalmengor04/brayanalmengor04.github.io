@@ -92,7 +92,9 @@ export default function ContactSection({ lang = "es" }) {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div data-aos="fade-up" data-aos-delay="350">
-                  <label htmlFor="firstName" className="block text-sm mb-1">{t('contact.form.firstname')}</label>
+                  <label htmlFor="firstName" className="block text-sm mb-1">
+                    {t('contact.form.firstname')} <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
                     id="firstName"
@@ -106,7 +108,9 @@ export default function ContactSection({ lang = "es" }) {
                   />
                 </div>
                 <div data-aos="fade-up" data-aos-delay="400">
-                  <label htmlFor="lastName" className="block text-sm mb-1">{t('contact.form.lastname')}</label>
+                  <label htmlFor="lastName" className="block text-sm mb-1">
+                    {t('contact.form.lastname')} <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
                     id="lastName"
@@ -123,7 +127,9 @@ export default function ContactSection({ lang = "es" }) {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div data-aos="fade-up" data-aos-delay="450">
-                  <label htmlFor="email" className="block text-sm mb-1">{t('contact.form.email')}</label>
+                  <label htmlFor="email" className="block text-sm mb-1">
+                    {t('contact.form.email')} <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -137,7 +143,14 @@ export default function ContactSection({ lang = "es" }) {
                   />
                 </div>
                 <div data-aos="fade-up" data-aos-delay="500">
-                  <label htmlFor="phone" className="block text-sm mb-1">{t('contact.form.phone')}</label>
+                  <div className="flex items-center justify-between mb-1">
+                    <label htmlFor="phone" className="block text-sm">
+                      {t('contact.form.phone')}
+                    </label>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-500 dark:bg-blue-400/10 dark:text-blue-400 border border-blue-500/20">
+                      {t('contact.form.optional')}
+                    </span>
+                  </div>
                   <input
                     type="tel"
                     id="phone"
@@ -148,11 +161,16 @@ export default function ContactSection({ lang = "es" }) {
                     className="w-full p-2.5 border rounded-md"
                     style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
                   />
+                  <p className="text-xs text-muted-foreground mt-1.5 italic">
+                    {t('contact.form.phone.hint')}
+                  </p>
                 </div>
               </div>
 
               <div className="mb-4" data-aos="fade-up" data-aos-delay="550">
-                <label htmlFor="message" className="block text-sm mb-1">{t('contact.form.message')}</label>
+                <label htmlFor="message" className="block text-sm mb-1">
+                  {t('contact.form.message')} <span className="text-red-500">*</span>
+                </label>
                 <textarea
                   id="message"
                   name="message"
