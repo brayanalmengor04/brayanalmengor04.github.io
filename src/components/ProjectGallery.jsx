@@ -83,12 +83,6 @@ const ProjectGallery = ({ lang = "es" }) => {
                 <div className="p-4 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-xl text-white font-bold">{title}</h3>
-                    {project.isProduction && (
-                      <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-green-500/20 border border-green-500/50">
-                        <FaRocket className="text-green-400 text-xs" />
-                        <span className="text-green-400 text-xs font-semibold">LIVE</span>
-                      </div>
-                    )}
                   </div>
                   <motion.div layout className="text-sm mb-3" style={{ color: 'var(--text-secondary)' }}>
                     {displayedDescription}

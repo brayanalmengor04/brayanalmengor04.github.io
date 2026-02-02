@@ -254,37 +254,47 @@ const HologramContainer =
                 </div>
             </div>
 
-            <div class="relative pl-8 md:pl-16" data-aos="fade-in">
-                <div
-                    class="absolute -left-[26px] top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-1 py-2 bg-background z-10"
-                >
-                    <GitBranch class="w-6 h-6 text-foreground/40" />
-                    <Layers class="w-4 h-4 text-foreground/20" />
-                </div>
-                <div
-                    class="font-mono text-sm text-muted-foreground/60 pl-4 border-l-2 border-blue-500/20"
-                >
-                    <span class="text-blue-500">$</span>
-                    {t("service.git")}
-                </div>
-            </div>
-
             <!-- Specialties Section -->
             <div
                 class="relative pl-8 md:pl-16"
                 data-aos="fade-up"
                 data-aos-delay="150"
             >
-                <div class="mb-8">
-                    <h3
-                        class="text-xl md:text-2xl font-bold text-foreground tracking-wide uppercase mb-3 flex items-center gap-3"
+                <div
+                    class="absolute -left-[11px] top-2 h-5 w-5 rounded-full bg-background border-[3px] border-[var(--accent-primary)] flex items-center justify-center z-10 shadow-[0_0_20px_var(--accent-glow)]"
+                >
+                    <div
+                        class="h-2 w-2 rounded-full bg-[var(--accent-primary)] animate-pulse"
                     >
-                        <span class="w-12 h-[2px] bg-[var(--accent-primary)]"
-                        ></span>
-                        {t("service.specialties.title")}
-                    </h3>
+                    </div>
+                </div>
+
+                <div class="mb-12 -mt-8">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-2 h-2 rounded-full bg-[var(--accent-primary)] animate-pulse"
+                            >
+                            </div>
+                            <div
+                                class="w-1.5 h-1.5 rounded-full bg-[var(--accent-primary)]/60 animate-pulse"
+                                style="animation-delay: 0.2s"
+                            >
+                            </div>
+                            <div
+                                class="w-1 h-1 rounded-full bg-[var(--accent-primary)]/40 animate-pulse"
+                                style="animation-delay: 0.4s"
+                            >
+                            </div>
+                        </div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-foreground tracking-wide uppercase mb-2"
+                        >
+                            {t("service.specialties.title")}
+                        </h3>
+                    </div>
                     <p
-                        class="text-base md:text-lg text-muted-foreground/80 pl-16"
+                        class="text-lg md:text-xl text-muted-foreground/90 font-light pl-8"
                     >
                         {
                             lang === "es"

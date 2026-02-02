@@ -88,7 +88,7 @@ export const ui = {
         'service.specialties.architecture.desc': "Soluciones escalables",
         'service.specialties.devops.title': "DevOps & CI/CD",
         'service.specialties.devops.desc': "Git, Control de versiones",
-        'service.git': "$ git checkout -b proyectos-personales",
+
         'service.item1.tag': "01 // LADO DEL SERVIDOR",
         'service.item1.title': "Arquitectura Backend",
         'service.item1.desc': "Construcción de APIs RESTful robustas. Lógica de negocio compleja, seguridad y rendimiento usando {springboot} y {laravel}.",
@@ -263,7 +263,7 @@ export const ui = {
         'service.specialties.architecture.desc': "Scalable solutions",
         'service.specialties.devops.title': "DevOps & CI/CD",
         'service.specialties.devops.desc': "Git, Version control",
-        'service.git': "$ git checkout -b personal-projects",
+
         'service.item1.tag': "01 // SERVER-SIDE",
         'service.item1.title': "Backend Architecture",
         'service.item1.desc': "Building robust RESTful APIs. Complex business logic, security, and performance using {springboot} and {laravel}.",
