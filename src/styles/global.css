@@ -181,6 +181,20 @@ body {
     color: var(--text-primary) !important;
 }
 
+/* Exception: text-white inside accent-bg cards always stays truly white */
+.bg-theme-magenta-blue .text-white,
+[style*="--card-gradient"] .text-white {
+    color: #ffffff !important;
+}
+
+/* Force white text on any element that directly has bg-theme-magenta-blue */
+:root.light .bg-theme-magenta-blue h4,
+:root.light .bg-theme-magenta-blue p,
+:root.light .bg-theme-magenta-blue h3,
+:root.light .bg-theme-magenta-blue span {
+    color: #ffffff !important;
+}
+
 .text-gray-200,
 .text-gray-300 {
     color: var(--text-secondary) !important;
