@@ -72,60 +72,60 @@
     --keyword-glow: rgba(168, 85, 247, 0.4);
 }
 
-/* Light Mode Theme - Warm Terracotta & Sage Elegance 🌿✨ */
+/* Light Mode Theme - Teal & Slate Fresh 🌊 */
 :root.light {
-    /* Background Colors - Creamy Warmth */
-    --bg-primary: #fdfbf7;
-    --bg-secondary: #fffefb;
-    --bg-tertiary: #f9f6f0;
+    /* Background Colors - Pure Clean */
+    --bg-primary: #f8fafb;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f0f5f5;
     --bg-card: #ffffff;
-    --bg-hover: #faf7f2;
+    --bg-hover: #e6f0ef;
 
-    /* Text Colors - Rich Earth Tones */
-    --text-primary: #2d2416;
-    --text-secondary: #5a4a36;
-    --text-muted: #8b7d6b;
-    --text-accent: #c85a3f;
+    /* Text Colors - Deep Slate */
+    --text-primary: #0f2027;
+    --text-secondary: #2d4a4a;
+    --text-muted: #6b8f8f;
+    --text-accent: #0d9488;
 
-    /* Border Colors - Subtle Sand */
-    --border-primary: #ebe6dc;
-    --border-secondary: #d9d0c1;
-    --border-accent: #c85a3f;
+    /* Border Colors - Soft Teal Gray */
+    --border-primary: #d4e6e5;
+    --border-secondary: #b2d0cf;
+    --border-accent: #0d9488;
 
-    /* Accent Colors - Terracotta & Burnt Sienna */
-    --accent-primary: #c85a3f;
-    --accent-secondary: #e07856;
-    --accent-glow: rgba(200, 90, 63, 0.18);
+    /* Accent Colors - Teal */
+    --accent-primary: #0d9488;
+    --accent-secondary: #14b8a6;
+    --accent-glow: rgba(13, 148, 136, 0.15);
 
-    /* Gradients - Warm Sunset & Sage */
-    --gradient-primary: linear-gradient(135deg, #c85a3f 0%, #e8956d 100%);
-    --gradient-secondary: linear-gradient(135deg, #b8956a 0%, #c85a3f 100%);
-    --gradient-accent: linear-gradient(135deg, #7ba584 0%, #b8956a 100%);
+    /* Gradients - Teal Calm */
+    --gradient-primary: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+    --gradient-secondary: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+    --gradient-accent: linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%);
 
-    /* Shadows - Soft Amber Glow */
-    --shadow-sm: 0 2px 8px rgba(200, 90, 63, 0.08);
-    --shadow-md: 0 4px 16px rgba(200, 90, 63, 0.12);
-    --shadow-lg: 0 8px 32px rgba(200, 90, 63, 0.16);
-    --shadow-glow: 0 0 24px rgba(200, 90, 63, 0.22);
+    /* Shadows - Barely There */
+    --shadow-sm: 0 2px 8px rgba(13, 148, 136, 0.06);
+    --shadow-md: 0 4px 16px rgba(13, 148, 136, 0.09);
+    --shadow-lg: 0 8px 32px rgba(13, 148, 136, 0.12);
+    --shadow-glow: 0 0 20px rgba(13, 148, 136, 0.14);
 
     /* Icon & Social Colors */
-    --icon-bg: #c85a3f;
+    --icon-bg: #0d9488;
     --icon-color: #ffffff;
-    --social-gradient-hover: linear-gradient(135deg, #c85a3f 0%, #e8956d 100%);
+    --social-gradient-hover: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
 
-    /* Card Gradients - Terracotta Sunset Dreams */
-    --card-gradient-primary: linear-gradient(135deg, #d97458 0%, #e8956d 100%);
-    --card-gradient-secondary: linear-gradient(135deg, #c6956f 0%, #d97458 100%);
-    --card-gradient-accent: linear-gradient(135deg, #8ab594 0%, #b8a87d 100%);
+    /* Card Gradients - Teal */
+    --card-gradient-primary: #0d9488;
+    --card-gradient-secondary: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    --card-gradient-accent: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
 
     /* Button Colors */
-    --button-primary: #d97458;
-    --button-hover: #c85a3f;
+    --button-primary: #0d9488;
+    --button-hover: #0f766e;
 
-    /* Keyword Gradients - Light Mode (Warm Coral/Salmon) */
-    --keyword-gradient-start: #ff6b6b;
-    --keyword-gradient-end: #ee5a24;
-    --keyword-glow: rgba(255, 107, 107, 0.3);
+    /* Keyword Gradients - Light Mode (Teal/Cyan calm) */
+    --keyword-gradient-start: #0d9488;
+    --keyword-gradient-end: #0891b2;
+    --keyword-glow: rgba(13, 148, 136, 0.18);
 }
 
 /* Smooth Transitions for Theme Changes */
@@ -292,4 +292,14 @@ body {
 .animate-gradient-x {
     background-size: 200% 200%;
     animation: gradient-shift 3s ease infinite;
+}
+
+/* Hide decorative elements in light mode */
+:root.light .hidden-light {
+    display: none !important;
+}
+
+/* Light mode card enhancements - light hover glow */
+:root.light .theme-card:hover {
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(91, 106, 191, 0.12);
 }

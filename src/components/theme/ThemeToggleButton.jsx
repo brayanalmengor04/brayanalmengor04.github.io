@@ -3,30 +3,24 @@ import { MoonIcon, SunIcon } from 'lucide-react'
 
 export default function ThemeToggleButton() {
   const [isDark, setIsDark] = useState(() => {
-    // Initialize based on document state if available
     if (typeof window !== 'undefined') {
       return !document.documentElement.classList.contains('light')
     }
-    return true // default to dark
+    return true
   })
-  const [isAnimating, setIsAnimating] = useState(false)
 
-  // Initialize theme from localStorage or system preference
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
 
-    // Function to apply theme
     const applySystemTheme = (prefersDark) => {
       const darkMode = savedTheme ? savedTheme === 'dark' : prefersDark
       setIsDark(darkMode)
       updateTheme(darkMode)
     }
 
-    // Apply initial theme
     applySystemTheme(systemPrefersDark.matches)
 
-    // Listen for system theme changes (only if user hasn't set a preference)
     const handleSystemThemeChange = (e) => {
       if (!localStorage.getItem('theme')) {
         setIsDark(e.matches)
@@ -35,10 +29,7 @@ export default function ThemeToggleButton() {
     }
 
     systemPrefersDark.addEventListener('change', handleSystemThemeChange)
-
-    return () => {
-      systemPrefersDark.removeEventListener('change', handleSystemThemeChange)
-    }
+    return () => systemPrefersDark.removeEventListener('change', handleSystemThemeChange)
   }, [])
 
   const updateTheme = (dark) => {
@@ -51,67 +42,106 @@ export default function ThemeToggleButton() {
   }
 
   const toggleTheme = () => {
-    setIsAnimating(true)
     const newTheme = !isDark
-
     setIsDark(newTheme)
     updateTheme(newTheme)
     localStorage.setItem('theme', newTheme ? 'dark' : 'light')
-
-    // Reset animation after delay
-    setTimeout(() => setIsAnimating(false), 600)
   }
 
   return (
     <div className="flex flex-col items-center space-y-4 group relative mb-10 z-50">
-      {/* Hide "Mode" text and divider on mobile - Show only on desktop */}
-      <p className="hidden md:block text-sm rotate-90 text-secondary transition-colors group-hover:text-primary">
+      {/* Label — solo desktop */}
+      <p className="hidden md:block text-[11px] rotate-90 tracking-widest uppercase opacity-50 transition-opacity group-hover:opacity-80"
+        style={{ color: isDark ? '#a5b4fc' : '#5b6abf' }}>
         Mode
       </p>
-      <div className="hidden md:block w-px h-12 bg-border-secondary"></div>
+      <div className="hidden md:block w-px h-10 opacity-20"
+        style={{ background: isDark ? '#583ebc' : '#5b6abf' }} />
 
+      {/* Switch pill */}
       <button
         onClick={toggleTheme}
-        className={`
-          relative p-3 rounded-full 
-          transition-all duration-500 ease-out
-          transform cursor-pointer
-          ${isAnimating ? 'rotate-180' : 'hover:rotate-12'}
-          ${isDark
-            ? 'bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700'
-            : 'bg-gradient-to-br from-[#e77a5f] via-[#c85a3f] to-[#a84832]'
-          }
-          hover:shadow-2xl
-          active:scale-95
-        `}
-        aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+        role="switch"
+        aria-checked={!isDark}
+        aria-label={isDark ? 'Activar modo claro' : 'Activar modo oscuro'}
+        style={{
+          width: '44px',
+          height: '80px',
+          borderRadius: '999px',
+          padding: '4px',
+          position: 'relative',
+          cursor: 'pointer',
+          border: 'none',
+          outline: 'none',
+          transition: 'background 0.4s ease, box-shadow 0.3s ease',
+          background: isDark
+            ? 'linear-gradient(180deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%)'
+            : 'linear-gradient(180deg, #ccfbf1 0%, #e6f7f5 50%, #f0fdf9 100%)',
+          boxShadow: isDark
+            ? '0 2px 12px rgba(88, 62, 188, 0.35), inset 0 1px 0 rgba(255,255,255,0.08)'
+            : '0 2px 10px rgba(13, 148, 136, 0.15), inset 0 1px 0 rgba(255,255,255,0.8)',
+        }}
       >
-        <div className={`transition-all duration-500 ${isAnimating ? 'rotate-180 scale-75' : ''}`}>
-          {isDark ? (
-            <SunIcon
-              className="w-5 h-5 text-amber-100 drop-shadow-glow animate-pulse"
-              strokeWidth={2.5}
-            />
-          ) : (
-            <MoonIcon
-              className="w-5 h-5 text-orange-50 drop-shadow-glow animate-pulse"
-              strokeWidth={2.5}
-            />
-          )}
+        {/* Ícono superior — Sol (light) */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '10px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            opacity: isDark ? 0.25 : 1,
+            transition: 'opacity 0.35s ease',
+          }}
+        >
+          <SunIcon
+            style={{
+              width: '14px',
+              height: '14px',
+              color: isDark ? '#6366f1' : '#0d9488',
+            }}
+            strokeWidth={2}
+          />
         </div>
 
-        {/* Glow effect */}
+        {/* Knob deslizante */}
         <div
-          className={`
-            absolute inset-0 rounded-full opacity-0 group-hover:opacity-100
-            transition-opacity duration-300
-            ${isDark
-              ? 'bg-gradient-to-r from-purple-400 to-indigo-400 blur-xl'
-              : 'bg-gradient-to-r from-[#e77a5f]/60 to-[#c85a3f]/60 blur-xl'
-            }
-            -z-10
-          `}
-        ></div>
+          style={{
+            position: 'absolute',
+            left: '5px',
+            right: '5px',
+            height: '30px',
+            borderRadius: '999px',
+            transition: 'top 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease, box-shadow 0.3s ease',
+            top: isDark ? 'calc(100% - 35px)' : '5px',
+            background: isDark
+              ? 'linear-gradient(135deg, #583ebc 0%, #7c3aed 100%)'
+              : 'linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)',
+            boxShadow: isDark
+              ? '0 2px 8px rgba(88, 62, 188, 0.5)'
+              : '0 2px 8px rgba(13, 148, 136, 0.3)',
+          }}
+        />
+
+        {/* Ícono inferior — Luna (dark) */}
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '10px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            opacity: isDark ? 1 : 0.3,
+            transition: 'opacity 0.35s ease',
+          }}
+        >
+          <MoonIcon
+            style={{
+              width: '14px',
+              height: '14px',
+              color: isDark ? '#c4b5fd' : '#6b8f8f',
+            }}
+            strokeWidth={2}
+          />
+        </div>
       </button>
     </div>
   )
