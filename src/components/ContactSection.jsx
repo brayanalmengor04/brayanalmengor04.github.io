@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import { ImSpinner8 } from "react-icons/im";
 import useFormSubmit from "../hook/useFormSubmit";
+import PhoneInput from "./PhoneInput";
 import Swal from 'sweetalert2';
 
 import { useTranslations } from "../i18n/utils";
@@ -190,15 +191,11 @@ export default function ContactSection({ lang = "es" }) {
                       {t('contact.form.optional')}
                     </span>
                   </div>
-                  <input
-                    type="tel"
-                    id="phone"
+                  <PhoneInput
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder={t('contact.form.phone.ph')}
-                    className="w-full p-2.5 border rounded-md"
-                    style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)', color: 'var(--text-primary)' }}
                   />
                   <p className="text-xs text-muted-foreground mt-1.5 italic">
                     {t('contact.form.phone.hint')}
@@ -250,7 +247,7 @@ export default function ContactSection({ lang = "es" }) {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes spin {
           from {
             transform: rotate(0deg);
