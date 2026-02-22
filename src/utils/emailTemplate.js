@@ -2,7 +2,7 @@
 import mjml2html from 'mjml';
 
 export const getContactEmailTemplate = ({ firstName, lastName, email, phone, message }) => {
-    const mjmlTemplate = `
+  const mjmlTemplate = `
     <mjml>
       <mj-head>
         <mj-title>New Message from Your Portfolio</mj-title>
@@ -34,7 +34,7 @@ export const getContactEmailTemplate = ({ firstName, lastName, email, phone, mes
         </mj-section>
         <mj-section background-color="#F2F2F2">
           <mj-column width="100%">
-            <mj-image src="https://brayanalmengorpty.netlify.app/logo/logo.png" width="80px" alt="Avatar" padding-bottom="20px" border-radius="50%"></mj-image>
+            <mj-image src="https://brayanalmengordev.netlify.app//logo/logo.png" width="80px" alt="Avatar" padding-bottom="20px" border-radius="50%"></mj-image>
             <mj-text align="center" color="#55575d" font-size="20px" font-family="Arial, sans-serif" padding-bottom="30px" font-weight="bold">
               You Have a New Message
             </mj-text>
@@ -82,10 +82,10 @@ export const getContactEmailTemplate = ({ firstName, lastName, email, phone, mes
       </mj-body>
     </mjml>
   `;
-    return mjmlTemplate;
+  return mjmlTemplate;
 };
 export const compileEmailTemplate = (data) => {
-    const mjmlContent = getContactEmailTemplate(data);
-    const { html } = mjml2html(mjmlContent);
-    return html;
+  const mjmlContent = getContactEmailTemplate(data);
+  const { html } = mjml2html(mjmlContent);
+  return html;
 };
