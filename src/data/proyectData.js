@@ -17,7 +17,7 @@ export const featuredWorks = {
       { name: "Astro", icon: SiAstro, hoverBg: "hover:text-purple-500" },
     ],
     isProduction: true,
-    productionUrl: "https://brayanalmengorpty.netlify.app/",
+    productionUrl: "https://brayanalmengordev.netlify.app/",
     githubLink: "https://github.com/brayanalmengor04/brayanalmengor04.github.io",
   },
 
