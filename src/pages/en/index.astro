@@ -20,7 +20,7 @@ const lang = "en";
     title="Brayan Almengor - Backend Developer & Software Engineer"
     lang={lang}
 >
-    <Navbar client:load lang={lang} />
+    <Navbar client:only="react" lang={lang} />
     <Hero lang={lang} />
     <Service lang={lang} />
     <Skill lang={lang} />

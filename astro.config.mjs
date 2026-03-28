@@ -1,4 +1,5 @@
 // @ts-check
+import './console-logger.mjs';
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import react from '@astrojs/react';
@@ -11,11 +12,12 @@ export default defineConfig({
   integrations: [react(), icon()],
 
   vite: {
-      plugins: [tailwindcss()],
-      ssr: {
-        noExternal: ['gsap'],
-      },
+    cacheDir: '.vite-cache',
+    plugins: [/** @type {any} */ (tailwindcss())],
+    ssr: {
+      noExternal: ['gsap'],
     },
+  },
 
   adapter: netlify(),
 });

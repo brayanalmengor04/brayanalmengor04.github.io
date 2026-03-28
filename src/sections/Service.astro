@@ -21,8 +21,8 @@ const { lang = "es" } = Astro.props;
 const t = useTranslations(lang);
 
 // Helper for replacements
-const strong = (text) => `<strong class="text-foreground">${text}</strong>`;
-const replaceTech = (str) => {
+const strong = (text: string) => `<strong class="text-foreground">${text}</strong>`;
+const replaceTech = (str: string) => {
     return str
         .replace("{laravel}", strong("Laravel"))
         .replace("{jquery}", strong("jQuery"))
@@ -42,7 +42,7 @@ const replaceTech = (str) => {
         ); // Hardcoded icon here for simplicity or pass component
 };
 
-const legacyReplacement = (str) => {
+const legacyReplacement = (str: string) => {
     return replaceTech(str);
 };
 
@@ -178,7 +178,7 @@ const HologramContainer =
                                         />
                                     </a>
                                     <span
-                                        class="px-3 py-1 rounded-full bg-green-500/10 text-green-500 font-mono text-xs border border-green-500/20"
+                                        class="px-3 py-1 rounded-full bg-[var(--accent-primary)]/10 text-accent font-mono text-xs border border-[var(--accent-primary)]/20"
                                     >
                                         {t("service.casabat.date")}
                                     </span>
@@ -523,7 +523,7 @@ const HologramContainer =
     </div>
 </section>
 
-<AOSClient client:load />
+<AOSClient client:only="react" />
 
 <style>
     @keyframes gradient-x {

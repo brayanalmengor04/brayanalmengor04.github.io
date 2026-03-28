@@ -177,7 +177,7 @@ export default function PhoneInput({
                             type="text"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            placeholder="🔍 Buscar / Search"
+                            placeholder="Buscar / Search"
                             className="pi-search-input"
                         />
                     </div>
@@ -271,6 +271,8 @@ export default function PhoneInput({
         /* ── Number input ── */
         .pi-number {
           flex: 1;
+          min-width: 0; /* Ensures input shrinks on very small screens */
+          width: 100%;
           padding: 0.6rem 0.72rem;
           background: transparent;
           border: none;

@@ -2,6 +2,7 @@
 import "aos/dist/aos.css";
 import AOSClient from "../components/AOSClient";
 import TargetCursor from "../components/TargetCursor";
+import FloatingMenu from "../components/FloatingMenu";
 
 const {
   title = "Brayan Almengor - Backend Developer & Software Engineer",
@@ -166,10 +167,11 @@ const {
       })();
     </script>
   </head>
-  <body class="overflow-x-hidden">
-    <TargetCursor client:load />
+  <body class="overflow-x-hidden pb-24 md:pb-0">
+    <TargetCursor client:only="react" />
     <slot />
-    <AOSClient client:load />
+    <AOSClient client:only="react" />
+    <FloatingMenu lang={lang} client:only="react" />
   </body>
 </html>
 
