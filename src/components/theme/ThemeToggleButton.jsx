@@ -41,11 +41,53 @@ export default function ThemeToggleButton() {
     }
   }
 
-  const toggleTheme = () => {
-    const newTheme = !isDark
-    setIsDark(newTheme)
-    updateTheme(newTheme)
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light')
+  const toggleTheme = async (event) => {
+    const newTheme = !isDark;
+
+    // Fallback: If browser doesn't support View Transitions or user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!document.startViewTransition || prefersReducedMotion) {
+      setIsDark(newTheme);
+      updateTheme(newTheme);
+      localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+      return;
+    }
+
+    // Getting the click position for the circular wipe
+    const x = event.clientX || window.innerWidth / 2;
+    const y = event.clientY || window.innerHeight / 2;
+
+    // Calculate distance to furthest corner = max radius
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    const transition = document.startViewTransition(() => {
+      // DOM updates inside transition
+      setIsDark(newTheme);
+      updateTheme(newTheme);
+      localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+    });
+
+    await transition.ready;
+
+    // The animation creates a circle growing from the click coordinates
+    const clipPath = [
+      `circle(0px at ${x}px ${y}px)`,
+      `circle(${endRadius}px at ${x}px ${y}px)`
+    ];
+
+    document.documentElement.animate(
+      {
+        clipPath: clipPath,
+      },
+      {
+        duration: 500,
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        pseudoElement: '::view-transition-new(root)'
+      }
+    );
   }
 
   return (

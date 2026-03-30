@@ -11,15 +11,54 @@ export default function FloatingMenu({ lang = "es" }) {
     }
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = async (event) => {
     const newDark = !isDark;
-    setIsDark(newDark);
-    if (newDark) {
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.add('light');
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!document.startViewTransition || prefersReducedMotion) {
+      setIsDark(newDark);
+      if (newDark) {
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.add('light');
+      }
+      localStorage.setItem('theme', newDark ? 'dark' : 'light');
+      return;
     }
-    localStorage.setItem('theme', newDark ? 'dark' : 'light');
+
+    const x = event?.clientX || window.innerWidth / 2;
+    const y = event?.clientY || window.innerHeight / 2;
+
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    const transition = document.startViewTransition(() => {
+      setIsDark(newDark);
+      if (newDark) {
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.add('light');
+      }
+      localStorage.setItem('theme', newDark ? 'dark' : 'light');
+    });
+
+    await transition.ready;
+
+    const clipPath = [
+      `circle(0px at ${x}px ${y}px)`,
+      `circle(${endRadius}px at ${x}px ${y}px)`
+    ];
+
+    document.documentElement.animate(
+      { clipPath: clipPath },
+      {
+        duration: 500,
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        pseudoElement: '::view-transition-new(root)'
+      }
+    );
   };
 
   const targetUrl = lang === 'es' ? '/en' : '/';
@@ -74,12 +113,12 @@ export default function FloatingMenu({ lang = "es" }) {
               onClick={item.onClick}
               target={item.href && item.id !== 'lang' ? "_blank" : undefined}
               rel={item.href ? "noreferrer" : undefined}
-              className={`group flex items-center justify-center w-[48px] h-[48px] rounded-full shadow-lg bg-[var(--bg-card)] border border-[var(--border-primary)] text-[var(--text-primary)] hover:bg-[var(--bg-hover)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] hover:scale-110 transition-all duration-200 focus:outline-none`}
+              className={`group flex items-center justify-center w-[48px] h-[48px] rounded-full shadow-lg bg-[var(--bg-card)] border border-[var(--border-primary)] text-[var(--text-primary)] hover:bg-[var(--bg-hover)] hover:!text-[#ffffff] hover:border-[var(--accent-primary)] hover:scale-110 transition-all duration-200 focus:outline-none`}
               style={{ transitionDelay: isOpen ? `${i * 50}ms` : '0ms' }}
             >
               {item.icon}
               {item.label && (
-                <span className="absolute right-14 px-2 py-1 rounded-md bg-[var(--bg-card)] text-[var(--text-primary)] text-xs font-bold border border-[var(--border-primary)] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="absolute right-14 px-2 py-1 rounded-md bg-[var(--bg-card)] text-[var(--text-primary)] group-hover:!text-[#ffffff] text-xs font-bold border border-[var(--border-primary)] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
                   {item.label}
                 </span>
               )}
@@ -92,7 +131,7 @@ export default function FloatingMenu({ lang = "es" }) {
       <button
         onClick={toggleMenu}
         aria-label="Abrir menú de ajustes rápidos"
-        className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[var(--accent-primary)] hover:bg-[var(--color-neon-blue)] text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--accent-glow)] z-10"
+        className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[var(--accent-primary)] hover:bg-[var(--color-neon-blue)] !text-[#ffffff] shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--accent-glow)] z-10"
       >
         {/* Glow de fondo */}
         <div className="absolute inset-0 rounded-full bg-inherit blur-md opacity-50 -z-10"></div>

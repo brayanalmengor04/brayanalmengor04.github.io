@@ -41,9 +41,8 @@ export default function MobileNavbar({ activeLink, handleLinkClick, lang }) {
         transform: `translateX(-50%) translateY(${isVisible ? '0' : '120px'})`,
         opacity: isVisible ? 1 : 0,
         transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease',
-        width: 'min(95vw, 400px)',
+        width: 'min(95vw, 420px)',
         pointerEvents: 'none',
-        // Nunca desbordarse horizontalmente
         maxWidth: '100vw',
       }}
     >
@@ -67,27 +66,26 @@ export default function MobileNavbar({ activeLink, handleLinkClick, lang }) {
             <button
               key={link.id}
               onClick={() => handleLinkClick(link.id)}
-              className={`relative flex flex-col items-center justify-center rounded-full transition-all duration-500 ease-out cursor-pointer ${isActive ? "scale-110 shadow-lg" : "hover:scale-105 opacity-60 hover:opacity-100"}`}
+              className={`relative flex items-center justify-center rounded-full transition-all duration-500 ease-out cursor-pointer ${isActive ? "bg-[var(--accent-primary)] !text-[#ffffff] shadow-lg px-3 sm:px-3.5 gap-1.5 sm:gap-2" : "hover:scale-105 opacity-60 hover:opacity-100 flex-1 px-1"
+                }`}
               style={{
-                background: isActive ? "var(--accent-primary)" : "transparent",
                 color: isActive ? "#ffffff" : "var(--text-primary)",
-                width: '3rem',
                 height: '3.2rem',
-                flexShrink: 0,
+                minWidth: '0', // Allow shrinking below content size if necessary
               }}
               aria-label={link.name}
             >
               <Icon
-                size={isActive ? 20 : 24}
-                className={`transition-all duration-500 ease-out ${isActive ? "translate-y-[-0.4rem]" : "translate-y-0"}`}
+                size={isActive ? 18 : 22}
+                className="transition-transform duration-500 ease-out flex-shrink-0"
                 strokeWidth={isActive ? 2.5 : 2}
               />
               {isActive && (
                 <span
-                  className="text-[0.6rem] font-bold absolute bottom-1.5 opacity-100 transition-opacity duration-500 tracking-wide"
-                  style={{ textShadow: "0px 1px 2px rgba(0,0,0,0.5)" }}
+                  className="text-[0.75rem] font-bold whitespace-nowrap transition-all duration-500 overflow-hidden text-ellipsis max-w-[80px] xs:max-w-none"
+                  style={{ textShadow: "0px 1px 2px rgba(0,0,0,0.3)" }}
                 >
-                  {link.name.substring(0, 5)}...
+                  {link.name}
                 </span>
               )}
             </button>

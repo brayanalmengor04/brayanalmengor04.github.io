@@ -128,19 +128,14 @@
     --keyword-glow: rgba(13, 148, 136, 0.18);
 }
 
-/* Smooth Transitions for Theme Changes */
-* {
-    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-        color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Smooth Transitions for Theme Changes - Removed wildcard '*' due to performance issues.
+   Transitions are now handled by specific components or the body. */
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transición de colores delegada a View Transitions API o instantánea por performance */
 }
 
 /* Theme-Aware Utility Classes */
@@ -316,4 +311,28 @@ body {
 /* Light mode card enhancements - light hover glow */
 :root.light .theme-card:hover {
     box-shadow: var(--shadow-lg), 0 0 20px rgba(91, 106, 191, 0.12);
+}
+
+/* ==========================================================================
+   VIEW TRANSITIONS API (Modo Oscuro/Claro Premium sin Lag)
+   ========================================================================== */
+
+::view-transition-group(root) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  /* Evita el cross-fade nativo, nosotros vamos a aplicar un clipPath circular vía JS */
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Orden base de las capas: El nuevo tema siempre va encima del anterior */
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
 }

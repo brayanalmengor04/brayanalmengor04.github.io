@@ -19,32 +19,42 @@ export default function Navbar({ lang = "es" }) {
     { name: lang === "es" ? "Contacto" : "Contact", id: "contact" },
   ];
 
+  // Using a static array of IDs prevents the useEffect from re-triggering infinitely
+  const sectionIds = ["home", "experience-services", "skill", "certifications", "portfolio", "contact"];
+
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-10% 0px -45% 0px", // Adjusts the "active" area to be around the center-top
-      threshold: [0, 0.1, 0.2, 0.5], // Multiple thresholds for better granularity
+      rootMargin: "-20% 0px -60% 0px", // Better margin for mobile to select what's in upper-middle view
+      threshold: [0, 0.1, 0.2, 0.5],
     };
+
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-          setActiveLink(entry.target.id);
-        }
-      });
+      // Find all intersecting entries
+      const intersecting = entries.filter(e => e.isIntersecting && e.intersectionRatio > 0);
+
+      if (intersecting.length > 0) {
+        // If multiple are visible, pick the one with highest ratio
+        const mostVisible = intersecting.reduce((prev, curr) =>
+          prev.intersectionRatio > curr.intersectionRatio ? prev : curr
+        );
+        setActiveLink(mostVisible.target.id);
+      }
     }, observerOptions);
 
-    navLinks.forEach((link) => {
-      const section = document.getElementById(link.id);
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
       if (section) observer.observe(section);
     });
 
     return () => {
-      navLinks.forEach((link) => {
-        const section = document.getElementById(link.id);
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
         if (section) observer.unobserve(section);
       });
+      observer.disconnect();
     };
-  }, [navLinks]);
+  }, []); // Empty dependency array stops infinite re-observing loops
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
@@ -68,15 +78,18 @@ export default function Navbar({ lang = "es" }) {
                   }`}
                 style={{
                   background: activeLink === link.id ? "var(--accent-primary)" : "transparent",
+                  color: activeLink === link.id ? "#ffffff" : "",
                 }}
                 onMouseEnter={(e) => {
                   if (activeLink !== link.id) {
                     e.currentTarget.style.background = "var(--accent-primary)";
+                    e.currentTarget.style.color = "#ffffff";
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (activeLink !== link.id) {
                     e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "";
                   }
                 }}
               >
@@ -108,15 +121,18 @@ export default function Navbar({ lang = "es" }) {
                   }`}
                 style={{
                   background: activeLink === link.id ? "var(--accent-primary)" : "transparent",
+                  color: activeLink === link.id ? "#ffffff" : "",
                 }}
                 onMouseEnter={(e) => {
                   if (activeLink !== link.id) {
                     e.currentTarget.style.background = "var(--accent-primary)";
+                    e.currentTarget.style.color = "#ffffff";
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (activeLink !== link.id) {
                     e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "";
                   }
                 }}
               >
