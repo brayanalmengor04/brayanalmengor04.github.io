@@ -17,47 +17,34 @@ export default function CertificationsCarousel({ lang = 'es' }) {
     const [showDragHint, setShowDragHint] = useState(true);
     const [themeClass, setThemeClass] = useState(''); // State to sync portal theme
     const swiperRef = useRef(null);
-
     const t = (key) => ui[lang][key] || key;
-
     // Smart truncation function with ellipsis
     const truncateTitle = (text, maxLength = 60) => {
         if (text.length <= maxLength) return text;
         return text.slice(0, maxLength).trim() + '...';
     };
+    // Load PDF preview for a single certificate lazily
+    const loadPreview = async (certId, file) => {
+        try {
+            const pdfjsLib = await import('pdfjs-dist');
+            pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+            const pdf = await pdfjsLib.getDocument(file).promise;
+            const page = await pdf.getPage(1);
+            const viewport = page.getViewport({ scale: 1 });
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            await page.render({ canvasContext: context, viewport }).promise;
+            setPdfPreviews(prev => ({ ...prev, [certId]: canvas.toDataURL('image/jpeg', 0.8) }));
+        } catch (err) {
+            console.error(`Error loading preview for ${certId}:`, err);
+        }
+    };
 
     useEffect(() => {
-        const loadPreviews = async () => {
-            try {
-                const pdfjsLib = await import('pdfjs-dist');
-                // Use JSDelivr with .mjs extension for v5+
-                pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
-
-                const loaded = {};
-                for (const cert of certifications) {
-                    try {
-                        const pdf = await pdfjsLib.getDocument(cert.file).promise;
-                        const page = await pdf.getPage(1);
-                        const viewport = page.getViewport({ scale: 1 });
-                        const canvas = document.createElement('canvas');
-                        const context = canvas.getContext('2d');
-
-                        canvas.height = viewport.height;
-                        canvas.width = viewport.width;
-
-                        await page.render({ canvasContext: context, viewport }).promise;
-                        loaded[cert.id] = canvas.toDataURL('image/jpeg', 0.8); // Compress slightly
-                    } catch (err) {
-                        console.error(`Error loading ${cert.id}:`, err);
-                    }
-                }
-                setPdfPreviews(loaded);
-            } catch (error) {
-                console.error("Failed to init PDF lib:", error);
-            }
-        };
-        loadPreviews();
-
+        // Load initial few previews (first 3 certificates) on mount
+        certifications.slice(0, 3).forEach(cert => loadPreview(cert.id, cert.file));
         // Hide drag hint after 3 seconds
         const timer = setTimeout(() => setShowDragHint(false), 3000);
 
@@ -128,7 +115,21 @@ export default function CertificationsCarousel({ lang = 'es' }) {
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper;
                     }}
-                    onSlideChange={handleInteraction}
+                    onSlideChange={(swiper) => {
+                        handleInteraction();
+                        // Lazy load preview for active slide and its neighbours
+                        const activeIndex = swiper.activeIndex;
+                        const idsToLoad = [];
+                        [activeIndex - 2, activeIndex - 1, activeIndex, activeIndex + 1, activeIndex + 2].forEach(i => {
+                            const cert = certifications[i];
+                            if (cert && !pdfPreviews[cert.id]) idsToLoad.push(cert);
+                        });
+                        idsToLoad.forEach(cert => {
+                            // Call the same lazy loader defined in useEffect via closure
+                            // eslint-disable-next-line no-use-before-define
+                            loadPreview(cert.id, cert.file);
+                        });
+                    }}
                     onTouchStart={handleInteraction}
                 >
                     {certifications.map((cert) => (
@@ -207,9 +208,9 @@ export default function CertificationsCarousel({ lang = 'es' }) {
                 >
                     {/* Animated Background Gradients */}
                     <div className="absolute inset-0 overflow-hidden">
-                        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/20 dark:from-blue-400/10 dark:to-purple-400/10 rounded-full blur-3xl animate-pulse" />
-                        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tr from-pink-500/20 to-orange-500/20 dark:from-pink-400/10 dark:to-orange-400/10 rounded-full blur-3xl animate-pulse delay-1000" />
-                        <div className="absolute inset-0 bg-white/90 dark:bg-black/85 backdrop-blur-2xl" />
+                        <div className={`absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse ${themeClass.includes('light') ? 'bg-gradient-to-br from-blue-500/20 to-purple-500/20' : 'bg-gradient-to-br from-blue-400/10 to-purple-400/10'}`} />
+                        <div className={`absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse delay-1000 ${themeClass.includes('light') ? 'bg-gradient-to-tr from-pink-500/20 to-orange-500/20' : 'bg-gradient-to-tr from-pink-400/10 to-orange-400/10'}`} />
+                        <div className={`absolute inset-0 backdrop-blur-2xl ${themeClass.includes('light') ? 'bg-white/90' : 'bg-black/85'}`} />
                     </div>
 
                     <div
@@ -217,40 +218,40 @@ export default function CertificationsCarousel({ lang = 'es' }) {
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Glassmorphism Header */}
-                        <div className="relative bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl p-4 md:p-5 flex items-center gap-3 md:gap-4 border-b border-gray-200/50 dark:border-white/10 shadow-2xl rounded-t-3xl z-50 overflow-hidden">
+                        <div className={`relative backdrop-blur-2xl p-4 md:p-5 flex items-center gap-3 md:gap-4 border-b shadow-2xl rounded-t-3xl z-50 overflow-hidden ${themeClass.includes('light') ? 'bg-white/95 border-gray-200/50' : 'bg-gray-900/95 border-white/10'}`}>
                             {/* Header Gradient Accent */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 dark:from-blue-400/5 dark:via-purple-400/5 dark:to-pink-400/5" />
+                            <div className={`absolute inset-0 ${themeClass.includes('light') ? 'bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5' : 'bg-gradient-to-r from-blue-400/5 via-purple-400/5 to-pink-400/5'}`} />
 
                             <button
-                                className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-white/10 dark:to-white/5 hover:from-gray-200 hover:to-gray-300 dark:hover:from-white/15 dark:hover:to-white/10 flex items-center justify-center text-gray-900 dark:text-white transition-all duration-300 hover:scale-110 active:scale-95 border border-gray-300/50 dark:border-white/10 shadow-lg hover:shadow-xl group"
+                                className={`relative w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 border shadow-lg hover:shadow-xl group ${themeClass.includes('light') ? 'bg-gradient-to-br from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 text-gray-900 border-gray-300/50' : 'bg-gradient-to-br from-white/10 to-white/5 hover:from-white/15 hover:to-white/10 text-white border-white/10'}`}
                                 onClick={() => setSelectedPdf(null)}
                             >
                                 <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-0.5" />
                             </button>
 
-                            <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-white to-gray-50 dark:from-white/10 dark:to-white/5 p-2.5 border border-gray-300/50 dark:border-white/15 shadow-lg">
+                            <div className={`relative w-12 h-12 rounded-xl p-2.5 border shadow-lg ${themeClass.includes('light') ? 'bg-gradient-to-br from-white to-gray-50 border-gray-300/50' : 'bg-gradient-to-br from-white/10 to-white/5 border-white/15'}`}>
                                 <img src={selectedPdf.logo} alt="" className="w-full h-full object-contain" />
                             </div>
 
                             <div className="relative flex-1 min-w-0">
-                                <h3 className="text-gray-900 dark:text-white text-base md:text-lg font-bold truncate bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text">{t(selectedPdf.titleKey)}</h3>
-                                <p className="text-gray-600 dark:text-white/70 text-xs md:text-sm truncate mt-0.5">{t(selectedPdf.orgKey)}</p>
+                                <h3 className={`text-base md:text-lg font-bold truncate bg-clip-text text-transparent ${themeClass.includes('light') ? 'text-gray-900 bg-gradient-to-r from-gray-900 to-gray-700' : 'bg-gradient-to-r from-white to-gray-200 text-white'}`}>{t(selectedPdf.titleKey)}</h3>
+                                <p className={`text-xs md:text-sm truncate mt-0.5 ${themeClass.includes('light') ? 'text-gray-600' : 'text-white/70'}`}>{t(selectedPdf.orgKey)}</p>
                             </div>
 
                         </div>
 
                         {/* Premium PDF Viewer Container */}
-                        <div className="relative flex-1 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/95 dark:to-gray-800/95 backdrop-blur-xl rounded-b-3xl shadow-2xl overflow-hidden border-x border-b border-gray-200/50 dark:border-white/10">
+                        <div className={`relative flex-1 backdrop-blur-xl rounded-b-3xl shadow-2xl overflow-hidden border-x border-b ${themeClass.includes('light') ? 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200/50' : 'bg-gradient-to-br from-gray-900/95 to-gray-800/95 border-white/10'}`}>
                             {/* Decorative Corner Accents */}
-                            <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent dark:from-blue-400/5 rounded-br-full" />
-                            <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-500/10 to-transparent dark:from-purple-400/5 rounded-tl-full" />
+                            <div className={`absolute top-0 left-0 w-32 h-32 rounded-br-full ${themeClass.includes('light') ? 'bg-gradient-to-br from-blue-500/10 to-transparent' : 'bg-gradient-to-br from-blue-400/5 to-transparent'}`} />
+                            <div className={`absolute bottom-0 right-0 w-32 h-32 rounded-tl-full ${themeClass.includes('light') ? 'bg-gradient-to-tl from-purple-500/10 to-transparent' : 'bg-gradient-to-tl from-purple-400/5 to-transparent'}`} />
 
                             {/* PDF Content */}
                             <div className="absolute inset-0 p-4 md:p-6 flex items-center justify-center">
-                                <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 dark:ring-white/5 bg-white dark:bg-gray-800">
+                                <div className={`w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ${themeClass.includes('light') ? 'ring-black/5 bg-white' : 'ring-white/5 bg-gray-800'}`}>
                                     <iframe
                                         src={`${selectedPdf.file}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
-                                        className="w-full h-full dark:brightness-90 dark:contrast-95"
+                                        className={`w-full h-full ${themeClass.includes('light') ? '' : 'brightness-90 contrast-95'}`}
                                         title="PDF Viewer"
                                         style={{
                                             border: 'none',
