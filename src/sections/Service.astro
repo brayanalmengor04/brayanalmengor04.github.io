@@ -21,7 +21,8 @@ const { lang = "es" } = Astro.props;
 const t = useTranslations(lang);
 
 // Helper for replacements
-const strong = (text: string) => `<strong class="text-foreground">${text}</strong>`;
+const strong = (text: string) =>
+    `<strong class="text-foreground">${text}</strong>`;
 const replaceTech = (str: string) => {
     return str
         .replace("{laravel}", strong("Laravel"))
@@ -35,6 +36,9 @@ const replaceTech = (str: string) => {
         .replace("{salesforce}", strong("Salesforce"))
         .replace("{bigquery}", strong("BigQuery"))
         .replace("{lookerstudio}", strong("Looker Studio"))
+        .replace("{sap}", strong("SAP"))
+        .replace("{mysql}", strong("MySQL"))
+        .replace("{docker}", strong("Docker"))
         .replace("{refactoring}", strong("Refactoring"))
         .replace(
             "{legacy}",
@@ -243,11 +247,14 @@ const HologramContainer =
                             <div class="flex flex-wrap gap-2">
                                 {
                                     [
+                                        "Laravel",
                                         "Python",
-                                        "Google Cloud",
-                                        "Salesforce",
-                                        "BigQuery",
                                         "Looker Studio",
+                                        "Google Cloud",
+                                        "SAP",
+                                        "MySQL",
+                                        "BigQuery",
+                                        "Docker",
                                     ].map((tech) => (
                                         <span class="px-3 py-1.5 rounded text-sm bg-secondary/30 border border-border/50 text-muted-foreground font-mono hover:text-accent hover:border-[var(--accent-primary)]/50 transition-colors cursor-default">
                                             {tech}
