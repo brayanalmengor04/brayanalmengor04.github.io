@@ -3,6 +3,8 @@ import "aos/dist/aos.css";
 import AOSClient from "../components/AOSClient";
 import TargetCursor from "../components/TargetCursor";
 import FloatingMenu from "../components/FloatingMenu";
+import ScrollToTop from "../components/ScrollToTop";
+
 
 const {
   title = "Brayan Almengor - Backend Developer & Software Engineer",
@@ -172,7 +174,9 @@ const {
     <slot />
     <AOSClient client:only="react" />
     <FloatingMenu lang={lang} client:only="react" />
+    <ScrollToTop lang={lang} client:only="react" />
   </body>
+
 </html>
 
 <style>
