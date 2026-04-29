@@ -25,16 +25,12 @@ const COUNTRIES = [
     { code: "CU", name: "Cuba", dial: "+53" },
     { code: "ES", name: "España", dial: "+34" },
     { code: "GB", name: "United Kingdom", dial: "+44" },
-    { code: "DE", name: "Deutschland", dial: "+49" },
     { code: "FR", name: "France", dial: "+33" },
     { code: "IT", name: "Italia", dial: "+39" },
     { code: "PT", name: "Portugal", dial: "+351" },
     { code: "CA", name: "Canada", dial: "+1" },
-    { code: "CN", name: "China", dial: "+86" },
-    { code: "JP", name: "Japan", dial: "+81" },
-    { code: "KR", name: "Korea", dial: "+82" },
-    { code: "IN", name: "India", dial: "+91" },
     { code: "AU", name: "Australia", dial: "+61" },
+    { code: "OTHER", name: "Otros / Others", dial: "" },
 ];
 
 const DEFAULT = COUNTRIES[0]; // Panama +507
@@ -44,6 +40,25 @@ const flagSrc = (code) => `https://flagsapi.com/${code}/flat/32.png`;
 
 /* ─── Sub-components ─────────────────────────────────────────────────────── */
 function Flag({ code }) {
+    if (code === "OTHER") {
+        return (
+            <div style={{
+                width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center",
+                background: "var(--border-secondary)", borderRadius: "50%", color: "var(--text-muted)"
+            }}>
+                <svg
+                    width="14" height="14"
+                    viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2.5"
+                    strokeLinecap="round" strokeLinejoin="round"
+                >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+            </div>
+        );
+    }
     return (
         <img
             src={flagSrc(code)}
@@ -119,7 +134,14 @@ export default function PhoneInput({
 
     /* Emit combined value */
     useEffect(() => {
-        const combined = number ? `${country.dial} ${number}` : "";
+        let combined = "";
+        if (number) {
+            if (country.code === "OTHER") {
+                combined = number; // User writes full number with prefix
+            } else {
+                combined = `${country.dial} ${number}`;
+            }
+        }
         onChange?.({ target: { name, value: combined } });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [country, number]);
@@ -370,21 +392,30 @@ export default function PhoneInput({
                     onClick={openDropdown}
                     aria-haspopup="listbox"
                     aria-expanded={open}
+                    style={country.code === "OTHER" ? { minWidth: "100px" } : {}}
                 >
                     <Flag code={country.code} />
-                    <span style={{ fontSize: "0.78rem", fontWeight: 600 }}>{country.dial}</span>
+                    <span style={{ fontSize: "0.78rem", fontWeight: 600 }}>
+                        {country.code === "OTHER" ? "Otro" : country.dial}
+                    </span>
                     <Chevron open={open} />
                 </button>
 
-                {/* Phone number */}
-                <input
-                    type="tel"
-                    className="pi-number"
-                    placeholder={placeholder}
-                    value={number}
-                    onChange={(e) => setNumber(e.target.value)}
-                    autoComplete="tel-national"
-                />
+                {/* Phone number area */}
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
+                    <input
+                        type="tel"
+                        className="pi-number"
+                        placeholder={country.code === "OTHER" ? "+507 6123-4567" : placeholder}
+                        value={number}
+                        onChange={(e) => {
+                            const val = e.target.value.replace(/[^0-9+\- ]/g, '');
+                            setNumber(val);
+                        }}
+                        autoComplete="tel"
+                        style={{ width: "100%", border: "none", outline: "none" }}
+                    />
+                </div>
             </div>
 
             {/* Dropdown portal — always above everything */}

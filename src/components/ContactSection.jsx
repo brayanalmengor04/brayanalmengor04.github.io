@@ -187,7 +187,14 @@ export default function ContactSection({ lang = "es" }) {
                     <label htmlFor="phone" className="block text-sm">
                       {t('contact.form.phone')}
                     </label>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-500 dark:bg-blue-400/10 dark:text-blue-400 border border-blue-500/20">
+                    <span 
+                      className="text-[10px] px-2 py-0.5 rounded-full border font-medium"
+                      style={{ 
+                        background: 'color-mix(in srgb, var(--accent-primary) 10%, transparent)',
+                        color: 'var(--accent-primary)',
+                        borderColor: 'color-mix(in srgb, var(--accent-primary) 20%, transparent)'
+                      }}
+                    >
                       {t('contact.form.optional')}
                     </span>
                   </div>

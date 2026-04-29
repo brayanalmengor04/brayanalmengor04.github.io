@@ -27,14 +27,14 @@ export const POST = async ({ request, cookies }) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'brayanalmengor300@gmail.com',
-                pass: 'cwuaxqtqqcbewphh',
+                user: import.meta.env.EMAIL_USER,
+                pass: import.meta.env.EMAIL_PASS,
             },
         });
         const htmlContent = compileEmailTemplate({ firstName, lastName, email, phone, message });
         const mailOptions = {
             from: `"${firstName} ${lastName}" <${email}>`,
-            to: 'brayanalmengor300@gmail.com',
+            to: import.meta.env.EMAIL_TO || import.meta.env.EMAIL_USER,
             replyTo: email,
             subject: `New Contact Form Submission from ${firstName} ${lastName}`,
             text: `
