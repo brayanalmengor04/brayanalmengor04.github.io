@@ -279,28 +279,30 @@ const timeAgo = (date: string) => {
         </div>
 
         {/* Terminal Body */}
-        <div class="p-6 font-mono text-sm md:text-base">
-          <div class="flex gap-2 mb-6">
-            <span class="text-neon-green">$</span>
-            <span class="text-theme-primary">git log --oneline --all</span>
-          </div>
+        <div class="p-6 font-mono text-sm md:text-base overflow-x-auto custom-scrollbar">
+          <div class="min-w-max">
+            <div class="flex gap-2 mb-6">
+              <span class="text-neon-green">$</span>
+              <span class="text-theme-primary">git log --oneline --all</span>
+            </div>
 
-          <div class="space-y-4">
-            {recentCommits?.map((commit) => (
-              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 group">
-                <div class="flex items-start md:items-center gap-3">
-                  <span class="text-yellow-500 shrink-0">{commit.oid.substring(0, 7)}</span>
-                  <span class="text-accent font-bold shrink-0">[{commit.repository.name}]</span>
-                  <span class="text-theme-secondary line-clamp-1 group-hover:text-theme-primary transition-colors">{commit.message}</span>
+            <div class="space-y-4">
+              {recentCommits?.map((commit) => (
+                <div class="flex items-center justify-between gap-8 group hover:bg-theme-secondary/5 p-2 rounded-lg -ml-2 transition-colors">
+                  <div class="flex items-center gap-3">
+                    <span class="text-yellow-500 shrink-0">{commit.oid.substring(0, 7)}</span>
+                    <span class="text-accent font-bold shrink-0">[{commit.repository.name}]</span>
+                    <span class="text-theme-secondary group-hover:text-theme-primary transition-colors whitespace-nowrap">{commit.message}</span>
+                  </div>
+                  <span class="text-theme-muted text-xs shrink-0 whitespace-nowrap">{timeAgo(commit.committedDate)}</span>
                 </div>
-                <span class="text-theme-muted text-xs shrink-0">{timeAgo(commit.committedDate)}</span>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div class="flex items-center gap-2 mt-6">
-            <span class="text-neon-green">$</span>
-            <div class="w-2 h-5 bg-theme-secondary animate-pulse"></div>
+            <div class="flex items-center gap-2 mt-6">
+              <span class="text-neon-green">$</span>
+              <div class="w-2 h-5 bg-theme-secondary animate-pulse"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -327,5 +329,21 @@ const timeAgo = (date: string) => {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  /* Custom subtle scrollbar for the terminal feed */
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--accent-primary, #583ebc);
+    border-radius: 4px;
+    opacity: 0.5;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary, #9333ea);
   }
 </style>
