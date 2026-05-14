@@ -8,14 +8,18 @@ const t = useTranslations(lang);
 
 <section class="bg-primary py-12 px-6">
   <AOSClient client:only="react" />
-  <div class="text-center mb-8" data-aos="fade-up">
+  <div class="text-center mb-16" data-aos="fade-up">
     <h3
-      class="text-lg font-semibold tracking-wide uppercase text-theme-secondary"
+      class="text-lg font-semibold tracking-wide uppercase text-theme-secondary flex items-center justify-center gap-3"
     >
+      <span class="w-8 h-[1px] bg-[var(--accent-primary)]/50"></span>
       {t("education.subtitle")}
+      <span class="w-8 h-[1px] bg-[var(--accent-primary)]/50"></span>
     </h3>
-    <h2 class="text-4xl font-bold mt-2 text-theme-primary">
-      {t("education.title")}
+    <h2 class="text-4xl md:text-5xl font-black mt-4 text-theme-primary leading-tight tracking-tight">
+       <span class="text-transparent bg-clip-text bg-[image:var(--gradient-primary)] animate-gradient-x">
+         {t("education.title")}
+       </span>
     </h2>
   </div>
   <div
@@ -26,19 +30,18 @@ const t = useTranslations(lang);
       class="col-span-1 md:col-span-3 md:row-span-5 bg-card border border-theme p-6 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-101 cursor-pointer"
       data-aos="fade-up"
     >
-      <div class="mb-4">
+      <div class="mb-6 relative overflow-hidden rounded-xl shadow-2xl">
         <img
-          src="/image/education.jpg"
-          alt="Education Image"
-          class="w-full h-auto rounded-lg"
+          src="/image/utp_background.jpg"
+          alt="Universidad Tecnológica de Panamá"
+          class="w-full h-64 md:h-80 object-cover rounded-xl transition-transform duration-700 hover:scale-105"
         />
       </div>
       <div class="text-theme-primary">
         <div class="flex items-center space-x-2 mb-2">
           <span class="text-lg font-semibold flex items-center gap-2">
             <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
+              class="w-6 h-6 text-accent"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -71,8 +74,7 @@ const t = useTranslations(lang);
     >
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
         <svg
-          class="w-14 h-14 text-gray-800 dark:text-white"
-          aria-hidden="true"
+          class="w-10 h-10 text-accent"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -103,8 +105,7 @@ const t = useTranslations(lang);
     >
       <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
         <svg
-          class="w-6 h-6 text-gray-800 dark:text-white"
-          aria-hidden="true"
+          class="w-6 h-6 text-accent"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"

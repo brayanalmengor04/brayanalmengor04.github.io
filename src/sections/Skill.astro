@@ -15,16 +15,28 @@ const t = useTranslations(lang);
   <div data-aos="fade-right" class="w-full md:w-2/5 pr-8">
     <div class="text-start">
       <h3
-        class="text-lg font-semibold tracking-wide uppercase text-theme-secondary"
+        class="text-lg font-semibold tracking-wide uppercase text-theme-secondary flex items-center gap-2"
       >
+        <span class="w-8 h-[1px] bg-[var(--accent-primary)]/50"></span>
         {t("skill.subtitle")}
       </h3>
-      <h2 class="text-4xl font-bold mt-3 text-theme-primary leading-tight">
-        {t("skill.title")}
+      <h2 class="text-4xl md:text-5xl font-black mt-4 leading-tight tracking-tight text-theme-primary">
+        <span class="text-transparent bg-clip-text bg-[image:var(--gradient-primary)] animate-gradient-x">
+          {t("skill.title")}
+        </span>
       </h2>
-      <p class="mt-5 text-lg text-theme-secondary">
-        {t("skill.desc")}
-      </p>
+      <p 
+        class="mt-6 text-lg text-theme-secondary leading-relaxed"
+        set:html={t("skill.desc")
+          .replace("stack principal", `<strong class="text-theme-primary">stack principal</strong>`)
+          .replace("core stack", `<strong class="text-theme-primary">core stack</strong>`)
+          .replace("bases de datos", `<strong class="text-theme-primary">bases de datos</strong>`)
+          .replace("databases", `<strong class="text-theme-primary">databases</strong>`)
+          .replace("backend", `<strong class="text-theme-primary">backend</strong>`)
+          .replace("despliegue", `<strong class="text-theme-primary">despliegue</strong>`)
+          .replace("deployment", `<strong class="text-theme-primary">deployment</strong>`)
+        }
+      />
     </div>
   </div>
   {/* Skill Bento */}
