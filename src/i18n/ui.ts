@@ -131,6 +131,7 @@ export const ui = {
 
         'education.subtitle': "Mi Trayectoria Académica",
         'education.title': "Educación y Formación",
+        'education.description': "Mi formación académica y aprendizaje continuo han sido fundamentales para desarrollar las bases técnicas y teóricas necesarias para construir software de calidad.",
         'education.card1.title': "Licenciatura en Desarrollo de Software",
         'education.card1.date': "2025",
         'education.card1.desc': "Actualmente cursando la Licenciatura en Desarrollo de Software en la Universidad Tecnológica de Panamá, mejorando mis habilidades en programación, arquitectura de software y tecnologías innovadoras para construir aplicaciones eficientes y escalables.",
@@ -328,6 +329,7 @@ export const ui = {
 
         'education.subtitle': "My Academic Journey",
         'education.title': "Education & Training",
+        'education.description': "My academic background and continuous learning have been fundamental in developing the technical and theoretical foundations necessary to build quality software.",
         'education.card1.title': "Bachelor's in Software Development",
         'education.card1.date': "2025",
         'education.card1.desc': "I am currently pursuing a Bachelor's degree in Software Development at the Technological University of Panama, enhancing my skills in programming, software architecture, and innovative technologies for building efficient and scalable applications.",

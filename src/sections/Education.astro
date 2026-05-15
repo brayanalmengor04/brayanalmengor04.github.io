@@ -4,130 +4,203 @@ import { useTranslations } from "../i18n/utils";
 
 const { lang = "es" } = Astro.props;
 const t = useTranslations(lang);
+
+const cardClass =
+  "group relative overflow-hidden rounded-2xl border border-theme bg-card/80 backdrop-blur-sm p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/10";
 ---
 
-<section class="bg-primary py-12 px-6">
+<section class="relative bg-primary py-24 px-6 overflow-hidden">
   <AOSClient client:only="react" />
-  <div class="text-center mb-16" data-aos="fade-up">
-    <h3
-      class="text-lg font-semibold tracking-wide uppercase text-theme-secondary flex items-center justify-center gap-3"
-    >
-      <span class="w-8 h-[1px] bg-[var(--accent-primary)]/50"></span>
-      {t("education.subtitle")}
-      <span class="w-8 h-[1px] bg-[var(--accent-primary)]/50"></span>
-    </h3>
-    <h2 class="text-4xl md:text-5xl font-black mt-4 text-theme-primary leading-tight tracking-tight">
-       <span class="text-transparent bg-clip-text bg-[image:var(--gradient-primary)] animate-gradient-x">
-         {t("education.title")}
-       </span>
-    </h2>
+
+  <!-- Subtle background -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div
+      class="absolute inset-0 opacity-[0.03]"
+      style="
+        background-image:
+          radial-gradient(circle at top left, var(--accent-primary), transparent 35%),
+          radial-gradient(circle at bottom right, var(--accent-primary), transparent 35%);
+      "
+    ></div>
+
+    <div
+      class="absolute inset-0 opacity-[0.04]"
+      style="
+        background-image:
+          linear-gradient(to right, var(--border-color, #ffffff10) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--border-color, #ffffff10) 1px, transparent 1px);
+        background-size: 40px 40px;
+      "
+    ></div>
   </div>
-  <div
-    class="grid grid-cols-1 md:grid-cols-5 md:grid-rows-5 gap-4 max-w-6xl mx-auto"
-  >
-    <!-- Main Education Card -->
-    <div
-      class="col-span-1 md:col-span-3 md:row-span-5 bg-card border border-theme p-6 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-101 cursor-pointer"
-      data-aos="fade-up"
-    >
-      <div class="mb-6 relative overflow-hidden rounded-xl shadow-2xl">
-        <img
-          src="/image/utp_background.jpg"
-          alt="Universidad Tecnológica de Panamá"
-          class="w-full h-64 md:h-80 object-cover rounded-xl transition-transform duration-700 hover:scale-105"
-        />
-      </div>
-      <div class="text-theme-primary">
-        <div class="flex items-center space-x-2 mb-2">
-          <span class="text-lg font-semibold flex items-center gap-2">
-            <svg
-              class="w-6 h-6 text-accent"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3.78552 9.5 12.7855 14l9-4.5-9-4.5-8.99998 4.5Zm0 0V17m3-6v6.2222c0 .3483 2 1.7778 5.99998 1.7778 4 0 6-1.3738 6-1.7778V11"
-              ></path>
-            </svg>
 
-            {t("education.card1.title")}
-          </span>
-          <span class="text-theme-muted">{t("education.card1.date")}</span>
+  <div class="relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-20" data-aos="fade-up">
+      <h3
+        class="inline-flex items-center gap-3 text-sm font-semibold tracking-[0.25em] uppercase text-theme-secondary"
+      >
+        <span class="w-10 h-px bg-[var(--accent-primary)]/50"></span>
+
+        {t("education.subtitle")}
+
+        <span class="w-10 h-px bg-[var(--accent-primary)]/50"></span>
+      </h3>
+
+      <h2
+        class="mt-6 text-4xl md:text-6xl font-black leading-tight tracking-tight"
+      >
+        <span
+          class="text-transparent bg-clip-text bg-[image:var(--gradient-primary)] animate-gradient-x"
+        >
+          {t("education.title")}
+        </span>
+      </h2>
+
+      {
+        t("education.description") && (
+          <p class="max-w-2xl mx-auto mt-6 text-theme-secondary text-lg leading-relaxed">
+            {t("education.description")}
+          </p>
+        )
+      }
+    </div>
+
+    <!-- Grid -->
+    <div
+      class="relative grid grid-cols-1 md:grid-cols-5 md:grid-rows-5 gap-5 max-w-7xl mx-auto"
+    >
+      <!-- Main Card -->
+      <article
+        class={`${cardClass} md:col-span-3 md:row-span-5`}
+        data-aos="fade-up"
+      >
+        <div class="relative overflow-hidden rounded-2xl">
+          <img
+            src="/image/utp_background.jpg"
+            alt="Universidad Tecnológica de Panamá"
+            class="w-full h-64 md:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"
+          ></div>
         </div>
+
+        <div class="mt-8">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--accent-primary)]/10 border border-[var(--accent-primary)]/20"
+            >
+              <svg
+                class="w-6 h-6 text-accent"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.78552 9.5 12.7855 14l9-4.5-9-4.5-8.99998 4.5Zm0 0V17m3-6v6.2222c0 .3483 2 1.7778 5.99998 1.7778 4 0 6-1.3738 6-1.7778V11"
+                ></path>
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-theme-primary">
+                {t("education.card1.title")}
+              </h3>
+
+              <span class="text-sm text-theme-muted">
+                {t("education.card1.date")}
+              </span>
+            </div>
+          </div>
+
+          <p class="text-theme-secondary leading-relaxed text-[15px]">
+            {t("education.card1.desc")}
+          </p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article
+        class={`${cardClass} md:col-span-2 md:row-span-3 md:col-start-4`}
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div
+          class="flex items-center justify-center w-14 h-14 rounded-2xl mb-5 bg-[var(--accent-primary)]/10 border border-[var(--accent-primary)]/20"
+        >
+          <svg
+            class="w-8 h-8 text-accent"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 20v-9l-4 1.125V20h4Zm0 0h8m-8 0V6.66667M16 20v-9l4 1.125V20h-4Zm0 0V6.66667M18 8l-6-4-6 4m5 1h2m-2 3h2"
+            ></path>
+          </svg>
+        </div>
+
+        <h3 class="text-2xl font-bold text-theme-primary mb-2">
+          {t("education.card2.title")}
+        </h3>
+
+        <span class="block text-sm text-theme-muted mb-5">
+          {t("education.card2.date")}
+        </span>
+
         <p class="text-theme-secondary leading-relaxed">
-          {t("education.card1.desc")}
+          {t("education.card2.desc")}
         </p>
-      </div>
-    </div>
+      </article>
 
-    <!-- Comercio -->
-    <div
-      class="col-span-1 md:col-span-2 md:row-span-3 md:col-start-4 bg-card border border-theme p-6 rounded-lg shadow-md text-theme-primary transition-transform duration-300 transform hover:scale-105 cursor-pointer"
-      data-aos="fade-up"
-    >
-      <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
-        <svg
-          class="w-10 h-10 text-accent"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M8 20v-9l-4 1.125V20h4Zm0 0h8m-8 0V6.66667M16 20v-9l4 1.125V20h-4Zm0 0V6.66667M18 8l-6-4-6 4m5 1h2m-2 3h2"
-          ></path>
-        </svg>
-        {t("education.card2.title")}
-      </h3>
-      <span class="text-theme-muted block mb-4"
-        >{t("education.card2.date")}</span
+      <!-- Card 3 -->
+      <article
+        class={`${cardClass} md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-4`}
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
-      <p class="text-theme-secondary text-sm leading-relaxed">
-        {t("education.card2.desc")}
-      </p>
-    </div>
+        <div
+          class="flex items-center justify-center w-12 h-12 rounded-xl mb-4 bg-[var(--accent-primary)]/10 border border-[var(--accent-primary)]/20"
+        >
+          <svg
+            class="w-6 h-6 text-accent"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            ></path>
+          </svg>
+        </div>
 
-    <div
-      class="col-span-1 md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-4 bg-card border border-theme p-6 rounded-lg shadow-md text-theme-primary transition-transform duration-300 transform hover:scale-105 cursor-pointer"
-      data-aos="fade-up"
-    >
-      <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
-        <svg
-          class="w-6 h-6 text-accent"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
-          ></path>
-        </svg>
-        {t("education.card3.title")}
-      </h3>
-      <span class="text-theme-muted block mb-4"
-        >{t("education.card3.date")}</span
-      >
-      <p class="text-theme-secondary text-sm leading-relaxed">
-        {t("education.card3.desc")}
-      </p>
+        <h3 class="text-xl font-bold text-theme-primary mb-2">
+          {t("education.card3.title")}
+        </h3>
+
+        <span class="block text-sm text-theme-muted mb-4">
+          {t("education.card3.date")}
+        </span>
+
+        <p class="text-theme-secondary text-sm leading-relaxed">
+          {t("education.card3.desc")}
+        </p>
+      </article>
     </div>
   </div>
 </section>

@@ -294,7 +294,12 @@ const timeAgo = (date: string) => {
                     <span class="text-accent font-bold shrink-0">[{commit.repository.name}]</span>
                     <span class="text-theme-secondary group-hover:text-theme-primary transition-colors whitespace-nowrap">{commit.message}</span>
                   </div>
-                  <span class="text-theme-muted text-xs shrink-0 whitespace-nowrap">{timeAgo(commit.committedDate)}</span>
+                  <span 
+                    class="time-ago text-theme-muted text-xs shrink-0 whitespace-nowrap" 
+                    data-timestamp={commit.committedDate}
+                  >
+                    {timeAgo(commit.committedDate)}
+                  </span>
                 </div>
               ))}
             </div>
@@ -309,6 +314,72 @@ const timeAgo = (date: string) => {
     </div>
   </div>
 </section>
+
+<script define:vars={{ 
+  translations: {
+    yearsAgo: t("time.yearsAgo"),
+    monthsAgo: t("time.monthsAgo"),
+    daysAgo: t("time.daysAgo"),
+    hoursAgo: t("time.hoursAgo"),
+    minutesAgo: t("time.minutesAgo"),
+    secondsAgo: t("time.secondsAgo"),
+    justNow: t("time.justNow"),
+  } 
+}}>
+  function updateTimeAgo() {
+    const elements = document.querySelectorAll('.time-ago');
+    elements.forEach(el => {
+      const timestamp = el.getAttribute('data-timestamp');
+      if (!timestamp) return;
+
+      const date = new Date(timestamp);
+      const seconds = Math.floor((new Date().getTime() - date.getTime()) / 1000);
+      
+      let text = "";
+      let interval = seconds / 31536000;
+      
+      if (interval > 1) {
+        text = translations.yearsAgo.replace("{time}", Math.floor(interval).toString());
+      } else {
+        interval = seconds / 2592000;
+        if (interval > 1) {
+          text = translations.monthsAgo.replace("{time}", Math.floor(interval).toString());
+        } else {
+          interval = seconds / 86400;
+          if (interval > 1) {
+            text = translations.daysAgo.replace("{time}", Math.floor(interval).toString());
+          } else {
+            interval = seconds / 3600;
+            if (interval > 1) {
+              text = translations.hoursAgo.replace("{time}", Math.floor(interval).toString());
+            } else {
+              interval = seconds / 60;
+              if (interval > 1) {
+                text = translations.minutesAgo.replace("{time}", Math.floor(interval).toString());
+              } else if (seconds < 30) {
+                text = translations.justNow;
+              } else {
+                text = translations.secondsAgo.replace("{time}", Math.floor(seconds).toString());
+              }
+            }
+          }
+        }
+      }
+      
+      if (el.textContent !== text) {
+        el.textContent = text;
+      }
+    });
+  }
+
+  // Update every 10 seconds to keep "seconds ago" relatively accurate
+  // but not too frequent to impact performance
+  setInterval(updateTimeAgo, 10000);
+  
+  // Also run immediately on load (though Astro already rendered it, 
+  // it might have been some time since the build/SSR)
+  updateTimeAgo();
+</script>
 
 <style>
   .animate-pulse {
