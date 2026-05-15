@@ -64,6 +64,8 @@ export const ui = {
         'hero.switch': "Cambiar Tema",
 
         'service.path': "~/desarrollador/portafolio",
+        'service.oriented.title': "Me especializo en:",
+        'service.oriented.subtitle': "Entornos de desarrollo y tecnologías en los que enfoco mi trabajo.",
         'service.title': "Experiencia",
         'service.subtitle': "& Stack Principal_",
         'service.companies.title': "Trayectoria Profesional",
