@@ -81,13 +81,13 @@ async function fetchGitHubData(): Promise<GitHubData | null> {
             totalContributions
           }
         }
-        recentCommits: repositories(first: 5, ownerAffiliations: OWNER, orderBy: {field: PUSHED_AT, direction: DESC}) {
+        recentCommits: repositories(first: 10, ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER], orderBy: {field: PUSHED_AT, direction: DESC}) {
           nodes {
             name
             defaultBranchRef {
               target {
                 ... on Commit {
-                  history(first: 3) {
+                  history(first: 5) {
                     nodes {
                       oid
                       message
@@ -153,7 +153,7 @@ const totalSize = sortedLanguages.reduce((acc: number, lang) => acc + lang.size,
 const recentCommits = githubData?.recentCommits.nodes
   .flatMap(repo => repo.defaultBranchRef?.target.history.nodes || [])
   .sort((a, b) => new Date(b.committedDate).getTime() - new Date(a.committedDate).getTime())
-  .slice(0, 4);
+  .slice(0, 8);
 
 const timeAgo = (date: string) => {
   const seconds = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
