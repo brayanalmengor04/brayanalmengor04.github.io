@@ -363,7 +363,7 @@
               }
             },
             {
-              "size": 85409,
+              "size": 83585,
               "node": {
                 "name": "Astro",
                 "color": "#ff5a03"
@@ -1333,9 +1333,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 52,
+    "totalCommitContributions": 56,
     "contributionCalendar": {
-      "totalContributions": 217
+      "totalContributions": 221
     }
   },
   "recentCommits": {
@@ -1347,41 +1347,41 @@
             "history": {
               "nodes": [
                 {
+                  "oid": "465e78726327a1257d5d6f9e05ab9d910c559114",
+                  "message": "fix: update github action to resolve non-fast-forward issue and fix versions",
+                  "committedDate": "2026-06-24T17:59:52Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "33f37a295923f85af1ff7345538737ec89592bf5",
+                  "message": "fix: resolve build error caused by imports position in GitHubActivity.astro",
+                  "committedDate": "2026-06-24T17:51:02Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "b95229c0ef2a58530bac5ad2f718c987e9427217",
+                  "message": "actualizacion mapeo de estadisticas de con github actions",
+                  "committedDate": "2026-06-24T17:24:44Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "454988d077469e54a7f32fdd01cc2ddda03b8115",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-06-24T17:18:18Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
                   "oid": "f26db026d67bd7a6e91daf22b5162093ce67377c",
                   "message": "Update commit author format in workflow file",
                   "committedDate": "2026-06-24T17:17:32Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "274b4a2676ab79a71f0bfeb99fc34cc29f77f702",
-                  "message": "Agregacion de action de github semanal de estadistica para el portfolio",
-                  "committedDate": "2026-06-24T16:54:24Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "870294d841e4805ccc8f5062ae90a0977fd7df99",
-                  "message": "feat: increase GitHub activity feed limits and include collaborative repos",
-                  "committedDate": "2026-05-19T12:23:25Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "dec650465edb338f955b7b7532fdb7637832c3f3",
-                  "message": "fix: mostrar la seccion de actividad de GitHub al cambiar de idioma",
-                  "committedDate": "2026-05-18T17:18:44Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "d3bf58128f5717a57f611cc98afc86fd1d66caaa",
-                  "message": "Rename main to main.yml",
-                  "committedDate": "2026-05-18T15:38:03Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
                   }
