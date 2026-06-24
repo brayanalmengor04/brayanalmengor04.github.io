@@ -1,13 +1,13 @@
 ---
 import { Github, BarChart3, Terminal as TerminalIcon, GitCommit, Star, GitFork, ExternalLink } from "lucide-astro";
 import { useTranslations } from "../i18n/utils";
+import githubDataRaw from "../data/github-stats.json";
 
 const { lang = "es" } = Astro.props;
 const t = useTranslations(lang);
 
 const GITHUB_USERNAME = import.meta.env.GITHUB_USERNAME || "brayanalmengor04";
 
-import githubDataRaw from "../data/github-stats.json";
 
 interface GitHubRepo {
   stargazerCount: number;
