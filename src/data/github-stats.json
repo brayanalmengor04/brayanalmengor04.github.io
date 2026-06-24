@@ -1,0 +1,1823 @@
+{
+  "repositories": {
+    "totalCount": 58,
+    "nodes": [
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 21446,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 8715,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 12467,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 124092,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 10749,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 11399,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 5335,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 4840,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 4144,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 1,
+        "forkCount": 0,
+        "languages": {
+          "edges": []
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 9664,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 376,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            },
+            {
+              "size": 4,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 2,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 11914,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 41893,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 100858,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 27104,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 72212,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 28275,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 65072,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 60522,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 23241,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 35041,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 32151,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 10950,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 12770,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            },
+            {
+              "size": 5774,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 121285,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 85409,
+              "node": {
+                "name": "Astro",
+                "color": "#ff5a03"
+              }
+            },
+            {
+              "size": 30862,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            },
+            {
+              "size": 20891,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": []
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": []
+        }
+      },
+      {
+        "stargazerCount": 1,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 82067,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            },
+            {
+              "size": 1626,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 1,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 8111,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 1180,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 361,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": []
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 709,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 696,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 7579,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 13195,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 1,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 4434,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 11145,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            },
+            {
+              "size": 4563,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 3871,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 11092,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 101675,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 73643,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 570,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 53846,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 13587,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 307,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 55230,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 26640,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 307,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 34339,
+              "node": {
+                "name": "Kotlin",
+                "color": "#A97BFF"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 60502,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 52407,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 11443,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 2510,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 59074,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 17802,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 929,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 59,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 1,
+        "languages": {
+          "edges": [
+            {
+              "size": 226672,
+              "node": {
+                "name": "SCSS",
+                "color": "#c6538c"
+              }
+            },
+            {
+              "size": 127291,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 100058,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 74259,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 25051,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 50560,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 36248,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 929,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 59,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 16992,
+              "node": {
+                "name": "Visual Basic .NET",
+                "color": "#945db7"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 589661,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 120050,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 1634,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 734649,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 226382,
+              "node": {
+                "name": "SCSS",
+                "color": "#c6538c"
+              }
+            },
+            {
+              "size": 163413,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 119705,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 14623,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 14034,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 6480,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 4931,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 3611,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 7631,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            },
+            {
+              "size": 5121,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 80,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 31863,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            },
+            {
+              "size": 269,
+              "node": {
+                "name": "Dockerfile",
+                "color": "#384d54"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 14097,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 800,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 6047,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 51051,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 432,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 22,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 32237,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            },
+            {
+              "size": 6863,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 6757,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 529,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 4481,
+              "node": {
+                "name": "Visual Basic .NET",
+                "color": "#945db7"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 13376,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 180319,
+              "node": {
+                "name": "Dart",
+                "color": "#00B4AB"
+              }
+            },
+            {
+              "size": 24870,
+              "node": {
+                "name": "C++",
+                "color": "#f34b7d"
+              }
+            },
+            {
+              "size": 19808,
+              "node": {
+                "name": "CMake",
+                "color": "#DA3434"
+              }
+            },
+            {
+              "size": 3105,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 2762,
+              "node": {
+                "name": "Swift",
+                "color": "#F05138"
+              }
+            },
+            {
+              "size": 1425,
+              "node": {
+                "name": "C",
+                "color": "#555555"
+              }
+            },
+            {
+              "size": 126,
+              "node": {
+                "name": "Kotlin",
+                "color": "#A97BFF"
+              }
+            },
+            {
+              "size": 38,
+              "node": {
+                "name": "Objective-C",
+                "color": "#438eff"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 94812,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 83687,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 353,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 44,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 47278,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 131275,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 61835,
+              "node": {
+                "name": "Dart",
+                "color": "#00B4AB"
+              }
+            },
+            {
+              "size": 24781,
+              "node": {
+                "name": "C++",
+                "color": "#f34b7d"
+              }
+            },
+            {
+              "size": 19696,
+              "node": {
+                "name": "CMake",
+                "color": "#DA3434"
+              }
+            },
+            {
+              "size": 4366,
+              "node": {
+                "name": "Dockerfile",
+                "color": "#384d54"
+              }
+            },
+            {
+              "size": 2036,
+              "node": {
+                "name": "Swift",
+                "color": "#F05138"
+              }
+            },
+            {
+              "size": 1488,
+              "node": {
+                "name": "C",
+                "color": "#555555"
+              }
+            },
+            {
+              "size": 117,
+              "node": {
+                "name": "Kotlin",
+                "color": "#A97BFF"
+              }
+            },
+            {
+              "size": 38,
+              "node": {
+                "name": "Objective-C",
+                "color": "#438eff"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "contributionsCollection": {
+    "totalCommitContributions": 52,
+    "contributionCalendar": {
+      "totalContributions": 217
+    }
+  },
+  "recentCommits": {
+    "nodes": [
+      {
+        "name": "brayanalmengor04.github.io",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "f26db026d67bd7a6e91daf22b5162093ce67377c",
+                  "message": "Update commit author format in workflow file",
+                  "committedDate": "2026-06-24T17:17:32Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "274b4a2676ab79a71f0bfeb99fc34cc29f77f702",
+                  "message": "Agregacion de action de github semanal de estadistica para el portfolio",
+                  "committedDate": "2026-06-24T16:54:24Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "870294d841e4805ccc8f5062ae90a0977fd7df99",
+                  "message": "feat: increase GitHub activity feed limits and include collaborative repos",
+                  "committedDate": "2026-05-19T12:23:25Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "dec650465edb338f955b7b7532fdb7637832c3f3",
+                  "message": "fix: mostrar la seccion de actividad de GitHub al cambiar de idioma",
+                  "committedDate": "2026-05-18T17:18:44Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "d3bf58128f5717a57f611cc98afc86fd1d66caaa",
+                  "message": "Rename main to main.yml",
+                  "committedDate": "2026-05-18T15:38:03Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "brayanalmengor04",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "79f784e2ede972c788970acc64a7e8d64156e7ea",
+                  "message": "change featured repository",
+                  "committedDate": "2025-05-19T17:54:36Z",
+                  "repository": {
+                    "name": "brayanalmengor04"
+                  }
+                },
+                {
+                  "oid": "4a43e8c75029986731b4f04378edf38e464c4f12",
+                  "message": "feature : new api spotify listening now",
+                  "committedDate": "2025-03-23T19:08:46Z",
+                  "repository": {
+                    "name": "brayanalmengor04"
+                  }
+                },
+                {
+                  "oid": "81cfa9fcd258dac1c12354dcf143a3cb4985723f",
+                  "message": "feature : new api spotify listening now",
+                  "committedDate": "2025-03-23T18:56:23Z",
+                  "repository": {
+                    "name": "brayanalmengor04"
+                  }
+                },
+                {
+                  "oid": "2cfb97a472cc44c322bae6240608c7fecf08410e",
+                  "message": "upload featured proyect in the readme",
+                  "committedDate": "2025-03-21T16:07:37Z",
+                  "repository": {
+                    "name": "brayanalmengor04"
+                  }
+                },
+                {
+                  "oid": "d8f7a2a61721afd3a86ba10eab46c1c3ca84b724",
+                  "message": "new changes readme presentation",
+                  "committedDate": "2025-03-21T16:00:06Z",
+                  "repository": {
+                    "name": "brayanalmengor04"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "app",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "13e66148f8da7458de99fd09955fd3c081ab7381",
+                  "message": "style(ui): corregir traslape de AppBar y Scaffold anidado en Perfil y Configuracion",
+                  "committedDate": "2026-05-18T18:03:47Z",
+                  "repository": {
+                    "name": "app"
+                  }
+                },
+                {
+                  "oid": "c54178042ace052f173689ea0f71f052b91b63fa",
+                  "message": "ui/ux : Agregacion de pantallas iniciales y agregacion de diseño panel de configuraciones modo oscuro , cambio de idioma y mas",
+                  "committedDate": "2026-05-18T15:20:22Z",
+                  "repository": {
+                    "name": "app"
+                  }
+                },
+                {
+                  "oid": "3929dcb530bb18d9b2c950c008e5799ac29026bf",
+                  "message": "feature : Integraccion de context AI definicion de reglas y arquitectura a seguir",
+                  "committedDate": "2026-05-15T19:27:41Z",
+                  "repository": {
+                    "name": "app"
+                  }
+                },
+                {
+                  "oid": "b2951fc9e1456602044c5cb49a0dfffafd3122b0",
+                  "message": "test: corregir timeout causado por animaciones de Lottie",
+                  "committedDate": "2026-05-12T21:02:22Z",
+                  "repository": {
+                    "name": "app"
+                  }
+                },
+                {
+                  "oid": "46a5c5f038a629efc7f0789afa5af51abe179b69",
+                  "message": "test: actualizar widget_test para que coincida con la nueva UI",
+                  "committedDate": "2026-05-12T20:59:10Z",
+                  "repository": {
+                    "name": "app"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "nexary-bot",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "139ce5ac196db074890badb4e5732bcf3af2c110",
+                  "message": "rename bot discord",
+                  "committedDate": "2026-01-24T23:12:00Z",
+                  "repository": {
+                    "name": "nexary-bot"
+                  }
+                },
+                {
+                  "oid": "e061db452164872aaf34624b68c4d8187d47a2c8",
+                  "message": "dock : arreglo de documentacion actual de wasaby-bot",
+                  "committedDate": "2026-01-17T00:45:58Z",
+                  "repository": {
+                    "name": "nexary-bot"
+                  }
+                },
+                {
+                  "oid": "c80a4fa0372a688dfc86ab97c283a6fcedd74007",
+                  "message": "dock : Agregacion de readme inicial para el proyecto de Wasabi Bot",
+                  "committedDate": "2026-01-14T06:33:56Z",
+                  "repository": {
+                    "name": "nexary-bot"
+                  }
+                },
+                {
+                  "oid": "9f7e2ef53437d099bce8e062a8d5c80b3605c16d",
+                  "message": "dock : Agregacion de readme inicial para el proyecto de Wasabi Bot",
+                  "committedDate": "2026-01-14T06:32:32Z",
+                  "repository": {
+                    "name": "nexary-bot"
+                  }
+                },
+                {
+                  "oid": "3d9c03919ab01ef780ab87037bebabfa9f5b5e63",
+                  "message": "feat: integracion de comando de musica reproduccion de bot de discord y limpieza de chat",
+                  "committedDate": "2026-01-14T03:41:13Z",
+                  "repository": {
+                    "name": "nexary-bot"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "saborpty-app",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "cdce2cdee71693b64f874e92a4b96788fd9bb28e",
+                  "message": "Merge pull request #13 from brayanalmengor04/core-dev\n\nfeature: UI/UX week options design",
+                  "committedDate": "2025-06-13T02:56:24Z",
+                  "repository": {
+                    "name": "saborpty-app"
+                  }
+                },
+                {
+                  "oid": "1990ab597a8859c1b88770e120cbaa99cd756159",
+                  "message": "feature: UI/UX week options design",
+                  "committedDate": "2025-06-13T02:55:53Z",
+                  "repository": {
+                    "name": "saborpty-app"
+                  }
+                },
+                {
+                  "oid": "a18e009dfcb6efc8da205aac25a7fed5504d0ef9",
+                  "message": "Merge pull request #12 from brayanalmengor04/core-dev\n\nUI/UX : Section category list navigator buttom",
+                  "committedDate": "2025-06-11T23:02:42Z",
+                  "repository": {
+                    "name": "saborpty-app"
+                  }
+                },
+                {
+                  "oid": "4597afcc0497f66197c9849da730698fb302fd7b",
+                  "message": "UI/UX : Section category list navigator buttom",
+                  "committedDate": "2025-06-11T23:01:20Z",
+                  "repository": {
+                    "name": "saborpty-app"
+                  }
+                },
+                {
+                  "oid": "0622b7f5eec350b9dcceea3c261b84d7c5f9565e",
+                  "message": "Merge pull request #11 from brayanalmengor04/core-dev\n\nintegration : Activity recent rating perfil",
+                  "committedDate": "2025-06-11T22:16:06Z",
+                  "repository": {
+                    "name": "saborpty-app"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "saborpty-backend",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "aeb07c23fd7589bd83ba0e3e79ad54b028dabe33",
+                  "message": "Merge pull request #9 from brayanalmengor04/core-dev\n\nintegration : Activity rating recent by user",
+                  "committedDate": "2025-06-11T22:00:17Z",
+                  "repository": {
+                    "name": "saborpty-backend"
+                  }
+                },
+                {
+                  "oid": "38b0f3af72f44b37660b116652cfae0479b72617",
+                  "message": "integration : Activity rating recent by user",
+                  "committedDate": "2025-06-11T21:59:43Z",
+                  "repository": {
+                    "name": "saborpty-backend"
+                  }
+                },
+                {
+                  "oid": "b1063941b39172e2438dbe1411a2896a00e6fdde",
+                  "message": "Merge pull request #8 from brayanalmengor04/core-dev\n\nintegration : Integration activity deleted favorite",
+                  "committedDate": "2025-06-10T23:50:45Z",
+                  "repository": {
+                    "name": "saborpty-backend"
+                  }
+                },
+                {
+                  "oid": "53da179a9f1829d5ead94672158865e9ba6e9d76",
+                  "message": "integration : Integration activity deleted favorite",
+                  "committedDate": "2025-06-10T23:50:18Z",
+                  "repository": {
+                    "name": "saborpty-backend"
+                  }
+                },
+                {
+                  "oid": "665c07e094968ebac610fb0aa9b1644fb060c33b",
+                  "message": "Merge pull request #7 from brayanalmengor04/core-dev\n\nintegration :Integration api  Activities recent to favorite",
+                  "committedDate": "2025-06-09T23:35:11Z",
+                  "repository": {
+                    "name": "saborpty-backend"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "angular-testing-",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "b0d25d10d0bbc62d973ebc8ebaa6dffc6d65b5a6",
+                  "message": "angular elements teoric",
+                  "committedDate": "2025-04-27T01:03:25Z",
+                  "repository": {
+                    "name": "angular-testing-"
+                  }
+                },
+                {
+                  "oid": "c76e1190ce4b9bade71381f6ec8fbed82efb34c7",
+                  "message": "initialize readme",
+                  "committedDate": "2025-04-26T03:37:05Z",
+                  "repository": {
+                    "name": "angular-testing-"
+                  }
+                },
+                {
+                  "oid": "393f5d934083fa9f6adf606b3af9e50810bd54a5",
+                  "message": "Merge branch 'main' of https://github.com/brayanalmengor04/angular-testing-",
+                  "committedDate": "2025-04-26T03:27:41Z",
+                  "repository": {
+                    "name": "angular-testing-"
+                  }
+                },
+                {
+                  "oid": "8a4d0ef6c65ed2ccb2596fcdaecbf5c05c30f1fd",
+                  "message": "upload testing typescript decorator",
+                  "committedDate": "2025-04-26T03:25:06Z",
+                  "repository": {
+                    "name": "angular-testing-"
+                  }
+                },
+                {
+                  "oid": "44f23e291867954fa7ccb3aef10689a814609f4b",
+                  "message": "Initial commit",
+                  "committedDate": "2025-04-26T03:23:07Z",
+                  "repository": {
+                    "name": "angular-testing-"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "technical-tests-vb.net",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "52a9d3d244f341b605964628b53e76bf0bc7b131",
+                  "message": "initialize practice array tehcnical test",
+                  "committedDate": "2025-04-22T18:07:37Z",
+                  "repository": {
+                    "name": "technical-tests-vb.net"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "eco-paraiso-lodge",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "e8adaa1ac79603efbe56feceb92747ac82dde1be",
+                  "message": "Merge pull request #6 from brayanalmengor04/fixed/deprecated-error\n\nbug : Fixed proyect ecologde deprecated dependency",
+                  "committedDate": "2025-04-16T20:04:03Z",
+                  "repository": {
+                    "name": "eco-paraiso-lodge"
+                  }
+                },
+                {
+                  "oid": "94f5ec37b860792d9b57a7ac5efea8aaa951d6d5",
+                  "message": "bug : Fixed proyect ecologde deprecated dependency",
+                  "committedDate": "2025-04-16T19:51:10Z",
+                  "repository": {
+                    "name": "eco-paraiso-lodge"
+                  }
+                },
+                {
+                  "oid": "2ed37fdf25d2b263475d243497c460b8fd1c1aa7",
+                  "message": "Merge pull request #5 from brayanalmengor04/Brayan\n\nfeat: add hotel reservation management, admin features, and user auth…",
+                  "committedDate": "2024-11-04T20:01:09Z",
+                  "repository": {
+                    "name": "eco-paraiso-lodge"
+                  }
+                },
+                {
+                  "oid": "00d55d4b6e46ab5fae1a4080997df5db29df83b2",
+                  "message": "Merge branch 'main' into Brayan",
+                  "committedDate": "2024-11-04T02:38:39Z",
+                  "repository": {
+                    "name": "eco-paraiso-lodge"
+                  }
+                },
+                {
+                  "oid": "3eb4e07312d03d5a6d5f9544ae73265933399ed7",
+                  "message": "feat: add hotel reservation management, admin features, and user authentication",
+                  "committedDate": "2024-11-04T02:21:36Z",
+                  "repository": {
+                    "name": "eco-paraiso-lodge"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "my-finnantrack-app",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "ac5b7fcb7a2d95adc5a88e915f276b1ed49d0a94",
+                  "message": "Merge pull request #15 from brayanalmengor04/finnantrack/brayanalmengor\n\nfix : Readme documentacion finantrack app",
+                  "committedDate": "2025-04-01T19:48:02Z",
+                  "repository": {
+                    "name": "my-finnantrack-app"
+                  }
+                },
+                {
+                  "oid": "29d1352e6cdccdc938e76c64eb4ae6d258a5bfb2",
+                  "message": "fix : Readme documentacion finantrack app",
+                  "committedDate": "2025-04-01T19:46:04Z",
+                  "repository": {
+                    "name": "my-finnantrack-app"
+                  }
+                },
+                {
+                  "oid": "7444f64c87046fb5dfed61e4d1c783aa22757e24",
+                  "message": "Merge pull request #14 from brayanalmengor04/finnantrack/brayanalmengor\n\ndocs: Estructure Proyect Finantrack",
+                  "committedDate": "2025-04-01T03:53:43Z",
+                  "repository": {
+                    "name": "my-finnantrack-app"
+                  }
+                },
+                {
+                  "oid": "c3947c497e93bcc9a758df5430b5689aad367077",
+                  "message": "docs: Estructure Proyect Finantrack",
+                  "committedDate": "2025-04-01T03:53:04Z",
+                  "repository": {
+                    "name": "my-finnantrack-app"
+                  }
+                },
+                {
+                  "oid": "c9e4d4e32c143cb901f836cc1c0532d9cde77620",
+                  "message": "Merge pull request #13 from brayanalmengor04/finnantrack/brayanalmengor\n\ndocs: Documenting the app design in figma",
+                  "committedDate": "2025-03-30T20:11:59Z",
+                  "repository": {
+                    "name": "my-finnantrack-app"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
