@@ -36,7 +36,7 @@ jobs:
           commit_message: "chore: Actualización automatizada de GitHub - Brayan Almengor"
           commit_user_name: brayanalmengor04
           commit_user_email: brayanalmengor300@gmail.com
-          commit_author: Brayan Almengor [AUTOMATE]
+          commit_author: Brayan Almengor [AUTOMATE] <brayanalmengor300@gmail.com>
           file_pattern: "src/data/github-stats.json"
 
       - name: Build Astro 5 project
