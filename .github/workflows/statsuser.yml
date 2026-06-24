@@ -1,0 +1,43 @@
+name: StatsMyGithub
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Se ejecuta cada domingo a las 00:00 UTC
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch GitHub Stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: brayanalmengor04
+        run: node scripts/fetch-github-stats.js
+        
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Actualización automatizada de GitHub - Brayan Almengor"
+          commit_user_name: brayanalmengor04
+          commit_user_email: brayanalmengor300@gmail.com
+          commit_author: Brayan Almengor [AUTOMATE]
+          file_pattern: "src/data/github-stats.json"
+
+      - name: Build Astro 5 project
+        run: npm run build
