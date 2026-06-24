@@ -13,10 +13,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
+        with:
+          ref: main
         
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
@@ -24,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Pull latest changes
+        run: git pull origin main --rebase
+        
       - name: Fetch GitHub Stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
