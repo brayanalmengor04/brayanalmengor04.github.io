@@ -1,6 +1,6 @@
 {
   "repositories": {
-    "totalCount": 58,
+    "totalCount": 59,
     "nodes": [
       {
         "stargazerCount": 0,
@@ -1329,61 +1329,125 @@
             }
           ]
         }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 244869,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 134019,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 24404,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 4962,
+              "node": {
+                "name": "PowerShell",
+                "color": "#012456"
+              }
+            },
+            {
+              "size": 3789,
+              "node": {
+                "name": "Just",
+                "color": "#384d54"
+              }
+            },
+            {
+              "size": 2354,
+              "node": {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            },
+            {
+              "size": 1130,
+              "node": {
+                "name": "Dockerfile",
+                "color": "#384d54"
+              }
+            },
+            {
+              "size": 530,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
       }
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 56,
+    "totalCommitContributions": 86,
     "contributionCalendar": {
-      "totalContributions": 221
+      "totalContributions": 252
     }
   },
   "recentCommits": {
     "nodes": [
       {
-        "name": "brayanalmengor04.github.io",
+        "name": "mgf-workspace",
         "defaultBranchRef": {
           "target": {
             "history": {
               "nodes": [
                 {
-                  "oid": "465e78726327a1257d5d6f9e05ab9d910c559114",
-                  "message": "fix: update github action to resolve non-fast-forward issue and fix versions",
-                  "committedDate": "2026-06-24T17:59:52Z",
+                  "oid": "b662c0124a8fd5a7686517c12fc369c6f4d15a12",
+                  "message": "fix: start HTTP server before migrations to avoid Railway 502\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-06-28T01:38:24Z",
                   "repository": {
-                    "name": "brayanalmengor04.github.io"
+                    "name": "mgf-workspace"
                   }
                 },
                 {
-                  "oid": "33f37a295923f85af1ff7345538737ec89592bf5",
-                  "message": "fix: resolve build error caused by imports position in GitHubActivity.astro",
-                  "committedDate": "2026-06-24T17:51:02Z",
+                  "oid": "7fe4dc7299cc048fa5ab37898398fa43eb711f7a",
+                  "message": "fix: publish Filament assets at build time and set Railway APP_URL\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-06-28T01:32:24Z",
                   "repository": {
-                    "name": "brayanalmengor04.github.io"
+                    "name": "mgf-workspace"
                   }
                 },
                 {
-                  "oid": "b95229c0ef2a58530bac5ad2f718c987e9427217",
-                  "message": "actualizacion mapeo de estadisticas de con github actions",
-                  "committedDate": "2026-06-24T17:24:44Z",
+                  "oid": "2ff80aa76fe42f02356e72177a0b9457c6ce8cf7",
+                  "message": "fix: run migrations before optimize:clear on Railway boot\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-06-28T01:29:23Z",
                   "repository": {
-                    "name": "brayanalmengor04.github.io"
+                    "name": "mgf-workspace"
                   }
                 },
                 {
-                  "oid": "454988d077469e54a7f32fdd01cc2ddda03b8115",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-06-24T17:18:18Z",
+                  "oid": "dd9e6e7a05e2cabfee8f3cfee990cbb843e9f888",
+                  "message": "fix: Railway APP_KEY bootstrap, auto-migrate, and prod ops commands\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-06-28T01:26:38Z",
                   "repository": {
-                    "name": "brayanalmengor04.github.io"
+                    "name": "mgf-workspace"
                   }
                 },
                 {
-                  "oid": "f26db026d67bd7a6e91daf22b5162093ce67377c",
-                  "message": "Update commit author format in workflow file",
-                  "committedDate": "2026-06-24T17:17:32Z",
+                  "oid": "f29936beffe4f2796b087ce5cc672938cfefdf84",
+                  "message": "fix: Railway deploy without .env file and copy app into image\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-06-28T01:23:03Z",
                   "repository": {
-                    "name": "brayanalmengor04.github.io"
+                    "name": "mgf-workspace"
                   }
                 }
               ]
@@ -1435,6 +1499,57 @@
                   "committedDate": "2025-03-21T16:00:06Z",
                   "repository": {
                     "name": "brayanalmengor04"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "brayanalmengor04.github.io",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "5ebdb4bda2f01efc168d27455544f9c2ae45d040",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-06-24T18:02:00Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "465e78726327a1257d5d6f9e05ab9d910c559114",
+                  "message": "fix: update github action to resolve non-fast-forward issue and fix versions",
+                  "committedDate": "2026-06-24T17:59:52Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "33f37a295923f85af1ff7345538737ec89592bf5",
+                  "message": "fix: resolve build error caused by imports position in GitHubActivity.astro",
+                  "committedDate": "2026-06-24T17:51:02Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "b95229c0ef2a58530bac5ad2f718c987e9427217",
+                  "message": "actualizacion mapeo de estadisticas de con github actions",
+                  "committedDate": "2026-06-24T17:24:44Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "454988d077469e54a7f32fdd01cc2ddda03b8115",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-06-24T17:18:18Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
                   }
                 }
               ]
@@ -1760,57 +1875,6 @@
                   "committedDate": "2024-11-04T02:21:36Z",
                   "repository": {
                     "name": "eco-paraiso-lodge"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "name": "my-finnantrack-app",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "ac5b7fcb7a2d95adc5a88e915f276b1ed49d0a94",
-                  "message": "Merge pull request #15 from brayanalmengor04/finnantrack/brayanalmengor\n\nfix : Readme documentacion finantrack app",
-                  "committedDate": "2025-04-01T19:48:02Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "29d1352e6cdccdc938e76c64eb4ae6d258a5bfb2",
-                  "message": "fix : Readme documentacion finantrack app",
-                  "committedDate": "2025-04-01T19:46:04Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "7444f64c87046fb5dfed61e4d1c783aa22757e24",
-                  "message": "Merge pull request #14 from brayanalmengor04/finnantrack/brayanalmengor\n\ndocs: Estructure Proyect Finantrack",
-                  "committedDate": "2025-04-01T03:53:43Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "c3947c497e93bcc9a758df5430b5689aad367077",
-                  "message": "docs: Estructure Proyect Finantrack",
-                  "committedDate": "2025-04-01T03:53:04Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "c9e4d4e32c143cb901f836cc1c0532d9cde77620",
-                  "message": "Merge pull request #13 from brayanalmengor04/finnantrack/brayanalmengor\n\ndocs: Documenting the app design in figma",
-                  "committedDate": "2025-03-30T20:11:59Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
                   }
                 }
               ]
