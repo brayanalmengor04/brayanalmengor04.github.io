@@ -1333,9 +1333,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 58,
+    "totalCommitContributions": 59,
     "contributionCalendar": {
-      "totalContributions": 241
+      "totalContributions": 233
     }
   },
   "recentCommits": {
@@ -1398,6 +1398,14 @@
             "history": {
               "nodes": [
                 {
+                  "oid": "f689e10517b8765d0ecf7f67327e7afb40a0f970",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-07-05T03:25:34Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
                   "oid": "e100c4ecebec0bbd205206666d5c56400d5b97ac",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
                   "committedDate": "2026-06-28T03:52:29Z",
@@ -1425,14 +1433,6 @@
                   "oid": "33f37a295923f85af1ff7345538737ec89592bf5",
                   "message": "fix: resolve build error caused by imports position in GitHubActivity.astro",
                   "committedDate": "2026-06-24T17:51:02Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "b95229c0ef2a58530bac5ad2f718c987e9427217",
-                  "message": "actualizacion mapeo de estadisticas de con github actions",
-                  "committedDate": "2026-06-24T17:24:44Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
                   }
