@@ -1,6 +1,6 @@
 {
   "repositories": {
-    "totalCount": 58,
+    "totalCount": 60,
     "nodes": [
       {
         "stargazerCount": 0,
@@ -1329,17 +1329,100 @@
             }
           ]
         }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": [
+            {
+              "size": 435103,
+              "node": {
+                "name": "PHP",
+                "color": "#4F5D95"
+              }
+            },
+            {
+              "size": 211210,
+              "node": {
+                "name": "Blade",
+                "color": "#f7523f"
+              }
+            },
+            {
+              "size": 27215,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 17837,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 8201,
+              "node": {
+                "name": "Just",
+                "color": "#384d54"
+              }
+            },
+            {
+              "size": 2575,
+              "node": {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            },
+            {
+              "size": 1171,
+              "node": {
+                "name": "Dockerfile",
+                "color": "#384d54"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stargazerCount": 0,
+        "forkCount": 0,
+        "languages": {
+          "edges": []
+        }
       }
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 62,
+    "totalCommitContributions": 141,
     "contributionCalendar": {
-      "totalContributions": 185
+      "totalContributions": 206
     }
   },
   "recentCommits": {
     "nodes": [
+      {
+        "name": "ba-assistant",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "93b74c138e8e8007e31f44ff53a4f0576bfa34ba",
+                  "message": "Initial commit",
+                  "committedDate": "2026-08-08T22:49:23Z",
+                  "repository": {
+                    "name": "ba-assistant"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
       {
         "name": "brayanalmengor04",
         "defaultBranchRef": {
@@ -1392,11 +1475,70 @@
         }
       },
       {
+        "name": "mgf-workspace",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "b1c1bc8f34989d26d2632c8fe3f0c09e8ea1c653",
+                  "message": "docs: guía correo Brevo/Railway, URLs de producción y troubleshooting\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-05T20:42:44Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "2825785002741e992809cb94eb03349160d08bbd",
+                  "message": "fix(mail): logo por URL pública en plantillas (compatible con Brevo API)\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-05T20:41:05Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "90297e50774f8f02f591b6a1221c40e8eb6f92a7",
+                  "message": "fix(mail): registrar transporte Brevo en Laravel (Unsupported mail transport)\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-05T20:32:39Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "9d35aa58dfd3f80f072b0ae32c92ed452c4b8297",
+                  "message": "feat(mail): Brevo API en Railway con Gmail verificado como remitente\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-05T20:20:44Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "099f5ffd1b06faf6bd4a6c5022bb68d24a3f59f1",
+                  "message": "feat(mail): Resend API para Railway (SMTP bloqueado)",
+                  "committedDate": "2026-08-05T19:45:16Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
         "name": "brayanalmengor04.github.io",
         "defaultBranchRef": {
           "target": {
             "history": {
               "nodes": [
+                {
+                  "oid": "468a44a9650eeaf23cfa36a9a0c1fd9899e89432",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-02T02:46:46Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
                 {
                   "oid": "95278e376f2db8337d3a1b40347fc0d6e0822564",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
@@ -1425,14 +1567,6 @@
                   "oid": "f689e10517b8765d0ecf7f67327e7afb40a0f970",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
                   "committedDate": "2026-07-05T03:25:34Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "e100c4ecebec0bbd205206666d5c56400d5b97ac",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-06-28T03:52:29Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
                   }
@@ -1709,108 +1843,6 @@
                   "committedDate": "2025-04-22T18:07:37Z",
                   "repository": {
                     "name": "technical-tests-vb.net"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "name": "eco-paraiso-lodge",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "e8adaa1ac79603efbe56feceb92747ac82dde1be",
-                  "message": "Merge pull request #6 from brayanalmengor04/fixed/deprecated-error\n\nbug : Fixed proyect ecologde deprecated dependency",
-                  "committedDate": "2025-04-16T20:04:03Z",
-                  "repository": {
-                    "name": "eco-paraiso-lodge"
-                  }
-                },
-                {
-                  "oid": "94f5ec37b860792d9b57a7ac5efea8aaa951d6d5",
-                  "message": "bug : Fixed proyect ecologde deprecated dependency",
-                  "committedDate": "2025-04-16T19:51:10Z",
-                  "repository": {
-                    "name": "eco-paraiso-lodge"
-                  }
-                },
-                {
-                  "oid": "2ed37fdf25d2b263475d243497c460b8fd1c1aa7",
-                  "message": "Merge pull request #5 from brayanalmengor04/Brayan\n\nfeat: add hotel reservation management, admin features, and user auth…",
-                  "committedDate": "2024-11-04T20:01:09Z",
-                  "repository": {
-                    "name": "eco-paraiso-lodge"
-                  }
-                },
-                {
-                  "oid": "00d55d4b6e46ab5fae1a4080997df5db29df83b2",
-                  "message": "Merge branch 'main' into Brayan",
-                  "committedDate": "2024-11-04T02:38:39Z",
-                  "repository": {
-                    "name": "eco-paraiso-lodge"
-                  }
-                },
-                {
-                  "oid": "3eb4e07312d03d5a6d5f9544ae73265933399ed7",
-                  "message": "feat: add hotel reservation management, admin features, and user authentication",
-                  "committedDate": "2024-11-04T02:21:36Z",
-                  "repository": {
-                    "name": "eco-paraiso-lodge"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "name": "my-finnantrack-app",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "ac5b7fcb7a2d95adc5a88e915f276b1ed49d0a94",
-                  "message": "Merge pull request #15 from brayanalmengor04/finnantrack/brayanalmengor\n\nfix : Readme documentacion finantrack app",
-                  "committedDate": "2025-04-01T19:48:02Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "29d1352e6cdccdc938e76c64eb4ae6d258a5bfb2",
-                  "message": "fix : Readme documentacion finantrack app",
-                  "committedDate": "2025-04-01T19:46:04Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "7444f64c87046fb5dfed61e4d1c783aa22757e24",
-                  "message": "Merge pull request #14 from brayanalmengor04/finnantrack/brayanalmengor\n\ndocs: Estructure Proyect Finantrack",
-                  "committedDate": "2025-04-01T03:53:43Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "c3947c497e93bcc9a758df5430b5689aad367077",
-                  "message": "docs: Estructure Proyect Finantrack",
-                  "committedDate": "2025-04-01T03:53:04Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
-                  }
-                },
-                {
-                  "oid": "c9e4d4e32c143cb901f836cc1c0532d9cde77620",
-                  "message": "Merge pull request #13 from brayanalmengor04/finnantrack/brayanalmengor\n\ndocs: Documenting the app design in figma",
-                  "committedDate": "2025-03-30T20:11:59Z",
-                  "repository": {
-                    "name": "my-finnantrack-app"
                   }
                 }
               ]
