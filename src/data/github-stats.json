@@ -1336,28 +1336,28 @@
         "languages": {
           "edges": [
             {
-              "size": 435103,
+              "size": 440386,
               "node": {
                 "name": "PHP",
                 "color": "#4F5D95"
               }
             },
             {
-              "size": 211210,
+              "size": 215111,
               "node": {
                 "name": "Blade",
                 "color": "#f7523f"
               }
             },
             {
-              "size": 27215,
+              "size": 27672,
               "node": {
                 "name": "CSS",
                 "color": "#663399"
               }
             },
             {
-              "size": 17837,
+              "size": 13476,
               "node": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
@@ -1397,32 +1397,13 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 141,
+    "totalCommitContributions": 144,
     "contributionCalendar": {
-      "totalContributions": 206
+      "totalContributions": 209
     }
   },
   "recentCommits": {
     "nodes": [
-      {
-        "name": "ba-assistant",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "93b74c138e8e8007e31f44ff53a4f0576bfa34ba",
-                  "message": "Initial commit",
-                  "committedDate": "2026-08-08T22:49:23Z",
-                  "repository": {
-                    "name": "ba-assistant"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
       {
         "name": "brayanalmengor04",
         "defaultBranchRef": {
@@ -1481,6 +1462,22 @@
             "history": {
               "nodes": [
                 {
+                  "oid": "82362de8e46284dcf288971a5d5ae057a6c22638",
+                  "message": "docs: política de seguridad, contribución y estándares de comunidad GitHub.\n\nAñade SECURITY.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md y plantilla de pull request para completar el perfil de comunidad del repositorio.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-13T21:18:50Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "4f59a00796622c1822e3f95635b149492bd555a6",
+                  "message": "feat(branding): nuevo logo B en PDFs, iconos PWA y guardado en wizard.\n\nCentraliza el branding PDF con monograma adaptable al fondo de plantilla, pie con enlace del sitio, iconos PWA/web regenerados y boton Guardar visible en cualquier paso del stepper.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-13T20:53:51Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
                   "oid": "b1c1bc8f34989d26d2632c8fe3f0c09e8ea1c653",
                   "message": "docs: guía correo Brevo/Railway, URLs de producción y troubleshooting\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
                   "committedDate": "2026-08-05T20:42:44Z",
@@ -1503,22 +1500,6 @@
                   "repository": {
                     "name": "mgf-workspace"
                   }
-                },
-                {
-                  "oid": "9d35aa58dfd3f80f072b0ae32c92ed452c4b8297",
-                  "message": "feat(mail): Brevo API en Railway con Gmail verificado como remitente\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-05T20:20:44Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "099f5ffd1b06faf6bd4a6c5022bb68d24a3f59f1",
-                  "message": "feat(mail): Resend API para Railway (SMTP bloqueado)",
-                  "committedDate": "2026-08-05T19:45:16Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
                 }
               ]
             }
@@ -1531,6 +1512,14 @@
           "target": {
             "history": {
               "nodes": [
+                {
+                  "oid": "affeab3e5de6a1741a998b09bf442286a62392e3",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-09T01:43:17Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
                 {
                   "oid": "468a44a9650eeaf23cfa36a9a0c1fd9899e89432",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
@@ -1562,13 +1551,24 @@
                   "repository": {
                     "name": "brayanalmengor04.github.io"
                   }
-                },
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "ba-assistant",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
                 {
-                  "oid": "f689e10517b8765d0ecf7f67327e7afb40a0f970",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-07-05T03:25:34Z",
+                  "oid": "93b74c138e8e8007e31f44ff53a4f0576bfa34ba",
+                  "message": "Initial commit",
+                  "committedDate": "2026-08-08T22:49:23Z",
                   "repository": {
-                    "name": "brayanalmengor04.github.io"
+                    "name": "ba-assistant"
                   }
                 }
               ]
