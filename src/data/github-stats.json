@@ -1336,21 +1336,21 @@
         "languages": {
           "edges": [
             {
-              "size": 440386,
+              "size": 592966,
               "node": {
                 "name": "PHP",
                 "color": "#4F5D95"
               }
             },
             {
-              "size": 215111,
+              "size": 248540,
               "node": {
                 "name": "Blade",
                 "color": "#f7523f"
               }
             },
             {
-              "size": 27672,
+              "size": 35065,
               "node": {
                 "name": "CSS",
                 "color": "#663399"
@@ -1397,9 +1397,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 144,
+    "totalCommitContributions": 147,
     "contributionCalendar": {
-      "totalContributions": 209
+      "totalContributions": 212
     }
   },
   "recentCommits": {
@@ -1462,6 +1462,22 @@
             "history": {
               "nodes": [
                 {
+                  "oid": "9bddd086455f1a11b46ea748c250e4bc04316dc6",
+                  "message": "feat(finanzas): panel de ahorros con métricas por cuenta y proyección de meta.\n\nMejora la vista de cuentas de ahorro con widgets por cuenta, gráfico de avance, acciones de depósito/retiro y proyección configurable por cadencia usando la meta por período.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-21T13:56:16Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "b9c25ed2cdb66c23304d1a939265270bc85254b3",
+                  "message": "feat(finanzas): módulo de ahorros, escritorio simplificado y login mejorado.\n\nAñade cuentas de ahorro con ledger, vínculo a presupuestos, panel analítico y contexto para el chatbot; reduce widgets duplicados en el escritorio y personaliza el login con sesión PWA más persistente.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-08-20T15:42:23Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
                   "oid": "82362de8e46284dcf288971a5d5ae057a6c22638",
                   "message": "docs: política de seguridad, contribución y estándares de comunidad GitHub.\n\nAñade SECURITY.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md y plantilla de pull request para completar el perfil de comunidad del repositorio.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
                   "committedDate": "2026-08-13T21:18:50Z",
@@ -1484,22 +1500,6 @@
                   "repository": {
                     "name": "mgf-workspace"
                   }
-                },
-                {
-                  "oid": "2825785002741e992809cb94eb03349160d08bbd",
-                  "message": "fix(mail): logo por URL pública en plantillas (compatible con Brevo API)\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-05T20:41:05Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "90297e50774f8f02f591b6a1221c40e8eb6f92a7",
-                  "message": "fix(mail): registrar transporte Brevo en Laravel (Unsupported mail transport)\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-05T20:32:39Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
                 }
               ]
             }
@@ -1512,6 +1512,14 @@
           "target": {
             "history": {
               "nodes": [
+                {
+                  "oid": "fa5a756803ef101dec7493dabce87dc6e4c6a9b5",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-16T01:16:35Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
                 {
                   "oid": "affeab3e5de6a1741a998b09bf442286a62392e3",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
@@ -1540,14 +1548,6 @@
                   "oid": "70fe4f4ba05fe88c254694c15c39164f641864ae",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
                   "committedDate": "2026-07-19T02:43:08Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "ba3bbe4a8f5013a79567d03b2c2315c7e962b4b5",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-07-12T02:46:14Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
                   }
