@@ -1336,28 +1336,28 @@
         "languages": {
           "edges": [
             {
-              "size": 592966,
+              "size": 681239,
               "node": {
                 "name": "PHP",
                 "color": "#4F5D95"
               }
             },
             {
-              "size": 248540,
+              "size": 293210,
               "node": {
                 "name": "Blade",
                 "color": "#f7523f"
               }
             },
             {
-              "size": 35065,
+              "size": 80297,
               "node": {
                 "name": "CSS",
                 "color": "#663399"
               }
             },
             {
-              "size": 13476,
+              "size": 42083,
               "node": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
@@ -1368,6 +1368,13 @@
               "node": {
                 "name": "Just",
                 "color": "#384d54"
+              }
+            },
+            {
+              "size": 5828,
+              "node": {
+                "name": "Python",
+                "color": "#3572A5"
               }
             },
             {
@@ -1397,9 +1404,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 148,
+    "totalCommitContributions": 161,
     "contributionCalendar": {
-      "totalContributions": 213
+      "totalContributions": 226
     }
   },
   "recentCommits": {
@@ -1456,11 +1463,70 @@
         }
       },
       {
+        "name": "mgf-workspace",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "2a68745d35e06e86e4aaf47267f991b54caac293",
+                  "message": "Fix budget scan, dark mode UI, and restrict audit to Super Admin.\n\nUpdate Gemini vision defaults with fallbacks and client/server image compression for faster scans. Align tables, cards, wizards, and savings widgets with CRM dark tokens, tighten budget list stats spacing, and limit Auditoria navigation and activity views to Super Administrador only.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T17:42:52Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "24eb51e735c1d384887985f941587f5d693f9a89",
+                  "message": "feat(ui): add upload progress bar to budget scan widget\n\nShow real upload percentage via Livewire events and an indeterminate bar while Gemini analyzes the photo.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T16:49:50Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "7de3a3b6ecbad83569031c2f4bbac269e42ea6d5",
+                  "message": "fix(ui): distinguish photo upload from AI analysis in scan banner\n\nShow separate loading states for uploading vs analyzing so mobile users know to wait for the image before scanning.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T16:40:51Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "84344aac3fbd2867ffe87a6606b817cad3ae1247",
+                  "message": "refactor(ui): rename budget scan hero gif to a descriptive filename\n\nReplace generic hero.gif with budget-scan-pen-hero.gif and update manifest, widget, and asset script references.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T16:24:56Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "2bd750a04b2415be4123f35f5de875faf7157f19",
+                  "message": "chore(build): register CRM frontend bundles and npm asset scripts\n\nWire Vite entries for charts, table view, and pen hero plus npm helpers to regenerate scan animation assets.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T16:22:38Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
         "name": "brayanalmengor04.github.io",
         "defaultBranchRef": {
           "target": {
             "history": {
               "nodes": [
+                {
+                  "oid": "d49db3f2165bbe5596c02004ed8be8b8e4258b72",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-30T03:56:43Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
                 {
                   "oid": "e7e98b67c104ae5f6eb754c544333ade1089f2a5",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
@@ -1491,65 +1557,6 @@
                   "committedDate": "2026-08-02T02:46:46Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "95278e376f2db8337d3a1b40347fc0d6e0822564",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-07-26T02:46:50Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "name": "mgf-workspace",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "9bddd086455f1a11b46ea748c250e4bc04316dc6",
-                  "message": "feat(finanzas): panel de ahorros con métricas por cuenta y proyección de meta.\n\nMejora la vista de cuentas de ahorro con widgets por cuenta, gráfico de avance, acciones de depósito/retiro y proyección configurable por cadencia usando la meta por período.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-21T13:56:16Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "b9c25ed2cdb66c23304d1a939265270bc85254b3",
-                  "message": "feat(finanzas): módulo de ahorros, escritorio simplificado y login mejorado.\n\nAñade cuentas de ahorro con ledger, vínculo a presupuestos, panel analítico y contexto para el chatbot; reduce widgets duplicados en el escritorio y personaliza el login con sesión PWA más persistente.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-20T15:42:23Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "82362de8e46284dcf288971a5d5ae057a6c22638",
-                  "message": "docs: política de seguridad, contribución y estándares de comunidad GitHub.\n\nAñade SECURITY.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md y plantilla de pull request para completar el perfil de comunidad del repositorio.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-13T21:18:50Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "4f59a00796622c1822e3f95635b149492bd555a6",
-                  "message": "feat(branding): nuevo logo B en PDFs, iconos PWA y guardado en wizard.\n\nCentraliza el branding PDF con monograma adaptable al fondo de plantilla, pie con enlace del sitio, iconos PWA/web regenerados y boton Guardar visible en cualquier paso del stepper.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-13T20:53:51Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "b1c1bc8f34989d26d2632c8fe3f0c09e8ea1c653",
-                  "message": "docs: guía correo Brevo/Railway, URLs de producción y troubleshooting\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-08-05T20:42:44Z",
-                  "repository": {
-                    "name": "mgf-workspace"
                   }
                 }
               ]
