@@ -1404,9 +1404,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 161,
+    "totalCommitContributions": 162,
     "contributionCalendar": {
-      "totalContributions": 226
+      "totalContributions": 227
     }
   },
   "recentCommits": {
@@ -1463,6 +1463,57 @@
         }
       },
       {
+        "name": "brayanalmengor04.github.io",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "45b8ef932c159efc8cf0494d74e31c7ca635928e",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-09-06T03:13:52Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "d49db3f2165bbe5596c02004ed8be8b8e4258b72",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-30T03:56:43Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "e7e98b67c104ae5f6eb754c544333ade1089f2a5",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-23T01:18:26Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "fa5a756803ef101dec7493dabce87dc6e4c6a9b5",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-16T01:16:35Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "affeab3e5de6a1741a998b09bf442286a62392e3",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-08-09T01:43:17Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
         "name": "mgf-workspace",
         "defaultBranchRef": {
           "target": {
@@ -1506,57 +1557,6 @@
                   "committedDate": "2026-09-01T16:22:38Z",
                   "repository": {
                     "name": "mgf-workspace"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "name": "brayanalmengor04.github.io",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "d49db3f2165bbe5596c02004ed8be8b8e4258b72",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-08-30T03:56:43Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "e7e98b67c104ae5f6eb754c544333ade1089f2a5",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-08-23T01:18:26Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "fa5a756803ef101dec7493dabce87dc6e4c6a9b5",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-08-16T01:16:35Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "affeab3e5de6a1741a998b09bf442286a62392e3",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-08-09T01:43:17Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "468a44a9650eeaf23cfa36a9a0c1fd9899e89432",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-08-02T02:46:46Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
                   }
                 }
               ]
