@@ -1336,14 +1336,14 @@
         "languages": {
           "edges": [
             {
-              "size": 681239,
+              "size": 681160,
               "node": {
                 "name": "PHP",
                 "color": "#4F5D95"
               }
             },
             {
-              "size": 293210,
+              "size": 294007,
               "node": {
                 "name": "Blade",
                 "color": "#f7523f"
@@ -1404,9 +1404,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 166,
+    "totalCommitContributions": 169,
     "contributionCalendar": {
-      "totalContributions": 231
+      "totalContributions": 234
     }
   },
   "recentCommits": {
@@ -1463,11 +1463,70 @@
         }
       },
       {
+        "name": "mgf-workspace",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "51916ec150c5cc6defb894d66f6cc5cc3f3e27af",
+                  "message": "Remove developer footer from quote PDFs only.\n\nBudget PDFs keep the MGF app branding and developer footer; quote PDFs show only template bank and notes.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-10-12T19:51:52Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "893b8b0623893452472b77f384787cc4f255658c",
+                  "message": "Enable chatbot multiline input and drop app logo from quote PDFs.\n\nShift+Enter adds line breaks in the assistant; Enter sends. Quote PDFs and previews no longer fall back to the MGF app logo or header brand block; budget PDF branding is unchanged.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-10-12T19:39:48Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "2a68745d35e06e86e4aaf47267f991b54caac293",
+                  "message": "Fix budget scan, dark mode UI, and restrict audit to Super Admin.\n\nUpdate Gemini vision defaults with fallbacks and client/server image compression for faster scans. Align tables, cards, wizards, and savings widgets with CRM dark tokens, tighten budget list stats spacing, and limit Auditoria navigation and activity views to Super Administrador only.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T17:42:52Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "24eb51e735c1d384887985f941587f5d693f9a89",
+                  "message": "feat(ui): add upload progress bar to budget scan widget\n\nShow real upload percentage via Livewire events and an indeterminate bar while Gemini analyzes the photo.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T16:49:50Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                },
+                {
+                  "oid": "7de3a3b6ecbad83569031c2f4bbac269e42ea6d5",
+                  "message": "fix(ui): distinguish photo upload from AI analysis in scan banner\n\nShow separate loading states for uploading vs analyzing so mobile users know to wait for the image before scanning.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-09-01T16:40:51Z",
+                  "repository": {
+                    "name": "mgf-workspace"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
         "name": "brayanalmengor04.github.io",
         "defaultBranchRef": {
           "target": {
             "history": {
               "nodes": [
+                {
+                  "oid": "2f555c4955d17ad042a3ddf36e345fbdb1847084",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-10-11T04:20:52Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
                 {
                   "oid": "8537c53bcb570969298ccc1fdfa9a2dd93eeed20",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
@@ -1498,65 +1557,6 @@
                   "committedDate": "2026-09-13T03:29:06Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "45b8ef932c159efc8cf0494d74e31c7ca635928e",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-09-06T03:13:52Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "name": "mgf-workspace",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "2a68745d35e06e86e4aaf47267f991b54caac293",
-                  "message": "Fix budget scan, dark mode UI, and restrict audit to Super Admin.\n\nUpdate Gemini vision defaults with fallbacks and client/server image compression for faster scans. Align tables, cards, wizards, and savings widgets with CRM dark tokens, tighten budget list stats spacing, and limit Auditoria navigation and activity views to Super Administrador only.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-09-01T17:42:52Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "24eb51e735c1d384887985f941587f5d693f9a89",
-                  "message": "feat(ui): add upload progress bar to budget scan widget\n\nShow real upload percentage via Livewire events and an indeterminate bar while Gemini analyzes the photo.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-09-01T16:49:50Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "7de3a3b6ecbad83569031c2f4bbac269e42ea6d5",
-                  "message": "fix(ui): distinguish photo upload from AI analysis in scan banner\n\nShow separate loading states for uploading vs analyzing so mobile users know to wait for the image before scanning.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-09-01T16:40:51Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "84344aac3fbd2867ffe87a6606b817cad3ae1247",
-                  "message": "refactor(ui): rename budget scan hero gif to a descriptive filename\n\nReplace generic hero.gif with budget-scan-pen-hero.gif and update manifest, widget, and asset script references.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-09-01T16:24:56Z",
-                  "repository": {
-                    "name": "mgf-workspace"
-                  }
-                },
-                {
-                  "oid": "2bd750a04b2415be4123f35f5de875faf7157f19",
-                  "message": "chore(build): register CRM frontend bundles and npm asset scripts\n\nWire Vite entries for charts, table view, and pen hero plus npm helpers to regenerate scan animation assets.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-                  "committedDate": "2026-09-01T16:22:38Z",
-                  "repository": {
-                    "name": "mgf-workspace"
                   }
                 }
               ]
