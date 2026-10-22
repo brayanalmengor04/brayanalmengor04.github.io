@@ -16,8 +16,12 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Prepare static GitHub Pages build
+        run: rm -rf src/pages/api
       - name: Install, build, and upload your site
         uses: withastro/action@v3
+        env:
+          ASTRO_GH_PAGES: "true"
 
   deploy:
     needs: build

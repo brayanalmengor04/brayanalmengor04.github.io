@@ -7,9 +7,13 @@ import icon from "astro-icon";
 
 import netlify from "@astrojs/netlify";
 
+const ghPages = process.env.ASTRO_GH_PAGES === "true";
+
 // https://astro.build/config
 export default defineConfig({
+  site: "https://brayanalmengor04.github.io",
   integrations: [react(), icon()],
+  ...(ghPages ? { output: "static" } : { adapter: netlify() }),
 
   vite: {
     cacheDir: '.vite-cache',
@@ -18,6 +22,4 @@ export default defineConfig({
       noExternal: ['gsap'],
     },
   },
-
-  adapter: netlify(),
 });
