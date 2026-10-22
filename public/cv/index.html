@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brayan Antonio Almengor Justavino | CV</title>
+  <meta name="description" content="Currículum de Brayan Almengor — Desarrollador de Software. Laravel, GCP, Salesforce y más.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    :root { --ink: #202124; --muted: #4b5563; --accent: #163a5f; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eef1f4;
+      color: var(--ink);
+      font-family: Calibri, Carlito, 'Segoe UI', Arial, sans-serif;
+      font-size: 10pt;
+      line-height: 1.28;
+    }
+    .cv-actions {
+      position: fixed;
+      z-index: 50;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(12, 18, 34, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(12px);
+    }
+    .cv-actions a,
+    .cv-actions button {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 10px 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cv-actions a:hover,
+    .cv-actions button:hover { transform: translateY(-1px); }
+    .cv-actions .primary {
+      color: #fff;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35);
+    }
+    .cv-actions .ghost {
+      color: #e5e7eb;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .resume {
+      width: min(210mm, 100%);
+      min-height: 297mm;
+      margin: 24px auto 88px;
+      padding: 17mm 18mm 16mm;
+      background: #fff;
+      box-shadow: 0 4px 22px rgba(0,0,0,.10);
+    }
+    header { text-align: center; margin-bottom: 14px; }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24.5pt;
+      line-height: 1.12;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 10px;
+      font-size: 10pt;
+    }
+    a { color: inherit; text-decoration: none; overflow-wrap: anywhere; }
+    a:hover { text-decoration: underline; }
+    section { margin-top: 13px; }
+    h2 {
+      margin: 0 0 8px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid var(--accent);
+      color: var(--accent);
+      font-size: 12pt;
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 400;
+    }
+    .entry { margin: 0 0 10px; }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 1px;
+    }
+    .entry-title { font-weight: 700; }
+    .place, .date { color: var(--muted); }
+    .date { white-space: nowrap; font-size: 10pt; }
+    .subtitle { margin-bottom: 3px; }
+    .resume > section:first-of-type h2,
+    .resume > section:nth-of-type(2) h2 { font-variant: small-caps; }
+    .resume > section:nth-of-type(3) h2 { font-weight: 700; text-transform: uppercase; }
+    .resume > section.skills h2 { font-weight: 700; text-transform: none; }
+    .resume > section:first-of-type .entry-title,
+    .resume > section:first-of-type .place { font-size: 11pt; }
+    .resume > section:first-of-type .place { color: var(--ink); font-weight: 700; }
+    .resume > section:first-of-type .subtitle,
+    .resume > section:first-of-type .date,
+    .resume > section:nth-of-type(2) .place,
+    .resume > section:nth-of-type(2) .date { font-style: italic; }
+    ul { margin: 4px 0 4px 18px; padding: 0; }
+    li { margin: 0 0 3px; }
+    .stack { margin: 4px 0 0; font-size: 9.5pt; }
+    .skills p { margin: 3px 0; }
+    @media (max-width: 650px) {
+      .resume { margin: 0 0 100px; padding: 24px 20px; width: 100%; box-shadow: none; }
+      .entry-head { display: block; }
+      .date { white-space: normal; }
+      h1 { font-size: 22pt; }
+      .cv-actions { width: calc(100% - 24px); border-radius: 16px; }
+    }
+    @media print {
+      .cv-actions { display: none !important; }
+      @page { size: A4; margin: 0; }
+      body { background: #fff; font-size: 9.6pt; }
+      .resume { width: 210mm; min-height: 297mm; margin: 0; padding: 14mm 17mm 13mm; box-shadow: none; }
+      a { text-decoration: none; }
+      section { margin-top: 10px; }
+      .entry { margin-bottom: 7px; }
+      header { margin-bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="cv-actions" aria-label="Acciones del CV">
+    <a class="primary" href="/file/Brayan_Almengor_CV.pdf" download="Brayan_Almengor_CV.pdf">Descargar PDF</a>
+    <button type="button" class="ghost" onclick="window.print()">Imprimir</button>
+    <a class="ghost" href="/">Volver al portfolio</a>
+  </nav>
+
+  <main class="resume">
+    <header>
+      <h1>Brayan Antonio Almengor<br>Justavino</h1>
+      <div class="contact">
+        <span>6542-5634</span>
+        <span>|</span>
+        <a href="mailto:brayanalmengor300@gmail.com">brayanalmengor300@gmail.com</a>
+        <span>|</span>
+        <a href="https://linkedin.com/in/brayan-antonio" target="_blank" rel="noopener noreferrer">linkedin.com/in/brayan-antonio</a>
+        <span>|</span>
+        <a href="https://brayanalmengorpty.netlify.app/" target="_blank" rel="noopener noreferrer">brayanalmengorpty.netlify.app</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Educación</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Universidad del Istmo</span>
+          <span class="place">Panamá, Panamá Oeste</span>
+        </div>
+        <div class="entry-head">
+          <span class="subtitle">Licenciatura en Administración de Sistemas</span>
+          <span class="date">Julio 2026 – Actual</span>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Universidad Tecnológica de Panamá</span>
+          <span class="place">Panamá, Panamá Oeste</span>
+        </div>
+        <div class="entry-head">
+          <span class="subtitle">Licenciatura de Desarrollo de Software</span>
+          <span class="date">Enero 2020 – Actual</span>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">C.E. Moisés Castillo Ocaña</span>
+          <span class="place">Panamá, Panamá Oeste</span>
+        </div>
+        <div class="entry-head">
+          <span class="subtitle">Bachiller de Comercio</span>
+          <span class="date">Marzo 2014 – Mayo 2020</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experiencia</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Desarrollador de Software — La Casa de las Baterías</span>
+        </div>
+        <div class="entry-head">
+          <span class="place">Ciudad de Panamá, Costa del Este</span>
+          <span class="date">Febrero 2026 – Actual</span>
+        </div>
+        <ul>
+          <li>Desarrollo y mantengo aplicaciones robustas con Laravel y MySQL, optimizando la lógica de negocio y supervisando la estabilidad del entorno mediante Google Cloud.</li>
+          <li>Resuelvo requerimientos técnicos e incidencias, brindando soporte especializado en la extracción y visualización de datos usando BigQuery y Looker Studio.</li>
+          <li>Diseño e implemento integraciones de datos entre SAP y plataformas web, proponiendo mejoras en la arquitectura para optimizar el flujo de información.</li>
+          <li>Utilizo tecnologías de desarrollo interno de Salesforce y Salesforce Digital Experiences para apoyar soluciones y experiencias digitales.</li>
+        </ul>
+        <p class="stack"><strong>Stacks:</strong> Laravel, MySQL, Google Cloud, BigQuery, Looker Studio, GitHub, Jira, SAP, Salesforce Digital Experiences.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Desarrollador de Software (Intern) — Secretaría Nacional de Ciencia, Tecnología e Innovación (SENACYT)</span>
+        </div>
+        <div class="entry-head">
+          <span class="place">Ciudad de Panamá, Ciudad del Saber</span>
+          <span class="date">Julio 2025 – Diciembre 2025</span>
+        </div>
+        <ul>
+          <li>Apoyé el desarrollo y mantenimiento de sistemas internos, implementando nuevas funcionalidades y optimizando módulos existentes utilizando Laravel, JavaScript y jQuery.</li>
+          <li>Diseñé y propuse estructuras de bases de datos en Oracle, asegurando coherencia, escalabilidad y eficiencia en consultas clave.</li>
+          <li>Participé en proyectos de desarrollo de software, desde la planificación hasta la integración de componentes, siguiendo buenas prácticas y control de versiones con Git.</li>
+        </ul>
+        <p class="stack"><strong>Stacks:</strong> Laravel, Oracle Database, JavaScript, jQuery, Git, Figma.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cursos</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Universidad Java – Programa de Desarrollo Full Stack (Spring Boot, React, Angular, 150+ hrs)</span>
+          <span class="date">Enero 2023 – Marzo 2025</span>
+        </div>
+        <ul>
+          <li>Adquirí competencias integrales en Java, abarcando desde fundamentos y conexión a bases de datos hasta el desarrollo de aplicaciones web con Servlets, JSP y Spring Boot.</li>
+          <li>Aprendí a integrar frameworks modernos como PrimeFaces-JSF, Thymeleaf, Angular y React, cimentando las bases para certificaciones y oportunidades laborales.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Habilidades técnicas</h2>
+      <p><strong>Lenguajes:</strong> Java, PHP (Laravel), SQL (MySQL/MariaDB/Oracle), JavaScript, HTML5/CSS3.</p>
+      <p><strong>Frameworks:</strong> React, Angular, Laravel, Flutter, Tailwind CSS, Spring Boot.</p>
+      <p><strong>Salesforce y experiencias digitales:</strong> Tecnologías de desarrollo interno de Salesforce y Salesforce Digital Experiences.</p>
+      <p><strong>Herramientas de desarrollo:</strong> Git, GitHub, Docker, VS Code, Cursor, IntelliJ IDEA, NetBeans, Android Studio, Postman, NPM/Yarn.</p>
+      <p><strong>Plataformas y herramientas en la nube:</strong> Google Cloud Platform (GCP), BigQuery, Looker Studio.</p>
+    </section>
+  </main>
+</body>
+</html>
