@@ -356,14 +356,14 @@
         "languages": {
           "edges": [
             {
-              "size": 121285,
+              "size": 121428,
               "node": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               }
             },
             {
-              "size": 83585,
+              "size": 84093,
               "node": {
                 "name": "Astro",
                 "color": "#ff5a03"
@@ -381,6 +381,13 @@
               "node": {
                 "name": "CSS",
                 "color": "#663399"
+              }
+            },
+            {
+              "size": 10847,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
               }
             }
           ]
@@ -1404,9 +1411,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 169,
+    "totalCommitContributions": 171,
     "contributionCalendar": {
-      "totalContributions": 234
+      "totalContributions": 236
     }
   },
   "recentCommits": {
@@ -1463,6 +1470,57 @@
         }
       },
       {
+        "name": "brayanalmengor04.github.io",
+        "defaultBranchRef": {
+          "target": {
+            "history": {
+              "nodes": [
+                {
+                  "oid": "07592521e60cfbd577ecdd8727fc5c1dea984f00",
+                  "message": "fix(cv): restaurar nombre DesarrolladorSoftware y habilitar GitHub Pages\n\nRenombra el PDF descargable, actualiza enlaces a brayanalmengor04.github.io y corrige el workflow con build estático para que el action pueda desplegar.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-10-22T15:26:31Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "80ec200de4e39a2adb96caace8aa5d98a5d6e653",
+                  "message": "feat(cv): publicar CV actualizado y vista en línea\n\nSe reemplaza el PDF con la versión convertida desde HTML, se enlaza Descargar CV a Brayan_Almengor_CV.pdf y se añade /cv con barra de acciones y redirecciones para enlaces antiguos.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+                  "committedDate": "2026-10-22T15:18:50Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "f34598c80309c3a57c24e035ed82b6015897392a",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-10-18T03:17:53Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "2f555c4955d17ad042a3ddf36e345fbdb1847084",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-10-11T04:20:52Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
+                  "oid": "8537c53bcb570969298ccc1fdfa9a2dd93eeed20",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-10-04T04:36:28Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
         "name": "mgf-workspace",
         "defaultBranchRef": {
           "target": {
@@ -1506,57 +1564,6 @@
                   "committedDate": "2026-09-01T16:40:51Z",
                   "repository": {
                     "name": "mgf-workspace"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        "name": "brayanalmengor04.github.io",
-        "defaultBranchRef": {
-          "target": {
-            "history": {
-              "nodes": [
-                {
-                  "oid": "2f555c4955d17ad042a3ddf36e345fbdb1847084",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-10-11T04:20:52Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "8537c53bcb570969298ccc1fdfa9a2dd93eeed20",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-10-04T04:36:28Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "ff9b2ab15cd480c5b761504e3cf18e7d7f83e205",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-09-27T03:58:37Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "7232bafe25ce8f02888304ad3030a7dc51b819d6",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-09-20T03:41:40Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "86e22fe18fd9d7e156ebfb05cfe4ac00d15b874b",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-09-13T03:29:06Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
                   }
                 }
               ]
