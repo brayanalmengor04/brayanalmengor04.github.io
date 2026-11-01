@@ -1411,9 +1411,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 171,
+    "totalCommitContributions": 172,
     "contributionCalendar": {
-      "totalContributions": 236
+      "totalContributions": 237
     }
   },
   "recentCommits": {
@@ -1476,6 +1476,14 @@
             "history": {
               "nodes": [
                 {
+                  "oid": "e80c290916ac4ba25864c8b646eb1b64f09ecb3c",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-10-25T03:27:34Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
                   "oid": "07592521e60cfbd577ecdd8727fc5c1dea984f00",
                   "message": "fix(cv): restaurar nombre DesarrolladorSoftware y habilitar GitHub Pages\n\nRenombra el PDF descargable, actualiza enlaces a brayanalmengor04.github.io y corrige el workflow con build estático para que el action pueda desplegar.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
                   "committedDate": "2026-10-22T15:26:31Z",
@@ -1503,14 +1511,6 @@
                   "oid": "2f555c4955d17ad042a3ddf36e345fbdb1847084",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
                   "committedDate": "2026-10-11T04:20:52Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "8537c53bcb570969298ccc1fdfa9a2dd93eeed20",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-10-04T04:36:28Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
                   }
