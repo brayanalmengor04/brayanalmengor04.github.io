@@ -1411,9 +1411,9 @@
     ]
   },
   "contributionsCollection": {
-    "totalCommitContributions": 173,
+    "totalCommitContributions": 174,
     "contributionCalendar": {
-      "totalContributions": 234
+      "totalContributions": 228
     }
   },
   "recentCommits": {
@@ -1476,6 +1476,14 @@
             "history": {
               "nodes": [
                 {
+                  "oid": "2197d520952ca22432dc02876ffc4b6748db1777",
+                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
+                  "committedDate": "2026-11-08T04:44:38Z",
+                  "repository": {
+                    "name": "brayanalmengor04.github.io"
+                  }
+                },
+                {
                   "oid": "5ee42494236d0b32bfec6d3df2e4f14f3822f24c",
                   "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
                   "committedDate": "2026-11-01T04:41:07Z",
@@ -1503,14 +1511,6 @@
                   "oid": "80ec200de4e39a2adb96caace8aa5d98a5d6e653",
                   "message": "feat(cv): publicar CV actualizado y vista en línea\n\nSe reemplaza el PDF con la versión convertida desde HTML, se enlaza Descargar CV a Brayan_Almengor_CV.pdf y se añade /cv con barra de acciones y redirecciones para enlaces antiguos.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
                   "committedDate": "2026-10-22T15:18:50Z",
-                  "repository": {
-                    "name": "brayanalmengor04.github.io"
-                  }
-                },
-                {
-                  "oid": "f34598c80309c3a57c24e035ed82b6015897392a",
-                  "message": "chore: Actualización automatizada de GitHub - Brayan Almengor",
-                  "committedDate": "2026-10-18T03:17:53Z",
                   "repository": {
                     "name": "brayanalmengor04.github.io"
                   }
